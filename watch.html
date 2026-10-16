@@ -1,12 +1,13 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0c0d14"><title>Watch episode — KitsuNest</title>
 <style>
-:root{color-scheme:dark;--bg:#0c0d14;--panel:#171925;--line:#2a2d3d;--text:#f5f6fb;--muted:#a8aec1;--purple:#9c7bff;--mint:#55d6be}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 80% -10%,#32215c 0,transparent 36%),var(--bg);color:var(--text);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}a{color:inherit;text-decoration:none}.wrap{width:min(1050px,calc(100% - 28px));margin:auto}header{border-bottom:1px solid #ffffff12;background:#0c0d14e8}.nav{height:66px;display:flex;align-items:center;justify-content:space-between}.brand{font-size:21px;font-weight:850}.brand b{display:inline-grid;place-items:center;background:linear-gradient(135deg,#9c7bff,#ed79c8);width:32px;height:32px;border-radius:10px;margin-right:8px}.back{color:#c7baff}.content{padding:28px 0 42px}.crumb{font-size:13px;color:var(--muted);margin-bottom:10px}.crumb a:hover{color:white}h1{font-size:clamp(25px,4vw,38px);line-height:1.15;margin:0 0 8px}.muted{color:var(--muted)}.player{margin-top:22px;aspect-ratio:16/9;width:100%;background:#05060a;border:1px solid var(--line);border-radius:16px;overflow:hidden;display:grid;place-items:center}.player iframe{width:100%;height:100%;border:0;background:#000}.empty{padding:24px;text-align:center;max-width:570px}.empty .symbol{font-size:40px}.empty h2{margin:7px 0;font-size:21px}.empty p{color:var(--muted);font-size:14px}.pill{display:inline-block;border:1px solid var(--line);background:#ffffff08;border-radius:10px;padding:9px 12px;margin-top:8px}.notice{margin-top:16px;border:1px solid #55d6be44;background:#55d6be0d;color:#d9fff7;border-radius:12px;padding:12px 14px;font-size:13px}.below{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:20px;margin-top:22px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px}.panel h2{font-size:17px;margin:0 0 10px}.episodes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.ep{border:1px solid var(--line);background:#ffffff06;color:var(--text);border-radius:9px;padding:10px;text-align:left;cursor:pointer}.ep:hover,.ep.active{border-color:#9c7bff;background:#9c7bff22}.ep small{display:block;color:var(--muted);font-size:11px}footer{border-top:1px solid var(--line);padding:22px 0 30px;color:var(--muted);font-size:12px}@media(max-width:700px){.below{grid-template-columns:1fr}.episodes{grid-template-columns:repeat(2,minmax(0,1fr))}.player{border-radius:10px}}
+:root{color-scheme:dark;--bg:#0c0d14;--panel:#171925;--line:#2a2d3d;--text:#f5f6fb;--muted:#a8aec1;--purple:#9c7bff;--mint:#55d6be}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 80% -10%,#32215c 0,transparent 36%),var(--bg);color:var(--text);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}a{color:inherit;text-decoration:none}.wrap{width:min(1050px,calc(100% - 28px));margin:auto}header{border-bottom:1px solid #ffffff12;background:#0c0d14e8}.nav{height:66px;display:flex;align-items:center;justify-content:space-between}.brand{font-size:21px;font-weight:850}.brand b{display:inline-grid;place-items:center;background:linear-gradient(135deg,#9c7bff,#ed79c8);width:32px;height:32px;border-radius:10px;margin-right:8px}.back{color:#c7baff}.content{padding:28px 0 42px}.crumb{font-size:13px;color:var(--muted);margin-bottom:10px}.crumb a:hover{color:white}h1{font-size:clamp(25px,4vw,38px);line-height:1.15;margin:0 0 8px}.muted{color:var(--muted)}.player{margin-top:22px;aspect-ratio:16/9;width:100%;background:#05060a;border:1px solid var(--line);border-radius:16px;overflow:hidden;display:grid;place-items:center}.player iframe{width:100%;height:100%;border:0;background:#000}.empty{padding:24px;text-align:center;max-width:570px}.empty .symbol{font-size:40px}.empty h2{margin:7px 0;font-size:21px}.empty p{color:var(--muted);font-size:14px}.pill{display:inline-block;border:1px solid var(--line);background:#ffffff08;border-radius:10px;padding:9px 12px;margin-top:8px}.notice{margin-top:16px;border:1px solid #55d6be44;background:#55d6be0d;color:#d9fff7;border-radius:12px;padding:12px 14px;font-size:13px}.season-panel{margin-top:14px}.season-list{display:flex;flex-wrap:wrap;gap:8px}.season-btn{border:1px solid var(--line);background:#ffffff06;color:var(--text);border-radius:9px;padding:9px 13px;cursor:pointer}.season-btn:hover,.season-btn.active{border-color:#9c7bff;background:#9c7bff22}.below{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:20px;margin-top:22px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px}.panel h2{font-size:17px;margin:0 0 10px}.episodes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.ep{border:1px solid var(--line);background:#ffffff06;color:var(--text);border-radius:9px;padding:10px;text-align:left;cursor:pointer}.ep:hover,.ep.active{border-color:#9c7bff;background:#9c7bff22}.ep small{display:block;color:var(--muted);font-size:11px}footer{border-top:1px solid var(--line);padding:22px 0 30px;color:var(--muted);font-size:12px}@media(max-width:700px){.below{grid-template-columns:1fr}.episodes{grid-template-columns:repeat(2,minmax(0,1fr))}.player{border-radius:10px}}
 </style></head><body>
 <header><div class="wrap nav"><a class="brand" href="./index.html"><b>✦</b>KitsuNest</a><a class="back" href="./index.html">← Back to library</a></div></header>
 <main class="wrap content"><div class="crumb"><a href="./index.html">Home</a> / <a id="seriesLink" href="./index.html">Anime</a> / <span id="crumbEpisode">Episode</span></div>
 <h1 id="heading">Watch episode</h1><div class="muted" id="subheading">KitsuNest episode player</div>
 <div class="player" id="player"><div class="empty"><div class="symbol">▶</div><h2>Player not configured yet</h2><p>This episode does not have an authorized embeddable video source configured. Add an HTTPS embed URL for this episode in the <code>episodeSources</code> section of <code>watch.html</code>.</p><a class="pill" href="./index.html">Browse anime</a></div></div>
+<section class="panel season-panel" aria-label="Choose season"><h2>Seasons</h2><div id="seasons" class="season-list"></div></section>
 <div class="notice">Only use embed URLs from official providers or sources that expressly allow you to embed and share the video. A normal watch-page URL may not work in an iframe.</div>
 <div class="below"><section class="panel"><h2>Episodes</h2><div class="episodes" id="episodes"></div></section><aside class="panel"><h2>About this player</h2><p class="muted" style="font-size:13px;margin-bottom:0">KitsuNest displays an external authorized player inside this page. The video is streamed by its source, not stored on GitHub Pages. Some providers block embedding; use their official embed feature and follow their terms.</p></aside></div></main>
 <footer><div class="wrap">KitsuNest · Fan-made anime guide · Not affiliated with anime studios or distributors.</div></footer>
@@ -71,7 +72,7 @@ episodeSources.haikyu = {
   24: "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/H/Haikyuu/Season%201/Episode%2024//24%20Removing%20the%20Solitary%20King.mp4",
   25: "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/H/Haikyuu/Season%201/Episode%2025//25%20The%20Third%20Day.mp4"
 };
-var shows = {
+var knownShows = {
   haikyu:{title:"Haikyu!!",episodes:25,seasons:4},
   tbate:{title:"The Beginning After the End",episodes:12,seasons:1},
   hellmode:{title:"Hell Mode",episodes:12,seasons:1},
@@ -80,14 +81,22 @@ var shows = {
   planetes:{title:"Planetes",episodes:26,seasons:1}
 };
 function getParam(key){return new URLSearchParams(location.search).get(key)}
-var id=getParam("show")||"haikyu", episode=Math.max(1,parseInt(getParam("episode")||"1",10)||1), show=shows[id]||shows.haikyu;
+var id=getParam("show")||"haikyu";
+var savedShow=knownShows[id];
+var show={
+  title:getParam("title") || (savedShow && savedShow.title) || ("Anime: "+id),
+  episodes:Math.max(1,parseInt(getParam("episodes") || (savedShow && savedShow.episodes) || "12",10)||12),
+  seasons:Math.max(1,parseInt(getParam("seasons") || (savedShow && savedShow.seasons) || "1",10)||1)
+};
+var season=Math.min(show.seasons,Math.max(1,parseInt(getParam("season")||"1",10)||1));
+var episode=Math.max(1,parseInt(getParam("episode")||"1",10)||1);
 episode=Math.min(episode,show.episodes);
 document.title=show.title+" — Episode "+episode+" | KitsuNest";
 document.getElementById("heading").textContent=show.title+" — Episode "+episode;
-document.getElementById("subheading").textContent="Season and episode guide · "+show.seasons+" season"+(show.seasons===1?"":"s")+" listed";
+document.getElementById("subheading").textContent="Season "+season+" · Episode "+episode+" · "+show.seasons+" season"+(show.seasons===1?"":"s")+" listed";
 document.getElementById("seriesLink").textContent=show.title;
 document.getElementById("crumbEpisode").textContent="Episode "+episode;
-var url=(episodeSources[id]||{})[episode];
+var url=season===1 ? (episodeSources[id]||{})[episode] : null;
 var player=document.getElementById("player");
 if(typeof url==="string" && /^https:\/\//i.test(url) && url.indexOf("example.")===-1){
   if (/\.mp4(?:$|[?#])/i.test(url)) {
@@ -98,6 +107,22 @@ if(typeof url==="string" && /^https:\/\//i.test(url) && url.indexOf("example.")=
     var frame=document.createElement("iframe");frame.src=url;frame.title=show.title+" episode "+episode;frame.allow="autoplay; fullscreen; picture-in-picture";frame.allowFullscreen=true;frame.referrerPolicy="strict-origin-when-cross-origin";player.replaceChildren(frame);
   }
 }
+var seasonList=document.getElementById("seasons");
+for(var s=1;s<=show.seasons;s++){
+  var sb=document.createElement("a");
+  sb.className="season-btn"+(s===season?" active":"");
+  sb.href="?show="+encodeURIComponent(id)+"&title="+encodeURIComponent(show.title)+"&seasons="+show.seasons+"&episodes="+show.episodes+"&season="+s+"&episode=1";
+  sb.textContent="Season "+s;
+  sb.setAttribute("aria-current",s===season?"page":"false");
+  seasonList.appendChild(sb);
+}
 var list=document.getElementById("episodes");
-for(var i=1;i<=show.episodes;i++){var a=document.createElement("a");a.className="ep"+(i===episode?" active":"");a.href="?show="+encodeURIComponent(id)+"&episode="+i;a.setAttribute("aria-current",i===episode?"page":"false");a.innerHTML="Episode "+i+"<small>"+(((episodeSources[id]||{})[i])?"Player available":"Source not added")+"</small>";list.appendChild(a)}
+for(var i=1;i<=show.episodes;i++){
+  var a=document.createElement("a");
+  a.className="ep"+(i===episode?" active":"");
+  a.href="?show="+encodeURIComponent(id)+"&title="+encodeURIComponent(show.title)+"&seasons="+show.seasons+"&episodes="+show.episodes+"&season="+season+"&episode="+i;
+  a.setAttribute("aria-current",i===episode?"page":"false");
+  a.innerHTML="Episode "+i+"<small>"+(season===1 && ((episodeSources[id]||{})[i])?"Player available":"Source not added")+"</small>";
+  list.appendChild(a);
+}
 </script></body></html>
