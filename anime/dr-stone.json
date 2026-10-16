@@ -1,7 +1,7 @@
 {
   "id": "drstone",
   "title": "Dr. Stone",
-  "genre": "Adventure",
+  "genre": "Adventure / Sci-Fi",
   "year": "2019",
   "mark": "科学",
   "art": "REBUILD CIVILIZATION",
@@ -10,7 +10,7 @@
     "#53b8b4",
     "#28345b"
   ],
-  "description": "Science becomes the key to rebuilding civilization after a mysterious event.",
+  "description": "After a mysterious event petrifies humanity, science-loving Senku Ishigami awakens and sets out to rebuild civilization through experiments, inventions, and teamwork.",
   "seasons": 4,
   "episodes": 24,
   "episodeSources": {}
