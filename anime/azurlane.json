@@ -1,0 +1,17 @@
+{
+  "id": "azurlane",
+  "title": "Azur Lane",
+  "genre": "Action",
+  "year": "2019",
+  "mark": "AL",
+  "art": "HORIZON OF BATTLE",
+  "official": "https://www.crunchyroll.com/search?q=Azur%20Lane",
+  "colors": [
+    "#5ba8d4",
+    "#31305b"
+  ],
+  "description": "A naval-inspired fantasy story featuring rival factions and mysterious enemies.",
+  "seasons": 1,
+  "episodes": 12,
+  "episodeSources": {}
+}

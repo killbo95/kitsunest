@@ -1,0 +1,17 @@
+{
+  "id": "onepunch",
+  "title": "One-Punch Man",
+  "genre": "Action",
+  "year": "2015",
+  "mark": "OPM",
+  "art": "ONE HIT IS ENOUGH",
+  "official": "https://www.crunchyroll.com/search?q=One-Punch%20Man",
+  "colors": [
+    "#e6a84c",
+    "#9c3549"
+  ],
+  "description": "An overwhelmingly powerful hero searches for a challenge that excites him.",
+  "seasons": 2,
+  "episodes": 12,
+  "episodeSources": {}
+}

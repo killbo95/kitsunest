@@ -1,0 +1,17 @@
+{
+  "id": "bleach",
+  "title": "Bleach",
+  "genre": "Action",
+  "year": "2004",
+  "mark": "斬",
+  "art": "SOULS AWAKEN",
+  "official": "https://www.crunchyroll.com/search?q=Bleach",
+  "colors": [
+    "#e17c4b",
+    "#29213f"
+  ],
+  "description": "A teenager gains the powers of a Soul Reaper and faces supernatural threats.",
+  "seasons": 16,
+  "episodes": 366,
+  "episodeSources": {}
+}

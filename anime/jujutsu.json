@@ -1,0 +1,17 @@
+{
+  "id": "jujutsu",
+  "title": "Jujutsu Kaisen",
+  "genre": "Action",
+  "year": "2020",
+  "mark": "呪",
+  "art": "CURSES AWAKEN",
+  "official": "https://www.crunchyroll.com/search?q=Jujutsu%20Kaisen",
+  "colors": [
+    "#7a65ce",
+    "#24253c"
+  ],
+  "description": "Students who fight dangerous curses face supernatural battles and difficult choices.",
+  "seasons": 2,
+  "episodes": 24,
+  "episodeSources": {}
+}

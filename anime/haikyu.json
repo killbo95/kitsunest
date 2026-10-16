@@ -1,0 +1,17 @@
+{
+  "id": "haikyu",
+  "title": "Haikyu!!",
+  "genre": "Sports",
+  "year": "2014",
+  "mark": "飛",
+  "art": "SPIKE THE LIMIT",
+  "official": "https://haikyu.jp/",
+  "colors": [
+    "#f08a24",
+    "#6b2c65"
+  ],
+  "description": "A high-energy volleyball story about teamwork, practice, and chasing a big goal.",
+  "seasons": 4,
+  "episodes": 25,
+  "episodeSources": {}
+}

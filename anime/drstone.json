@@ -1,0 +1,17 @@
+{
+  "id": "drstone",
+  "title": "Dr. Stone",
+  "genre": "Adventure",
+  "year": "2019",
+  "mark": "科学",
+  "art": "REBUILD CIVILIZATION",
+  "official": "https://www.crunchyroll.com/search?q=Dr.%20STONE",
+  "colors": [
+    "#53b8b4",
+    "#28345b"
+  ],
+  "description": "Science becomes the key to rebuilding civilization after a mysterious event.",
+  "seasons": 4,
+  "episodes": 24,
+  "episodeSources": {}
+}

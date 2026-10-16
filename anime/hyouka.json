@@ -1,0 +1,17 @@
+{
+  "id": "hyouka",
+  "title": "Hyouka",
+  "genre": "Drama",
+  "year": "2012",
+  "mark": "氷",
+  "art": "EVERYDAY MYSTERIES",
+  "official": "https://www.crunchyroll.com/search?q=Hyouka",
+  "colors": [
+    "#5ba9b5",
+    "#27304c"
+  ],
+  "description": "A reserved student and his curious friends unravel small mysteries at school.",
+  "seasons": 1,
+  "episodes": 22,
+  "episodeSources": {}
+}

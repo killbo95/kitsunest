@@ -1,0 +1,17 @@
+{
+  "id": "onepiece",
+  "title": "One Piece",
+  "genre": "Adventure",
+  "year": "1999",
+  "mark": "OP",
+  "art": "SAIL TOWARD FREEDOM",
+  "official": "https://www.crunchyroll.com/search?q=One%20Piece",
+  "colors": [
+    "#277fb7",
+    "#17274c"
+  ],
+  "description": "A crew of pirates sets out across the seas in search of the legendary treasure.",
+  "seasons": 1,
+  "episodes": 1000,
+  "episodeSources": {}
+}

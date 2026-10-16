@@ -1,0 +1,17 @@
+{
+  "id": "bluelock",
+  "title": "Blue Lock",
+  "genre": "Sports",
+  "year": "2022",
+  "mark": "BL",
+  "art": "BECOME THE STRIKER",
+  "official": "https://www.crunchyroll.com/search?q=Blue%20Lock",
+  "colors": [
+    "#3d9ad8",
+    "#25275e"
+  ],
+  "description": "Young footballers compete in an intense program designed to create an elite striker.",
+  "seasons": 1,
+  "episodes": 24,
+  "episodeSources": {}
+}

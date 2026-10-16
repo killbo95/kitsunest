@@ -1,0 +1,17 @@
+{
+  "id": "blackclover",
+  "title": "Black Clover",
+  "genre": "Fantasy",
+  "year": "2017",
+  "mark": "BC",
+  "art": "RISE BEYOND LIMITS",
+  "official": "https://www.crunchyroll.com/search?q=Black%20Clover",
+  "colors": [
+    "#7b9d3c",
+    "#1c2637"
+  ],
+  "description": "A determined young magic knight aims to become the Wizard King.",
+  "seasons": 4,
+  "episodes": 170,
+  "episodeSources": {}
+}

@@ -1,0 +1,17 @@
+{
+  "id": "planetes",
+  "title": "Planetes",
+  "genre": "Sci-Fi",
+  "year": "2003",
+  "mark": "✦",
+  "art": "THE DISTANCE BETWEEN US",
+  "official": "https://en.wikipedia.org/wiki/Planetes",
+  "colors": [
+    "#5eaccf",
+    "#23345e"
+  ],
+  "description": "A thoughtful science-fiction series about a crew working in orbital space.",
+  "seasons": 1,
+  "episodes": 26,
+  "episodeSources": {}
+}

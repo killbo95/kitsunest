@@ -1,0 +1,17 @@
+{
+  "id": "myhero",
+  "title": "My Hero Academia",
+  "genre": "Action",
+  "year": "2016",
+  "mark": "MHA",
+  "art": "GO BEYOND",
+  "official": "https://www.crunchyroll.com/search?q=My%20Hero%20Academia",
+  "colors": [
+    "#5b9e6d",
+    "#27304f"
+  ],
+  "description": "A determined student trains to become a hero in a world where many people have powers.",
+  "seasons": 7,
+  "episodes": 25,
+  "episodeSources": {}
+}

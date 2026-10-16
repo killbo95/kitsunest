@@ -1,0 +1,17 @@
+{
+  "id": "mob",
+  "title": "Mob Psycho 100",
+  "genre": "Action",
+  "year": "2016",
+  "mark": "100",
+  "art": "POWER WITHIN",
+  "official": "https://mobpsycho100.com/2nd/",
+  "colors": [
+    "#52b8a9",
+    "#393b87"
+  ],
+  "description": "A quiet student with extraordinary psychic powers learns what really matters.",
+  "seasons": 3,
+  "episodes": 12,
+  "episodeSources": {}
+}

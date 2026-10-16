@@ -1,0 +1,17 @@
+{
+  "id": "fireforce",
+  "title": "Fire Force",
+  "genre": "Action",
+  "year": "2019",
+  "mark": "炎",
+  "art": "FIGHT THE FLAMES",
+  "official": "https://www.crunchyroll.com/search?q=Fire%20Force",
+  "colors": [
+    "#e85c32",
+    "#3b1c39"
+  ],
+  "description": "Special fire soldiers investigate spontaneous human combustion and battle infernals.",
+  "seasons": 2,
+  "episodes": 24,
+  "episodeSources": {}
+}
