@@ -1,0 +1,82 @@
+# .github/workflows/workflow-refresh.yml
+#
+# A safe, manually-triggered workflow controller template.
+# IMPORTANT: Replace the example tasks with your real commands/jobs.
+# GitHub Actions cannot automatically discover and rerun arbitrary skipped
+# jobs from other workflows. This file provides a sequential execution pattern.
+
+name: Workflow Refresh Controller
+
+on:
+  workflow_dispatch:
+    inputs:
+      refresh_reason:
+        description: "Why are you refreshing the workflow?"
+        required: false
+        default: "Manual refresh"
+
+# Prevent two copies of this controller from running at the same time.
+concurrency:
+  group: workflow-refresh-controller-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: Check workflow state
+    runs-on: ubuntu-latest
+    steps:
+      - name: Explain refresh run
+        run: |
+          echo "Refresh requested: ${{ inputs.refresh_reason }}"
+          echo "This controller runs jobs in dependency order."
+          echo "Replace the example tasks with your real workflow actions."
+
+  high_priority:
+    name: High-priority actions
+    needs: check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run high-priority task
+        run: |
+          echo "Replace this with your high-priority command."
+          # Example:
+          # ./scripts/high-priority-task.sh
+
+  normal_priority:
+    name: Normal-priority actions
+    needs: high_priority
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run normal-priority task
+        run: |
+          echo "Replace this with your normal-priority command."
+          # Example:
+          # ./scripts/normal-task.sh
+
+  recovery_check:
+    name: Recovery / skipped-action check
+    needs: [check, high_priority, normal_priority]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Report job results
+        env:
+          CHECK_RESULT: ${{ needs.check.result }}
+          HIGH_PRIORITY_RESULT: ${{ needs.high_priority.result }}
+          NORMAL_PRIORITY_RESULT: ${{ needs.normal_priority.result }}
+        run: |
+          echo "check: ${CHECK_RESULT}"
+          echo "high_priority: ${HIGH_PRIORITY_RESULT}"
+          echo "normal_priority: ${NORMAL_PRIORITY_RESULT}"
+
+          if [ "$CHECK_RESULT" != "success" ] || \
+             [ "$HIGH_PRIORITY_RESULT" != "success" ] || \
+             [ "$NORMAL_PRIORITY_RESULT" != "success" ]; then
+            echo "::warning::One or more jobs failed or were skipped. Review the job logs and rerun after correcting the cause."
+            exit 1
+          fi
+
+          echo "All configured actions completed successfully."
