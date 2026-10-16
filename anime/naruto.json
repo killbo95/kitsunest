@@ -1,8 +1,8 @@
 {
   "id": "naruto0",
   "title": "Naruto",
-  "genre": "Action",
-  "year": "—",
+  "genre": "Action / Adventure",
+  "year": "2002",
   "mark": "N",
   "art": "DISCOVER THE STORY",
   "official": "https://www.crunchyroll.com/search?q=Naruto",
@@ -10,8 +10,8 @@
     "#d96d56",
     "#34203d"
   ],
-  "description": "Explore Naruto in the KitsuNest anime discovery catalogue. Check official sources for regional viewing options.",
+  "description": "Naruto Uzumaki, a young ninja who dreams of becoming his village's leader, works hard to earn recognition while facing challenging missions and powerful enemies.",
   "seasons": 1,
-  "episodes": 12,
+  "episodes": 220,
   "episodeSources": {}
 }
