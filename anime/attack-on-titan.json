@@ -1,8 +1,8 @@
 {
   "id": "attackontitan8",
   "title": "Attack on Titan",
-  "genre": "Action",
-  "year": "—",
+  "genre": "Action / Dark Fantasy",
+  "year": "2013",
   "mark": "AO",
   "art": "DISCOVER THE STORY",
   "official": "https://www.crunchyroll.com/search?q=Attack%20on%20Titan",
@@ -10,8 +10,8 @@
     "#4e9eb7",
     "#20294d"
   ],
-  "description": "Explore Attack on Titan in the KitsuNest anime discovery catalogue. Check official sources for regional viewing options.",
-  "seasons": 1,
-  "episodes": 12,
+  "description": "Humanity lives behind enormous walls to survive against giant humanoid Titans. Eren Yeager and his friends join the fight and uncover secrets about their world.",
+  "seasons": 4,
+  "episodes": 25,
   "episodeSources": {}
 }
