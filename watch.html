@@ -5,7 +5,7 @@
 </style></head><body>
 <header><div class="wrap nav"><a class="brand" href="./index.html"><b>✦</b>KitsuNest</a><a class="back" href="./index.html">← Back to library</a></div></header>
 <main class="wrap content"><div class="crumb"><a href="./index.html">Home</a> / <a id="seriesLink" href="./index.html">Anime</a> / <span id="crumbEpisode">Episode</span></div>
-<h1 id="heading">Watch episode</h1><div class="muted" id="subheading">KitsuNest episode player</div>
+<h1 id="heading">Watch episode</h1><div class="muted" id="subheading">Loading anime details…</div><p id="animeDetails" class="muted" style="margin:8px 0 0"></p>
 <div class="player" id="player"><div class="empty"><div class="symbol">▶</div><h2>Player not configured yet</h2><p>This episode does not have an authorized embeddable video source configured. Add an HTTPS embed URL for this episode in the <code>episodeSources</code> section of <code>watch.html</code>.</p><a class="pill" href="./index.html">Browse anime</a></div></div>
 <section class="panel season-panel" aria-label="Choose season"><h2>Seasons</h2><div id="seasons" class="season-list"></div></section>
 <div class="notice">Only use embed URLs from official providers or sources that expressly allow you to embed and share the video. A normal watch-page URL may not work in an iframe.</div>
@@ -72,57 +72,80 @@ episodeSources.haikyu = {
   24: "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/H/Haikyuu/Season%201/Episode%2024//24%20Removing%20the%20Solitary%20King.mp4",
   25: "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/H/Haikyuu/Season%201/Episode%2025//25%20The%20Third%20Day.mp4"
 };
-var knownShows = {
-  haikyu:{title:"Haikyu!!",episodes:25,seasons:4},
-  tbate:{title:"The Beginning After the End",episodes:12,seasons:1},
-  hellmode:{title:"Hell Mode",episodes:12,seasons:1},
-  mob:{title:"Mob Psycho 100",episodes:12,seasons:3},
-  littlewitch:{title:"Little Witch Academia",episodes:25,seasons:1},
-  planetes:{title:"Planetes",episodes:26,seasons:1}
-};
+// Anime details are loaded from one JSON file per series in ./anime/.
+
 function getParam(key){return new URLSearchParams(location.search).get(key)}
-var id=getParam("show")||"haikyu";
-var savedShow=knownShows[id];
-var show={
-  title:getParam("title") || (savedShow && savedShow.title) || ("Anime: "+id),
-  episodes:Math.max(1,parseInt(getParam("episodes") || (savedShow && savedShow.episodes) || "12",10)||12),
-  seasons:Math.max(1,parseInt(getParam("seasons") || (savedShow && savedShow.seasons) || "1",10)||1)
-};
-var season=Math.min(show.seasons,Math.max(1,parseInt(getParam("season")||"1",10)||1));
+var id=(getParam("show")||"haikyu").replace(/[^a-zA-Z0-9_-]/g,"");
 var episode=Math.max(1,parseInt(getParam("episode")||"1",10)||1);
-episode=Math.min(episode,show.episodes);
-document.title=show.title+" — Episode "+episode+" | KitsuNest";
-document.getElementById("heading").textContent=show.title+" — Episode "+episode;
-document.getElementById("subheading").textContent="Season "+season+" · Episode "+episode+" · "+show.seasons+" season"+(show.seasons===1?"":"s")+" listed";
-document.getElementById("seriesLink").textContent=show.title;
-document.getElementById("crumbEpisode").textContent="Episode "+episode;
-var url=season===1 ? (episodeSources[id]||{})[episode] : null;
-var player=document.getElementById("player");
-if(typeof url==="string" && /^https:\/\//i.test(url) && url.indexOf("example.")===-1){
-  if (/\.mp4(?:$|[?#])/i.test(url)) {
-    var video=document.createElement("video");video.src=url;video.controls=true;video.playsInline=true;video.preload="metadata";video.style.width="100%";video.style.height="100%";video.style.objectFit="contain";video.title=show.title+" episode "+episode;
-    video.addEventListener("error",function(){player.innerHTML='<div class="empty"><h2>Video could not load</h2><p>The source may block direct playback or require a different authorized embed URL.</p><a class="pill" href="'+url.replace(/&/g,"&amp;")+'" target="_blank" rel="noopener">Open video source</a></div>';});
-    player.replaceChildren(video);
-  } else {
-    var frame=document.createElement("iframe");frame.src=url;frame.title=show.title+" episode "+episode;frame.allow="autoplay; fullscreen; picture-in-picture";frame.allowFullscreen=true;frame.referrerPolicy="strict-origin-when-cross-origin";player.replaceChildren(frame);
+var season=Math.max(1,parseInt(getParam("season")||"1",10)||1);
+
+function renderWatch(data){
+  var show={
+    id:data.id||id,
+    title:data.title||("Anime: "+id),
+    episodes:Math.max(1,parseInt(data.episodes,10)||12),
+    seasons:Math.max(1,parseInt(data.seasons,10)||1),
+    genre:data.genre||"",
+    year:data.year||"",
+    description:data.description||"",
+    official:data.official||""
+  };
+  season=Math.min(show.seasons,season);
+  episode=Math.min(show.episodes,episode);
+  document.title=show.title+" — Episode "+episode+" | KitsuNest";
+  document.getElementById("heading").textContent=show.title+" — Episode "+episode;
+  document.getElementById("subheading").textContent="Season "+season+" · Episode "+episode+" · "+show.seasons+" season"+(show.seasons===1?"":"s");
+  document.getElementById("seriesLink").textContent=show.title;
+  document.getElementById("crumbEpisode").textContent="Episode "+episode;
+  var details=[show.genre,show.year].filter(Boolean).join(" · ");
+  if(show.description) details+=(details?" — ":"")+show.description;
+  var detailsEl=document.getElementById("animeDetails");
+  detailsEl.textContent=details;
+  if(show.official && /^https:\/\//i.test(show.official)){
+    var officialLink=document.createElement("a");
+    officialLink.href=show.official;officialLink.target="_blank";officialLink.rel="noopener noreferrer";
+    officialLink.textContent=" Official site ↗";officialLink.style.marginLeft="6px";
+    detailsEl.appendChild(officialLink);
+  }
+  var url=season===1 ? (episodeSources[id]||{})[episode] : null;
+  var player=document.getElementById("player");
+  if(typeof url==="string" && /^https:\/\//i.test(url) && url.indexOf("example.")===-1){
+    if (/\.mp4(?:$|[?#])/i.test(url)) {
+      var video=document.createElement("video");video.src=url;video.controls=true;video.playsInline=true;video.preload="metadata";video.style.width="100%";video.style.height="100%";video.style.objectFit="contain";video.title=show.title+" episode "+episode;
+      video.addEventListener("error",function(){player.innerHTML='<div class="empty"><h2>Video could not load</h2><p>The source may block direct playback or require a different authorized embed URL.</p><a class="pill" href="'+url.replace(/&/g,"&amp;")+'" target="_blank" rel="noopener">Open video source</a></div>';});
+      player.replaceChildren(video);
+    } else {
+      var frame=document.createElement("iframe");frame.src=url;frame.title=show.title+" episode "+episode;frame.allow="autoplay; fullscreen; picture-in-picture";frame.allowFullscreen=true;frame.referrerPolicy="strict-origin-when-cross-origin";player.replaceChildren(frame);
+    }
+  }
+  var seasonList=document.getElementById("seasons");
+  seasonList.replaceChildren();
+  for(var s=1;s<=show.seasons;s++){
+    var sb=document.createElement("a");
+    sb.className="season-btn"+(s===season?" active":"");
+    sb.href="?show="+encodeURIComponent(id)+"&season="+s+"&episode=1";
+    sb.textContent="Season "+s;
+    sb.setAttribute("aria-current",s===season?"page":"false");
+    seasonList.appendChild(sb);
+  }
+  var list=document.getElementById("episodes");
+  list.replaceChildren();
+  for(var i=1;i<=show.episodes;i++){
+    var a=document.createElement("a");
+    a.className="ep"+(i===episode?" active":"");
+    a.href="?show="+encodeURIComponent(id)+"&season="+season+"&episode="+i;
+    a.setAttribute("aria-current",i===episode?"page":"false");
+    a.innerHTML="Episode "+i+"<small>"+(season===1 && ((episodeSources[id]||{})[i])?"Player available":"Source not added")+"</small>";
+    list.appendChild(a);
   }
 }
-var seasonList=document.getElementById("seasons");
-for(var s=1;s<=show.seasons;s++){
-  var sb=document.createElement("a");
-  sb.className="season-btn"+(s===season?" active":"");
-  sb.href="?show="+encodeURIComponent(id)+"&title="+encodeURIComponent(show.title)+"&seasons="+show.seasons+"&episodes="+show.episodes+"&season="+s+"&episode=1";
-  sb.textContent="Season "+s;
-  sb.setAttribute("aria-current",s===season?"page":"false");
-  seasonList.appendChild(sb);
-}
-var list=document.getElementById("episodes");
-for(var i=1;i<=show.episodes;i++){
-  var a=document.createElement("a");
-  a.className="ep"+(i===episode?" active":"");
-  a.href="?show="+encodeURIComponent(id)+"&title="+encodeURIComponent(show.title)+"&seasons="+show.seasons+"&episodes="+show.episodes+"&season="+season+"&episode="+i;
-  a.setAttribute("aria-current",i===episode?"page":"false");
-  a.innerHTML="Episode "+i+"<small>"+(season===1 && ((episodeSources[id]||{})[i])?"Player available":"Source not added")+"</small>";
-  list.appendChild(a);
-}
+fetch("./anime/"+encodeURIComponent(id)+".json")
+  .then(function(response){if(!response.ok)throw new Error("Anime file not found");return response.json();})
+  .then(renderWatch)
+  .catch(function(){
+    document.getElementById("heading").textContent="Anime details unavailable";
+    document.getElementById("subheading").textContent="Could not load anime/"+id+".json";
+    document.getElementById("animeDetails").textContent="Check that the anime JSON file exists in the repository.";
+    document.getElementById("player").innerHTML='<div class="empty"><h2>Could not load this anime</h2><p>Its metadata file may be missing. Return to the library and try again.</p><a class="pill" href="./index.html">Browse anime</a></div>';
+  });
 </script></body></html>
