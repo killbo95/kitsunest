@@ -1,7 +1,7 @@
 {
   "id": "onepiece",
   "title": "One Piece",
-  "genre": "Adventure",
+  "genre": "Adventure / Fantasy",
   "year": "1999",
   "mark": "OP",
   "art": "SAIL TOWARD FREEDOM",
@@ -10,8 +10,8 @@
     "#277fb7",
     "#17274c"
   ],
-  "description": "A crew of pirates sets out across the seas in search of the legendary treasure.",
+  "description": "Monkey D. Luffy sails with the Straw Hat Pirates in search of the legendary One Piece treasure. Their journey brings new friends, powerful rivals, and adventures across the Grand Line.",
   "seasons": 1,
-  "episodes": 1000,
+  "episodes": 12,
   "episodeSources": {}
 }
