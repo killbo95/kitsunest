@@ -1,7 +1,7 @@
 {
   "id": "jujutsu",
   "title": "Jujutsu Kaisen",
-  "genre": "Action",
+  "genre": "Action / Supernatural",
   "year": "2020",
   "mark": "呪",
   "art": "CURSES AWAKEN",
@@ -10,7 +10,7 @@
     "#7a65ce",
     "#24253c"
   ],
-  "description": "Students who fight dangerous curses face supernatural battles and difficult choices.",
+  "description": "Yuji Itadori enters the dangerous world of jujutsu sorcerers after becoming the host of a powerful cursed object. He trains to protect people from curses.",
   "seasons": 2,
   "episodes": 24,
   "episodeSources": {}
