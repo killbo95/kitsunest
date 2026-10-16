@@ -1,7 +1,7 @@
 {
   "id": "blackclover",
   "title": "Black Clover",
-  "genre": "Fantasy",
+  "genre": "Action / Fantasy",
   "year": "2017",
   "mark": "BC",
   "art": "RISE BEYOND LIMITS",
@@ -10,8 +10,8 @@
     "#7b9d3c",
     "#1c2637"
   ],
-  "description": "A determined young magic knight aims to become the Wizard King.",
+  "description": "In a world where magic is everything, Asta is born without it. With determination and a mysterious anti-magic grimoire, he aims to become the Wizard King alongside his rival Yuno.",
   "seasons": 4,
-  "episodes": 170,
+  "episodes": 51,
   "episodeSources": {}
 }
