@@ -1,6 +1,7 @@
 {
   "id": "black-clover-sword-of-the-wizard-king",
   "title": "Black Clover: Sword of the Wizard King",
+  "poster": "",
   "genre": "Drama",
   "year": "—",
   "mark": "BC",
@@ -13,7 +14,17 @@
   "description": "Explore Black Clover: Sword of the Wizard King in the KitsuNest anime discovery catalogue. Check official sources for regional viewing options.",
   "seasons": 1,
   "episodes": 12,
-  "episodeSources": {},
-  "seasonEpisodeSources": {},
-  "seasonEpisodeCounts": {}
+  "seasonData": [],
+  "episodeSources": {
+    "1": "https://photos.app.goo.gl/ZyA8pHtTQnCL1GJf7"
+  },
+  "seasonEpisodeSources": {
+    "1": {
+      "1": "https://photos.app.goo.gl/ZyA8pHtTQnCL1GJf7"
+    }
+  },
+  "seasonEpisodeCounts": {
+    "1": 12
+  },
+  "upcomingReleases": []
 }
