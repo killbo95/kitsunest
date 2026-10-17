@@ -12,9 +12,17 @@
   ],
   "description": "Explore D.Gray-man in the KitsuNest anime discovery catalogue. Check official sources for regional viewing options.",
   "seasons": 1,
-  "episodes": 103,
+  "episodes": 12,
   "seasonData": [],
-  "episodeSources": {},
-  "seasonEpisodeSources": {},
-  "seasonEpisodeCounts": {}
+  "episodeSources": {
+    "5": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/D/D.Gray%20Man/Season%201/Episode%205//05%20Let%20Me%20Hear%20the%20Lullab.mp4"
+  },
+  "seasonEpisodeSources": {
+    "1": {
+      "5": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/D/D.Gray%20Man/Season%201/Episode%205//05%20Let%20Me%20Hear%20the%20Lullab.mp4"
+    }
+  },
+  "seasonEpisodeCounts": {
+    "1": 12
+  }
 }
