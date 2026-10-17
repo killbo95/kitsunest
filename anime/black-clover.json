@@ -14,7 +14,15 @@
   "seasons": 4,
   "episodes": 51,
   "seasonData": [],
-  "episodeSources": {},
-  "seasonEpisodeSources": {},
-  "seasonEpisodeCounts": {}
+  "episodeSources": {
+    "1": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%201/Episode%201//01%20Asta%20and%20Yuno.mp4"
+  },
+  "seasonEpisodeSources": {
+    "1": {
+      "1": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%201/Episode%201//01%20Asta%20and%20Yuno.mp4"
+    }
+  },
+  "seasonEpisodeCounts": {
+    "1": 51
+  }
 }
