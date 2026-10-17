@@ -30,7 +30,7 @@ function renderWatch(data){
     year:data.year||"",
     description:data.description||"",
     official:data.official||"",
-    episodeSources:data.episodeSources||{}
+    episodeSources:data.episodeSources||{},\n    seasonEpisodeSources:data.seasonEpisodeSources||{},\n    seasonEpisodeCounts:data.seasonEpisodeCounts||{}
   };
   season=Math.min(show.seasons,season);
   episode=Math.min(show.episodes,episode);
@@ -49,7 +49,7 @@ function renderWatch(data){
     officialLink.textContent=" Official site ↗";officialLink.style.marginLeft="6px";
     detailsEl.appendChild(officialLink);
   }
-  var url=season===1 ? (show.episodeSources||{})[episode] : null;
+  var url=seasonSources[episode];
   var player=document.getElementById("player");
   if(typeof url==="string" && /^https:\/\//i.test(url) && url.indexOf("example.")===-1){
     if (/\.mp4(?:$|[?#])/i.test(url)) {
@@ -72,12 +72,12 @@ function renderWatch(data){
   }
   var list=document.getElementById("episodes");
   list.replaceChildren();
-  for(var i=1;i<=show.episodes;i++){
+  for(var i=1;i<=seasonCount;i++){
     var a=document.createElement("a");
     a.className="ep"+(i===episode?" active":"");
     a.href="?show="+encodeURIComponent(id)+"&season="+season+"&episode="+i;
     a.setAttribute("aria-current",i===episode?"page":"false");
-    a.innerHTML="Episode "+i+"<small>"+(season===1 && ((show.episodeSources||{})[i])?"Player available":"Source not added")+"</small>";
+    a.innerHTML="Episode "+i+"<small>"+(seasonSources[i]?"Player available":"Source not added")+"</small>";
     list.appendChild(a);
   }
 }
