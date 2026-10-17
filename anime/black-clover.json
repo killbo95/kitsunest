@@ -14,29 +14,7 @@
   "seasons": 4,
   "episodes": 51,
   "seasonData": [],
-  "episodeSources": {
-    "1": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%201/Episode%201//01%20Asta%20and%20Yuno.mp4",
-    "2": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%201/Episode%202//02%20A%20Young%20Man's%20Vow.mp4",
-    "3": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%201/Episode%203//03%20To%20the%20Royal%20Capital!.mp4",
-    "4": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%201/Episode%204//04%20The%20Magic%20Knights%20Entrance%20Exam.mp4",
-    "5": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%201/Episode%205//05%20The%20Road%20to%20the%20Wizard%20King.mp4",
-    "6": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%201/Episode%206//06%20The%20Black%20Bulls.mp4",
-    "7": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%201/Episode%207//07%20Another%20New%20Member.mp4",
-    "8": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%201/Episode%208//08%20Go!%20Go!%20My%20First%20Mission.mp4"
-  },
-  "seasonEpisodeSources": {
-    "1": {
-      "1": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%201/Episode%201//01%20Asta%20and%20Yuno.mp4",
-      "2": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%201/Episode%202//02%20A%20Young%20Man's%20Vow.mp4",
-      "3": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%201/Episode%203//03%20To%20the%20Royal%20Capital!.mp4",
-      "4": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%201/Episode%204//04%20The%20Magic%20Knights%20Entrance%20Exam.mp4",
-      "5": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%201/Episode%205//05%20The%20Road%20to%20the%20Wizard%20King.mp4",
-      "6": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%201/Episode%206//06%20The%20Black%20Bulls.mp4",
-      "7": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%201/Episode%207//07%20Another%20New%20Member.mp4",
-      "8": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%201/Episode%208//08%20Go!%20Go!%20My%20First%20Mission.mp4"
-    }
-  },
-  "seasonEpisodeCounts": {
-    "1": 51
-  }
+  "episodeSources": {},
+  "seasonEpisodeSources": {},
+  "seasonEpisodeCounts": {}
 }
