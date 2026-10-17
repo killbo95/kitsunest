@@ -38,7 +38,7 @@ function renderWatch(data){
   var seasonSources=(show.seasonEpisodeSources[String(season)]&&typeof show.seasonEpisodeSources[String(season)]==="object")?show.seasonEpisodeSources[String(season)]:(season===1?show.episodeSources:{});
   var configuredCount=parseInt(show.seasonEpisodeCounts[String(season)],10)||0;
   var sourceNumbers=Object.keys(seasonSources).map(Number).filter(function(n){return Number.isInteger(n)&&n>0});
-  var seasonCount=Math.max(1,configuredCount,season===1?show.episodes:1,...sourceNumbers);
+  var seasonCount=Math.max(1,configuredCount,show.episodes,...sourceNumbers);
   episode=Math.min(episode,seasonCount);
   document.title=show.title+" — Episode "+episode+" | KitsuNest";
   document.getElementById("heading").textContent=show.title+" — Episode "+episode;
@@ -87,7 +87,7 @@ function renderWatch(data){
     list.appendChild(a);
   }
 }
-fetch("./anime/"+encodeURIComponent(id)+".json")
+fetch("./anime/"+encodeURIComponent(id)+".json",{cache:"no-store"})
   .then(function(response){if(!response.ok)throw new Error("Anime file not found");return response.json();})
   .then(renderWatch)
   .catch(function(){
