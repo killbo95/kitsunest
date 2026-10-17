@@ -1,5 +1,5 @@
 {
-  "id": "blackclover",
+  "id": "black-clover",
   "title": "Black Clover",
   "genre": "Action / Fantasy",
   "year": "2017",
@@ -13,5 +13,16 @@
   "description": "In a world where magic is everything, Asta is born without it. With determination and a mysterious anti-magic grimoire, he aims to become the Wizard King alongside his rival Yuno.",
   "seasons": 4,
   "episodes": 51,
-  "episodeSources": {}
+  "seasonData": [],
+  "episodeSources": {
+    "1": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%201/Episode%201//01%20Asta%20and%20Yuno.mp4"
+  },
+  "seasonEpisodeSources": {
+    "1": {
+      "1": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%201/Episode%201//01%20Asta%20and%20Yuno.mp4"
+    }
+  },
+  "seasonEpisodeCounts": {
+    "1": 51
+  }
 }
