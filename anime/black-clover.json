@@ -16,12 +16,14 @@
   "seasonData": [],
   "episodeSources": {
     "1": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%201/Episode%201//01%20Asta%20and%20Yuno.mp4",
-    "2": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%201/Episode%202//02%20A%20Young%20Man's%20Vow.mp4"
+    "2": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%201/Episode%202//02%20A%20Young%20Man's%20Vow.mp4",
+    "3": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%201/Episode%203//03%20To%20the%20Royal%20Capital!.mp4"
   },
   "seasonEpisodeSources": {
     "1": {
       "1": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%201/Episode%201//01%20Asta%20and%20Yuno.mp4",
-      "2": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%201/Episode%202//02%20A%20Young%20Man's%20Vow.mp4"
+      "2": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%201/Episode%202//02%20A%20Young%20Man's%20Vow.mp4",
+      "3": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%201/Episode%203//03%20To%20the%20Royal%20Capital!.mp4"
     }
   },
   "seasonEpisodeCounts": {
