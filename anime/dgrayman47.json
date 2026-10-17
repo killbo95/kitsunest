@@ -14,7 +14,23 @@
   "seasons": 2,
   "episodes": 103,
   "seasonData": [],
-  "episodeSources": {},
-  "seasonEpisodeSources": {},
-  "seasonEpisodeCounts": {}
+  "episodeSources": {
+    "1": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/D/D.Gray%20Man/Season%201/Episode%201//01%20The%20Boy%20Who%20Hunts%20Akuma.mp4",
+    "2": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/D/D.Gray%20Man/Season%201/Episode%202//02%20The%20Black%20Order.mp4",
+    "3": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/D/D.Gray%20Man/Season%201/Episode%203//03%20The%20Ghost%20of%20Martel.mp4",
+    "4": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/D/D.Gray%20Man/Season%201/Episode%204//04%20Old%20Man%20of%20the%20Soil%20and%20a%20Lonely%20Night's%20Aria.mp4",
+    "5": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/D/D.Gray%20Man/Season%201/Episode%205//05%20Let%20Me%20Hear%20the%20Lullab.mp4"
+  },
+  "seasonEpisodeSources": {
+    "1": {
+      "1": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/D/D.Gray%20Man/Season%201/Episode%201//01%20The%20Boy%20Who%20Hunts%20Akuma.mp4",
+      "2": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/D/D.Gray%20Man/Season%201/Episode%202//02%20The%20Black%20Order.mp4",
+      "3": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/D/D.Gray%20Man/Season%201/Episode%203//03%20The%20Ghost%20of%20Martel.mp4",
+      "4": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/D/D.Gray%20Man/Season%201/Episode%204//04%20Old%20Man%20of%20the%20Soil%20and%20a%20Lonely%20Night's%20Aria.mp4",
+      "5": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/D/D.Gray%20Man/Season%201/Episode%205//05%20Let%20Me%20Hear%20the%20Lullab.mp4"
+    }
+  },
+  "seasonEpisodeCounts": {
+    "1": 103
+  }
 }
