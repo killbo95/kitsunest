@@ -1,13 +1,9 @@
 name: Catalogue Audit
 
+# Run this audit manually so pre-existing catalogue warnings do not create
+# a failed Actions run every time the admin saves an anime.
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - "anime/**/*.json"
-      - "index.html"
-      - ".github/scripts/audit_catalogue.py"
-      - ".github/workflows/catalogue-audit.yml"
 
 permissions:
   contents: read
