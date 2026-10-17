@@ -18,6 +18,11 @@ def normalize(value):
     return re.sub(r"[^a-z0-9]+", "", value)
 
 
+def legacy_id_base(value):
+    # Older generated record IDs often append digits to the title slug.
+    return re.sub(r"\d+$", "", normalize(value))
+
+
 def main():
     errors = []
     warnings = []
@@ -51,7 +56,7 @@ def main():
             errors.append(f"{path.relative_to(ROOT)}: missing/empty string field 'id'")
         else:
             id_paths[normalize(anime_id)].append((anime_id, path.name))
-            if normalize(anime_id) != normalize(path.stem):
+            if legacy_id_base(anime_id) != normalize(path.stem):
                 warnings.append(f"ID/filename mismatch: {path.as_posix()} has id={anime_id!r}")
 
         for field in ("episodeSources", "seasonEpisodeSources"):
@@ -79,7 +84,8 @@ def main():
         if not match:
             warnings.append("Could not locate the 'var shows=[...]' catalogue array in index.html; catalogue reference checks skipped.")
         else:
-            catalogue_entries = re.findall(r'\{\s*id\s*:\s*["\']([^"\']+)["\']\s*,\s*title\s*:\s*["\']([^"\']+)["\']', match.group(1))
+            # Catalogue strings use double quotes; allow apostrophes inside titles such as Kuroko's.
+            catalogue_entries = re.findall(r'\{\s*id\s*:\s*"([^"]+)"\s*,\s*title\s*:\s*"((?:\\\\.|[^"\\\\])*)"', match.group(1))
             if not catalogue_entries:
                 warnings.append("Catalogue array was found, but no {id, title} entries matched the audit pattern.")
 
