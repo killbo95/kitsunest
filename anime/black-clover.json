@@ -15,16 +15,15 @@
   "episodes": 51,
   "seasonData": [],
   "episodeSources": {},
-  "seasonEpisodeSources": {
-    "1": {},
-    "5": {
-      "1": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%202/Episode%20171//171%20The%20Battle%20Begins.mp4",
-      "2": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%202/Episode%20172//172%20The%20Door%20to%20Hell.mp4"
+  "seasonEpisodeSources": {},
+  "seasonEpisodeCounts": {},
+  "upcomingReleases": [
+    {
+      "type": "episode",
+      "season": 5,
+      "episode": 3,
+      "dateTime": "2026-10-17T15:00:00.000Z",
+      "note": ""
     }
-  },
-  "seasonEpisodeCounts": {
-    "1": 51,
-    "5": 2
-  },
-  "upcomingReleases": []
+  ]
 }
