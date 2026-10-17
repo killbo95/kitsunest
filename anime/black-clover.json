@@ -14,13 +14,9 @@
   "seasons": 5,
   "episodes": 51,
   "seasonData": [],
-  "episodeSources": {
-    "2": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%202/Episode%20172//172%20The%20Door%20to%20Hell.mp4"
-  },
+  "episodeSources": {},
   "seasonEpisodeSources": {
-    "1": {
-      "2": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%202/Episode%20172//172%20The%20Door%20to%20Hell.mp4"
-    },
+    "1": {},
     "5": {
       "1": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%202/Episode%20171//171%20The%20Battle%20Begins.mp4"
     }
