@@ -14,7 +14,15 @@
   "seasons": 4,
   "episodes": 51,
   "seasonData": [],
-  "episodeSources": {},
-  "seasonEpisodeSources": {},
-  "seasonEpisodeCounts": {}
+  "episodeSources": {
+    "8": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%201/Episode%208//08%20Go!%20Go!%20My%20First%20Mission.mp4"
+  },
+  "seasonEpisodeSources": {
+    "1": {
+      "8": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%201/Episode%208//08%20Go!%20Go!%20My%20First%20Mission.mp4"
+    }
+  },
+  "seasonEpisodeCounts": {
+    "1": 51
+  }
 }
