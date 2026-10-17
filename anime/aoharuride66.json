@@ -14,8 +14,24 @@
   "seasons": 1,
   "episodes": 12,
   "seasonData": [],
-  "episodeSources": {},
-  "seasonEpisodeSources": {},
+  "episodeSources": {
+    "1": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/A/Ao%20Haru%20Ride/Season%201/Episode%201//01%20Page%200.mp4",
+    "2": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/A/Ao%20Haru%20Ride/Season%201/Episode%202//02%20Page%201.mp4",
+    "3": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/A/Ao%20Haru%20Ride/Season%201/Episode%203//03%20Page%202.mp4",
+    "4": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/A/Ao%20Haru%20Ride/Season%201/Episode%204//04%20Page%203.mp4",
+    "5": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/A/Ao%20Haru%20Ride/Season%201/Episode%205//05%20Page%204.mp4",
+    "6": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/A/Ao%20Haru%20Ride/Season%201/Episode%206//06%20Page%205.mp4"
+  },
+  "seasonEpisodeSources": {
+    "1": {
+      "1": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/A/Ao%20Haru%20Ride/Season%201/Episode%201//01%20Page%200.mp4",
+      "2": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/A/Ao%20Haru%20Ride/Season%201/Episode%202//02%20Page%201.mp4",
+      "3": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/A/Ao%20Haru%20Ride/Season%201/Episode%203//03%20Page%202.mp4",
+      "4": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/A/Ao%20Haru%20Ride/Season%201/Episode%204//04%20Page%203.mp4",
+      "5": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/A/Ao%20Haru%20Ride/Season%201/Episode%205//05%20Page%204.mp4",
+      "6": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/A/Ao%20Haru%20Ride/Season%201/Episode%206//06%20Page%205.mp4"
+    }
+  },
   "seasonEpisodeCounts": {
     "1": 12
   },
