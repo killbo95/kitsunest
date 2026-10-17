@@ -60,7 +60,8 @@ function renderWatch(data){
     genre:data.genre||"",
     year:data.year||"",
     description:data.description||"",
-    official:data.official||""
+    official:data.official||"",
+    episodeSources:data.episodeSources||{}
   };
   season=Math.min(show.seasons,season);
   episode=Math.min(show.episodes,episode);
