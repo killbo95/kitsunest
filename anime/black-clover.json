@@ -16,7 +16,9 @@
   "seasonData": [],
   "episodeSources": {},
   "seasonEpisodeSources": {},
-  "seasonEpisodeCounts": {},
+  "seasonEpisodeCounts": {
+    "5": 2
+  },
   "upcomingReleases": [
     {
       "type": "episode",
