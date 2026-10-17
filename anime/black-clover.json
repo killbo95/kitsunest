@@ -11,7 +11,7 @@
     "#1c2637"
   ],
   "description": "In a world where magic is everything, Asta is born without it. With determination and a mysterious anti-magic grimoire, he aims to become the Wizard King alongside his rival Yuno.",
-  "seasons": 4,
+  "seasons": 5,
   "episodes": 51,
   "seasonData": [],
   "episodeSources": {
@@ -19,6 +19,7 @@
     "2": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%201/Episode%202//02%20A%20Young%20Man's%20Vow.mp4",
     "3": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%201/Episode%203//03%20To%20the%20Royal%20Capital!.mp4"
   },
+  "upcomingReleases": [],
   "seasonEpisodeSources": {
     "1": {
       "1": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%201/Episode%201//01%20Asta%20and%20Yuno.mp4",
@@ -33,6 +34,5 @@
   "seasonEpisodeCounts": {
     "1": 51,
     "5": 2
-  },
-  "upcomingReleases": []
+  }
 }
