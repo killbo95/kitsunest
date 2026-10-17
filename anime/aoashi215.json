@@ -14,8 +14,32 @@
   "seasons": 1,
   "episodes": 24,
   "seasonData": [],
-  "episodeSources": {},
-  "seasonEpisodeSources": {},
+  "episodeSources": {
+    "1": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/A/Ao%20Ashi/Season1/Episode%201//01%20First%20Touch.mp4",
+    "2": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/A/Ao%20Ashi/Season1/Episode%202//02%20Tokyo%20City%20Esperion.mp4",
+    "3": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/A/Ao%20Ashi/Season1/Episode%202//02%20Tokyo%20City%20Esperion.mp4",
+    "4": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/A/Ao%20Ashi/Season1/Episode%204//04%20CROW.mp4",
+    "5": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/A/Ao%20Ashi/Season1/Episode%205//05%20Orange%20Scenery.mp4",
+    "6": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/A/Ao%20Ashi/Season1/Episode%206//06%20First%20Fan.mp4",
+    "7": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/A/Ao%20Ashi/Season1/Episode%207//07%20The%20First%20Youth%20Match.mp4",
+    "8": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/A/Ao%20Ashi/Season1/Episode%208//08%20Night%20Training.mp4",
+    "9": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/A/Ao%20Ashi/Season1/Episode%209//09%20A%20Broader%20Soccer.mp4",
+    "10": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/A/Ao%20Ashi/Season1/Episode%2010//10%20No%20Compromises.mp4"
+  },
+  "seasonEpisodeSources": {
+    "1": {
+      "1": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/A/Ao%20Ashi/Season1/Episode%201//01%20First%20Touch.mp4",
+      "2": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/A/Ao%20Ashi/Season1/Episode%202//02%20Tokyo%20City%20Esperion.mp4",
+      "3": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/A/Ao%20Ashi/Season1/Episode%202//02%20Tokyo%20City%20Esperion.mp4",
+      "4": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/A/Ao%20Ashi/Season1/Episode%204//04%20CROW.mp4",
+      "5": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/A/Ao%20Ashi/Season1/Episode%205//05%20Orange%20Scenery.mp4",
+      "6": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/A/Ao%20Ashi/Season1/Episode%206//06%20First%20Fan.mp4",
+      "7": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/A/Ao%20Ashi/Season1/Episode%207//07%20The%20First%20Youth%20Match.mp4",
+      "8": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/A/Ao%20Ashi/Season1/Episode%208//08%20Night%20Training.mp4",
+      "9": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/A/Ao%20Ashi/Season1/Episode%209//09%20A%20Broader%20Soccer.mp4",
+      "10": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/A/Ao%20Ashi/Season1/Episode%2010//10%20No%20Compromises.mp4"
+    }
+  },
   "seasonEpisodeCounts": {
     "1": 24
   },
