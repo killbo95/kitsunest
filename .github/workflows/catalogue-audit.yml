@@ -1,0 +1,49 @@
+name: Catalogue Audit
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "anime/**/*.json"
+      - "index.html"
+      - ".github/scripts/audit_catalogue.py"
+      - ".github/workflows/catalogue-audit.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: catalogue-audit-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  audit:
+    name: Read-only catalogue checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Audit JSON records and catalogue references
+        id: audit
+        run: |
+          set +e
+          python .github/scripts/audit_catalogue.py 2>&1 | tee catalogue-audit-report.txt
+          result=${PIPESTATUS[0]}
+          echo "exit_code=$result" >> "$GITHUB_OUTPUT"
+          exit "$result"
+
+      - name: Save audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: kitsunest-catalogue-audit
+          path: catalogue-audit-report.txt
+          if-no-files-found: ignore
+          retention-days: 14
