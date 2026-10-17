@@ -35,7 +35,11 @@ function renderWatch(data){
     seasonEpisodeCounts:data.seasonEpisodeCounts||{}
   };
   season=Math.min(show.seasons,season);
-  episode=Math.min(show.episodes,episode);
+  var seasonSources=(show.seasonEpisodeSources[String(season)]&&typeof show.seasonEpisodeSources[String(season)]==="object")?show.seasonEpisodeSources[String(season)]:(season===1?show.episodeSources:{});
+  var configuredCount=parseInt(show.seasonEpisodeCounts[String(season)],10)||0;
+  var sourceNumbers=Object.keys(seasonSources).map(Number).filter(function(n){return Number.isInteger(n)&&n>0});
+  var seasonCount=Math.max(1,configuredCount,season===1?show.episodes:1,...sourceNumbers);
+  episode=Math.min(episode,seasonCount);
   document.title=show.title+" — Episode "+episode+" | KitsuNest";
   document.getElementById("heading").textContent=show.title+" — Episode "+episode;
   document.getElementById("subheading").textContent="Season "+season+" · Episode "+episode+" · "+show.seasons+" season"+(show.seasons===1?"":"s");
@@ -51,11 +55,6 @@ function renderWatch(data){
     officialLink.textContent=" Official site ↗";officialLink.style.marginLeft="6px";
     detailsEl.appendChild(officialLink);
   }
-  var seasonSources=(show.seasonEpisodeSources[String(season)]&&typeof show.seasonEpisodeSources[String(season)]==="object")?show.seasonEpisodeSources[String(season)]:(season===1?show.episodeSources:{});
-  var configuredCount=parseInt(show.seasonEpisodeCounts[String(season)],10)||0;
-  var sourceNumbers=Object.keys(seasonSources).map(Number).filter(function(n){return Number.isInteger(n)&&n>0});
-  var seasonCount=Math.max(1,configuredCount,season===1?show.episodes:1,...sourceNumbers);
-  episode=Math.min(episode,seasonCount);
   var url=seasonSources[episode];
   var player=document.getElementById("player");
   if(typeof url==="string" && /^https:\/\//i.test(url) && url.indexOf("example.")===-1){
