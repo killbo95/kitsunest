@@ -12,27 +12,10 @@
   ],
   "description": "In a world where magic is everything, Asta is born without it. With determination and a mysterious anti-magic grimoire, he aims to become the Wizard King alongside his rival Yuno.",
   "seasons": 5,
-  "episodes": 51,
+  "episodes": 52,
   "seasonData": [],
-  "episodeSources": {
-    "1": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%201/Episode%201//01%20Asta%20and%20Yuno.mp4",
-    "2": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%201/Episode%202//02%20A%20Young%20Man's%20Vow.mp4",
-    "3": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%201/Episode%203//03%20To%20the%20Royal%20Capital!.mp4"
-  },
+  "episodeSources": {},
   "upcomingReleases": [],
-  "seasonEpisodeSources": {
-    "1": {
-      "1": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%201/Episode%201//01%20Asta%20and%20Yuno.mp4",
-      "2": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%201/Episode%202//02%20A%20Young%20Man's%20Vow.mp4",
-      "3": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%201/Episode%203//03%20To%20the%20Royal%20Capital!.mp4"
-    },
-    "5": {
-      "1": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%202/Episode%20171//171%20The%20Battle%20Begins.mp4",
-      "2": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%202/Episode%20172//172%20The%20Door%20to%20Hell.mp4"
-    }
-  },
-  "seasonEpisodeCounts": {
-    "1": 51,
-    "5": 2
-  }
+  "seasonEpisodeSources": {},
+  "seasonEpisodeCounts": {}
 }
