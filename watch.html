@@ -35,7 +35,7 @@ function renderWatch(data){
     seasonEpisodeCounts:data.seasonEpisodeCounts||{}
   };
   season=Math.min(show.seasons,season);
-  var seasonSources=(show.seasonEpisodeSources[String(season)]&&typeof show.seasonEpisodeSources[String(season)]==="object")?show.seasonEpisodeSources[String(season)]:(season===1?show.episodeSources:{});
+  var seasonSources=season===1?Object.assign({},show.episodeSources,show.seasonEpisodeSources[String(season)]||{}):(show.seasonEpisodeSources[String(season)]&&typeof show.seasonEpisodeSources[String(season)]==="object"?show.seasonEpisodeSources[String(season)]:{});
   var configuredCount=parseInt(show.seasonEpisodeCounts[String(season)],10)||0;
   var sourceNumbers=Object.keys(seasonSources).map(Number).filter(function(n){return Number.isInteger(n)&&n>0});
   var seasonCount=Math.max(1,configuredCount,show.episodes,...sourceNumbers);
