@@ -15,7 +15,11 @@
   "episodes": 51,
   "seasonData": [],
   "episodeSources": {},
-  "seasonEpisodeSources": {},
+  "seasonEpisodeSources": {
+    "5": {
+      "2": "https://www.cartoonsarea.cc/USER-DATA/Cartoonsarea/Japines%20Language/B/Black%20Clover/Season%202/Episode%20172//172%20The%20Door%20to%20Hell.mp4"
+    }
+  },
   "seasonEpisodeCounts": {
     "5": 2
   },
