@@ -38,7 +38,8 @@ function renderWatch(data){
   var seasonSources=season===1?Object.assign({},show.episodeSources,show.seasonEpisodeSources[String(season)]||{}):(show.seasonEpisodeSources[String(season)]&&typeof show.seasonEpisodeSources[String(season)]==="object"?show.seasonEpisodeSources[String(season)]:{});
   var configuredCount=parseInt(show.seasonEpisodeCounts[String(season)],10)||0;
   var sourceNumbers=Object.keys(seasonSources).map(Number).filter(function(n){return Number.isInteger(n)&&n>0});
-  var seasonCount=Math.max(1,configuredCount,show.episodes,...sourceNumbers);
+  var fallbackCount=season===1?(parseInt(show.episodes,10)||12):(sourceNumbers.length?Math.max.apply(null,sourceNumbers):12);
+  var seasonCount=Math.max(1,configuredCount||fallbackCount,...sourceNumbers);
   episode=Math.min(episode,seasonCount);
   document.title=show.title+" — Episode "+episode+" | KitsuNest";
   document.getElementById("heading").textContent=show.title+" — Episode "+episode;
