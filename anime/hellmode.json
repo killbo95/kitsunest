@@ -1,0 +1,22 @@
+{
+  "id": "hellmode",
+  "title": "Hell Mode",
+  "poster": "",
+  "genre": "Fantasy",
+  "year": "2026",
+  "mark": "HM",
+  "art": "LEVEL UP YOUR FATE",
+  "official": "https://hellmode-anime.com/",
+  "colors": [
+    "#bd6b45",
+    "#4c2448"
+  ],
+  "description": "A fantasy adventure set in a notoriously difficult game-like world.",
+  "seasons": 1,
+  "episodes": 12,
+  "seasonData": [],
+  "episodeSources": {},
+  "seasonEpisodeSources": {},
+  "seasonEpisodeCounts": {},
+  "upcomingReleases": []
+}
