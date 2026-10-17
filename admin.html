@@ -27,7 +27,8 @@ $("login").onclick=()=>{if(!API){message("Worker URL not set. Configure it in th
 $("logout").onclick=async()=>{try{await api("/auth/logout",{method:"POST",body:"{}"})}catch{}setAuth(false);fill(null);message("Signed out.")};
 $("new").onclick=()=>{clearMessage();fill(null);renderList()};
 $("reset").onclick=()=>fill(selected?items.find(x=>x.id===selected):null);
-$("filter").oninput=renderList;\n$("saveEpisode").onclick=saveEpisode;
+$("filter").oninput=renderList;
+$("saveEpisode").onclick=saveEpisode;
 $("editor").onsubmit=async e=>{e.preventDefault();clearMessage();try{const x=readForm();$("save").disabled=true;const result=await api("/api/anime"+(selected?"/"+encodeURIComponent(selected):""),{method:selected?"PUT":"POST",body:JSON.stringify(x)});message(result.message||"Saved.");selected=x.id;await loadItems();const saved=items.find(i=>i.id===selected)||x;fill(saved);renderList()}catch(err){message(err.message,true)}finally{$("save").disabled=false}};
 $("remove").onclick=async()=>{if(!selected||!confirm("Delete "+selected+"? This removes its JSON file and catalogue entry."))return;try{const old=selected;await api("/api/anime/"+encodeURIComponent(old),{method:"DELETE"});selected=null;fill(null);await loadItems();message("Deleted "+old+".")}catch(e){message(e.message,true)}};
 (async()=>{if(!API){$("login").textContent="Configure Worker URL";return}try{const r=await api("/auth/me");setAuth(true,r.user)}catch{setAuth(false)}})();
