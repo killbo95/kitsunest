@@ -4,5 +4,5 @@
   "type": "module",
   "engines": { "node": ">=20" },
   "scripts": { "start": "node server.mjs" },
-  "dependencies": { "anime-sdk": "^1.0.0" }
+  "dependencies": { "anime-sdk": "latest" }
 }
