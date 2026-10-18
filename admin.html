@@ -35,9 +35,16 @@ function importJikanMetadata(anime){
  const poster=anime.images?.jpg?.large_image_url||anime.images?.jpg?.image_url||anime.images?.webp?.large_image_url||"";
  if(poster){$("poster").value=poster;if(typeof updatePosterPreview==="function")updatePosterPreview(poster)}
  if(anime.synopsis)$("description").value=String(anime.synopsis).replace(/\s*\[Written by MAL Rewrite\]\s*$/,"").trim();
- if(Number.isInteger(anime.episodes)&&anime.episodes>0)$("episodes").value=anime.episodes;
+ if(Number.isInteger(anime.episodes)&&anime.episodes>0){
+  $("episodes").value=anime.episodes;
+  seasonEpisodeCounts={...(seasonEpisodeCounts||{}),"1":anime.episodes};
+  $("seasonEpisodeCount").value=anime.episodes;
+ }
  if(!$("seasons").value)$("seasons").value="1";
- metadataStatus("Details copied into the form. Review the season and episode count, then save anime when ready.");
+ populateEpisodeSeasons();
+ renderEpisodeList();
+ updateEpisodeCount();
+ metadataStatus("Details and episode count imported. The episode list will be generated when you save this anime. Jikan does not provide playable video URLs, so add authorized HTTPS URLs separately.");
 }
 function renderJikanResults(results){
  const root=$("metadataResults");root.replaceChildren();
