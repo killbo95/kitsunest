@@ -1,0 +1,8 @@
+{
+  "name": "kitsunest-anime-sdk-backend",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": { "start": "node server.mjs" },
+  "dependencies": { "anime-sdk": "^1.0.0" }
+}
