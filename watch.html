@@ -7,7 +7,6 @@
 <main class="wrap content"><div class="crumb"><a href="./index.html">Home</a> / <a id="seriesLink" href="./index.html">Anime</a> / <span id="crumbEpisode">Episode</span></div>
 <h1 id="heading">Watch episode</h1><div class="muted" id="subheading">Loading anime details…</div><p id="animeDetails" class="muted" style="margin:8px 0 0"></p>
 <div class="player" id="player"><div class="empty"><div class="symbol">▶</div><h2>Player not configured yet</h2><p>This episode has no usable source in this anime’s JSON file. Add an authorized HTTPS embed URL under <code>episodeSources</code> in <code>anime/{id}.json</code>.</p><a class="pill" href="./index.html">Browse anime</a></div></div>
-<section class="panel season-panel" aria-label="Choose season"><h2>Seasons</h2><div id="seasons" class="season-list"></div></section>
 <div class="notice">Only use embed URLs from official providers or sources that expressly allow you to embed and share the video. A normal watch-page URL may not work in an iframe.</div>
 <div class="below"><section class="panel"><h2>Episodes</h2><div class="episodes" id="episodes"></div></section><aside class="panel"><h2>About this player</h2><p class="muted" style="font-size:13px;margin-bottom:0">KitsuNest displays an external authorized player inside this page. The video is streamed by its source, not stored on GitHub Pages. Some providers block embedding; use their official embed feature and follow their terms.</p></aside></div></main>
 <footer><div class="wrap">KitsuNest · Fan-made anime guide · Not affiliated with anime studios or distributors.</div></footer>
@@ -43,7 +42,7 @@ function renderWatch(data){
   episode=Math.min(episode,seasonCount);
   document.title=show.title+" — Episode "+episode+" | KitsuNest";
   document.getElementById("heading").textContent=show.title+" — Episode "+episode;
-  document.getElementById("subheading").textContent="Season "+season+" · Episode "+episode+" · "+show.seasons+" season"+(show.seasons===1?"":"s");
+  document.getElementById("subheading").textContent="Episode "+episode;
   document.getElementById("seriesLink").textContent=show.title;
   document.getElementById("crumbEpisode").textContent="Episode "+episode;
   var details=[show.genre,show.year].filter(Boolean).join(" · ");
@@ -66,16 +65,6 @@ function renderWatch(data){
     } else {
       var frame=document.createElement("iframe");frame.src=url;frame.title=show.title+" episode "+episode;frame.allow="autoplay; fullscreen; picture-in-picture";frame.allowFullscreen=true;frame.referrerPolicy="strict-origin-when-cross-origin";player.replaceChildren(frame);
     }
-  }
-  var seasonList=document.getElementById("seasons");
-  seasonList.replaceChildren();
-  for(var s=1;s<=show.seasons;s++){
-    var sb=document.createElement("a");
-    sb.className="season-btn"+(s===season?" active":"");
-    sb.href="?show="+encodeURIComponent(id)+"&season="+s+"&episode=1";
-    sb.textContent="Season "+s;
-    sb.setAttribute("aria-current",s===season?"page":"false");
-    seasonList.appendChild(sb);
   }
   var list=document.getElementById("episodes");
   list.replaceChildren();
