@@ -64,7 +64,7 @@ function importSdkMetadata(item){
  const episodes=Number(item.episodes);
  if(Number.isInteger(episodes)&&episodes>0){$("episodes").value=episodes;seasonEpisodeCounts={...(seasonEpisodeCounts||{}),"1":episodes};$("seasonEpisodeCount").value=episodes}
  const links=Array.isArray(item.streamingEpisodes)?item.streamingEpisodes:[];
- $("seasonData").value=JSON.stringify(links.map((ep,i)=>({number:Number(ep.number)||i+1,title:ep.title||("Episode "+(i+1)),url:ep.url,thumbnail:ep.thumbnail||"",official:true})),null,2);
+ $("seasonData").value=JSON.stringify(links.map((ep,i)=>({number:Number(ep.number)||i+1,title:ep.title||("Episode "+(i+1)),url:ep.url,thumbnail:ep.thumbnail||""})),null,2);
  populateEpisodeSeasons();renderEpisodeList();updateEpisodeCount();
  metadataStatus("Imported anime-sdk details"+(links.length?" and "+links.length+" external episode link(s)":"")+". Save the anime to publish. External links open on their provider; KitsuNest does not host those videos.");
 }
