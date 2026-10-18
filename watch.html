@@ -84,7 +84,7 @@ function renderWatch(data){
     a.setAttribute("aria-current",i===episode?"page":"false");
     var epDetail=show.seasonData.find(function(ep){return Number(ep.number)===i});
     var label=document.createElement("span");label.textContent=epDetail?.title||("Episode "+i);
-    var sub=document.createElement("small");sub.textContent=seasonSources[i]?"Player available":(epDetail?.url?"Official viewing link":"Source not added");
+    var sub=document.createElement("small");sub.textContent=seasonSources[i]?"Player available":(epDetail?.url?"External viewing link":"Source not added");
     a.append(label,sub);
     list.appendChild(a);
   }
