@@ -31,7 +31,8 @@ function renderWatch(data){
     official:data.official||"",
     episodeSources:data.episodeSources||{},
     seasonEpisodeSources:data.seasonEpisodeSources||{},
-    seasonEpisodeCounts:data.seasonEpisodeCounts||{}
+    seasonEpisodeCounts:data.seasonEpisodeCounts||{},
+    seasonData:Array.isArray(data.seasonData)?data.seasonData:[]
   };
   season=Math.min(show.seasons,season);
   var seasonSources=season===1?Object.assign({},show.episodeSources,show.seasonEpisodeSources[String(season)]||{}):(show.seasonEpisodeSources[String(season)]&&typeof show.seasonEpisodeSources[String(season)]==="object"?show.seasonEpisodeSources[String(season)]:{});
@@ -56,6 +57,7 @@ function renderWatch(data){
     detailsEl.appendChild(officialLink);
   }
   var url=seasonSources[episode];
+  var episodeDetail=show.seasonData.find(function(ep){return Number(ep.number)===episode&&typeof ep.url==="string"&&/^https:\/\//i.test(ep.url)});
   var player=document.getElementById("player");
   if(typeof url==="string" && /^https:\/\//i.test(url) && url.indexOf("example.")===-1){
     if (/\.mp4(?:$|[?#])/i.test(url)) {
@@ -66,6 +68,13 @@ function renderWatch(data){
       var frame=document.createElement("iframe");frame.src=url;frame.title=show.title+" episode "+episode;frame.allow="autoplay; fullscreen; picture-in-picture";frame.allowFullscreen=true;frame.referrerPolicy="strict-origin-when-cross-origin";player.replaceChildren(frame);
     }
   }
+  if(!(typeof url==="string"&&/^https:\/\//i.test(url)&&url.indexOf("example.")===-1)&&episodeDetail){
+    var external=document.createElement("div");external.className="empty";
+    var externalTitle=document.createElement("h2");externalTitle.textContent=episodeDetail.title||("Episode "+episode);
+    var externalText=document.createElement("p");externalText.textContent="This episode has an external viewing link supplied by the anime catalogue. Availability and playback are controlled by that service.";
+    var externalLink=document.createElement("a");externalLink.className="pill";externalLink.href=episodeDetail.url;externalLink.target="_blank";externalLink.rel="noopener noreferrer";externalLink.textContent="Open episode on provider ↗";
+    external.append(externalTitle,externalText,externalLink);player.replaceChildren(external);
+  }
   var list=document.getElementById("episodes");
   list.replaceChildren();
   for(var i=1;i<=seasonCount;i++){
@@ -73,7 +82,10 @@ function renderWatch(data){
     a.className="ep"+(i===episode?" active":"");
     a.href="?show="+encodeURIComponent(id)+"&season="+season+"&episode="+i;
     a.setAttribute("aria-current",i===episode?"page":"false");
-    a.innerHTML="Episode "+i+"<small>"+(seasonSources[i]?"Player available":"Source not added")+"</small>";
+    var epDetail=show.seasonData.find(function(ep){return Number(ep.number)===i});
+    var label=document.createElement("span");label.textContent=epDetail?.title||("Episode "+i);
+    var sub=document.createElement("small");sub.textContent=seasonSources[i]?"Player available":(epDetail?.url?"Official viewing link":"Source not added");
+    a.append(label,sub);
     list.appendChild(a);
   }
 }
