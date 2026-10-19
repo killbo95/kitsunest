@@ -81,15 +81,57 @@ function renderWatch(data){
     var link=document.createElement("a");link.className="pill";link.href=href;link.target="_blank";link.rel="noopener noreferrer";link.textContent="Open episode on provider ↗";
     card.append(title,text,link);player.replaceChildren(card);
   }
+  function showAutoPlayer(){
+    if(!show.catalogueId || !/^anilist:\d+$/.test(show.catalogueId)) return false;
+    var loading=document.createElement("div");loading.className="empty";
+    var symbol=document.createElement("div");symbol.className="symbol";symbol.textContent="▶";
+    var title=document.createElement("h2");title.textContent="Loading episode player…";
+    var text=document.createElement("p");text.textContent="Trying the configured catalogue player for this episode.";
+    loading.append(symbol,title,text);player.replaceChildren(loading);
+    var frame=document.createElement("iframe");
+    frame.title=show.title+" episode "+episode;
+    frame.allow="autoplay; fullscreen; picture-in-picture";
+    frame.allowFullscreen=true;
+    frame.referrerPolicy="strict-origin-when-cross-origin";
+    frame.src="https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id="+encodeURIComponent(show.catalogueId)+"&episode="+encodeURIComponent(episode)+"&language=sub";
+    frame.addEventListener("error",function(){
+      var failed=document.createElement("div");failed.className="empty";
+      var h=document.createElement("h2");h.textContent="Player couldn't load";
+      var p=document.createElement("p");p.textContent="The configured source did not load. Try an official viewing option or add a working authorized episode URL in Admin.";
+      failed.append(h,p);player.replaceChildren(failed);
+    });
+    player.replaceChildren(frame);
+    return true;
+  }
   if(sourceUrl){
     var parsedSource=null;try{parsedSource=new URL(sourceUrl)}catch{}
-    var isExplicitEmbed=!!parsedSource&&(parsedSource.pathname.toLowerCase().includes("/embed/")||/[?&](?:embed|player)=/i.test(parsedSource.search)||parsedSource.pathname.toLowerCase().endsWith("/api/catalogue/player"));
-    if(isExplicitEmbed){
+    var path=(parsedSource&&parsedSource.pathname||"").toLowerCase();
+    var isDirectVideo=/\.(?:mp4|webm|ogg|m3u8)(?:$)/i.test(path);
+    var isExplicitEmbed=!!parsedSource&&(path.includes("/embed/")||/[?&](?:embed|player)=/i.test(parsedSource.search)||path.endsWith("/api/catalogue/player"));
+    if(isDirectVideo){
+      var video=document.createElement("video");
+      video.controls=true;video.playsInline=true;video.preload="metadata";
+      video.style.width="100%";video.style.height="100%";video.style.maxHeight="100%";video.style.background="#000";
+      if(/\.m3u8(?:$)/i.test(path)){
+        var hlsScript=document.createElement("script");
+        hlsScript.src="https://cdn.jsdelivr.net/npm/hls.js@1";
+        hlsScript.onload=function(){
+          if(window.Hls&&window.Hls.isSupported()){var hls=new Hls();hls.loadSource(sourceUrl);hls.attachMedia(video);}
+          else {video.src=sourceUrl;}
+        };
+        hlsScript.onerror=function(){video.src=sourceUrl;};
+        document.head.appendChild(hlsScript);
+      }else{video.src=sourceUrl;}
+      video.addEventListener("error",function(){
+        if(show.catalogueId) showAutoPlayer();
+      },{once:true});
+      player.replaceChildren(video);
+    }else if(isExplicitEmbed){
       var frame=document.createElement("iframe");frame.src=sourceUrl;frame.title=show.title+" episode "+episode;frame.allow="autoplay; fullscreen; picture-in-picture";frame.allowFullscreen=true;frame.referrerPolicy="strict-origin-when-cross-origin";player.replaceChildren(frame);
     }else{
       showExternalEpisode(sourceUrl,episodeDetail&&episodeDetail.title);
     }
-  }else{
+  }else if(!showAutoPlayer()){
     var empty=document.createElement("div");empty.className="empty";
     var symbol=document.createElement("div");symbol.className="symbol";symbol.textContent="▶";
     var title=document.createElement("h2");title.textContent="Episode link not added yet";
@@ -115,7 +157,7 @@ function renderWatch(data){
 fetch("./anime/"+encodeURIComponent(id)+".json",{cache:"no-store"})
   .then(function(response){if(!response.ok)throw new Error("Anime file not found");return response.json();})
   .then(async function(data){
-    if(data.catalogueId&&/^anilist:\\d+$/.test(data.catalogueId)){
+    if(data.catalogueId&&/^anilist:\d+$/.test(data.catalogueId)){
       try{
         var catalogueResponse=await fetch("https://kitsunest-anime-backend.onrender.com/api/catalogue/episodes?id="+encodeURIComponent(data.catalogueId),{headers:{Accept:"application/json"},cache:"no-store"});
         var cataloguePayload=await catalogueResponse.json();
