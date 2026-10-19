@@ -14,7 +14,108 @@
   "description": "Following their participation at the Inter-High, the Karasuno High School volleyball team attempts to refocus their efforts, aiming to conquer the Spring tournament instead.\n  \nWhen they receive an invitation from long-standing rival Nekoma High, Karasuno agrees to take part in a large training camp alongside many notable volleyball teams in Tokyo and even some national level players. By playing with some of the toughest teams in Japan, they hope not only to sharpen their skills, but also come up with new attacks that would strengthen them. Moreover, Hinata and Kageyama attempt to devise a more powerful weapon, one that could possibly break the sturdiest of blocks.\n  \nFacing what may be their last chance at victory before the senior players graduate, the members of Karasuno's volleyball team must learn to settle their differences and train harder than ever if they hope to overcome formidable opponents old and new—including their archrival Aoba Jousai and its world-class setter Tooru Oikawa.\n  \n[Written by MAL Rewrite]",
   "seasons": 1,
   "episodes": 25,
-  "seasonData": [],
+  "seasonData": [
+    {
+      "number": 1,
+      "title": "Episode 1"
+    },
+    {
+      "number": 2,
+      "title": "Episode 2"
+    },
+    {
+      "number": 3,
+      "title": "Episode 3"
+    },
+    {
+      "number": 4,
+      "title": "Episode 4"
+    },
+    {
+      "number": 5,
+      "title": "Episode 5"
+    },
+    {
+      "number": 6,
+      "title": "Episode 6"
+    },
+    {
+      "number": 7,
+      "title": "Episode 7"
+    },
+    {
+      "number": 8,
+      "title": "Episode 8"
+    },
+    {
+      "number": 9,
+      "title": "Episode 9"
+    },
+    {
+      "number": 10,
+      "title": "Episode 10"
+    },
+    {
+      "number": 11,
+      "title": "Episode 11"
+    },
+    {
+      "number": 12,
+      "title": "Episode 12"
+    },
+    {
+      "number": 13,
+      "title": "Episode 13"
+    },
+    {
+      "number": 14,
+      "title": "Episode 14"
+    },
+    {
+      "number": 15,
+      "title": "Episode 15"
+    },
+    {
+      "number": 16,
+      "title": "Episode 16"
+    },
+    {
+      "number": 17,
+      "title": "Episode 17"
+    },
+    {
+      "number": 18,
+      "title": "Episode 18"
+    },
+    {
+      "number": 19,
+      "title": "Episode 19"
+    },
+    {
+      "number": 20,
+      "title": "Episode 20"
+    },
+    {
+      "number": 21,
+      "title": "Episode 21"
+    },
+    {
+      "number": 22,
+      "title": "Episode 22"
+    },
+    {
+      "number": 23,
+      "title": "Episode 23"
+    },
+    {
+      "number": 24,
+      "title": "Episode 24"
+    },
+    {
+      "number": 25,
+      "title": "Episode 25"
+    }
+  ],
   "episodeSources": {},
   "seasonEpisodeSources": {},
   "seasonEpisodeCounts": {
