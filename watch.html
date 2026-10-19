@@ -77,7 +77,7 @@ function renderWatch(data){
   }
   if(sourceUrl){
     var parsedSource=null;try{parsedSource=new URL(sourceUrl)}catch{}
-    var isExplicitEmbed=!!parsedSource&&(/(?:^|\\/)embed(?:\\/|$)/i.test(parsedSource.pathname)||/[?&](?:embed|player)=/i.test(parsedSource.search));
+    var isExplicitEmbed=!!parsedSource&&(parsedSource.pathname.toLowerCase().includes("/embed/")||/[?&](?:embed|player)=/i.test(parsedSource.search));
     if(isExplicitEmbed){
       var frame=document.createElement("iframe");frame.src=sourceUrl;frame.title=show.title+" episode "+episode;frame.allow="autoplay; fullscreen; picture-in-picture";frame.allowFullscreen=true;frame.referrerPolicy="strict-origin-when-cross-origin";player.replaceChildren(frame);
     }else{
@@ -100,7 +100,7 @@ function renderWatch(data){
     a.setAttribute("aria-current",i===episode?"page":"false");
     var epDetail=show.seasonData.find(function(ep){return Number(ep.number)===i});
     var label=document.createElement("span");label.textContent=epDetail?.title||("Episode "+i);
-    var sub=document.createElement("small");sub.textContent=seasonSources[i]?(function(){var u=seasonSources[i];try{var p=new URL(u);return /(?:^|\\/)embed(?:\\/|$)/i.test(p.pathname)||/[?&](?:embed|player)=/i.test(p.search)?"Authorized embed link":"Viewing link added"}catch{return "Viewing link added"}})():(epDetail?.url?"External viewing link":"Source not added");
+    var sub=document.createElement("small");sub.textContent=seasonSources[i]?(function(){var u=seasonSources[i];try{var p=new URL(u);return p.pathname.toLowerCase().includes("/embed/")||/[?&](?:embed|player)=/i.test(p.search)?"Authorized embed link":"Viewing link added"}catch{return "Viewing link added"}})():(epDetail?.url?"External viewing link":"Source not added");
     a.append(label,sub);
     list.appendChild(a);
   }
