@@ -1,226 +1,231 @@
 {
   "id": "07ghost406",
-  "catalogueId": "anilist:31349",
+  "catalogueId": "anilist:5525",
   "title": "07-Ghost",
-  "poster": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/nx31349-bZZeeBYXcqL1.jpg",
-  "genre": "Action, Adventure, Comedy, Drama",
-  "year": "2005",
+  "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/5525.jpg",
+  "genre": "Action, Fantasy",
+  "year": "2009",
   "mark": "0G",
   "art": "DISCOVER THE STORY",
   "official": "https://www.viz.com/07-ghost",
-  "viewingLinks": [],
+  "viewingLinks": [
+    {
+      "site": "RetroCrush",
+      "url": "https://www.retrocrush.tv/series/012806s/07-ghost"
+    }
+  ],
   "colors": [
     "#d96d56",
     "#34203d"
   ],
-  "description": "Barsburg Empire's Military Academy has always been known for training the elite with potential to become superb soldiers who won't bring shame to the name of the empire. The students of the special program freely utilize an ability called \"zaiphon\" to fight... Everyone's capabilities are different, and in many cases, reflect their nature.  \nHowever, not everything is what it seems, and nothing will be the same for Teito Klein after passing the last exam...  \n(Source: Timcanpi)",
+  "description": "Barsburg Empire's Military Academy is known for training elites who bring victory to the empire. Students of the academy freely utilize an ability called \"Zaiphon\" to fight, while the types of Zaiphon usable depends on the nature of the soldier.  \nTeito Klein, a student at the academy, is one of the most promising soldiers produced. Although ridiculed by everyone for being a sklave (German for slave) with no memories of his past, he is befriended by a fellow student called Mikage. While preparing for the final exam, Teito uncovers a dark secret related to his past. When an attempt to assassinate Ayanami, a high-ranking official who killed his father, fails, Teito is locked away awaiting punishment.  \nOnly wanting the best for Teito, Mikage helps him escape. Teito ends up at the 7th District Church where he is taken in by the bishops. It is here that Teito attempts to evade the grasp of Ayanami and the Military, so he can rediscover his memories and learn why he is the person that can change the fate of the world.  \n[Written by MAL Rewrite]",
   "seasons": 1,
   "episodes": 25,
   "seasonData": [
     {
       "number": 1,
-      "title": "Episode 1",
+      "title": "The Future of Painful Thoughts is",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/1",
-      "thumbnail": "",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=1&language=sub"
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/65975714d74147a3302868cc3fdfdcd51301561725_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=1&language=sub"
     },
     {
       "number": 2,
-      "title": "Episode 2",
+      "title": "Nostalgic Memories Accompany Pain",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/2",
-      "thumbnail": "",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=2&language=sub"
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/4a454647d473924a33d706a46a9633ca1301559297_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=2&language=sub"
     },
     {
       "number": 3,
-      "title": "Episode 3",
+      "title": "My Innocent Child, Sleep Within The Light",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/3",
-      "thumbnail": "",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=3&language=sub"
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/e9c841e213bec8fbef8005ca787296cc1301560651_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=3&language=sub"
     },
     {
       "number": 4,
-      "title": "Episode 4",
+      "title": "To the Depths of the Earnest Prayer",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/4",
-      "thumbnail": "",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=4&language=sub"
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/3fb7ab41e4bbce552b3a241cd6f79c6e1301564093_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=4&language=sub"
     },
     {
       "number": 5,
-      "title": "Episode 5",
+      "title": "Hot Tears, Gently Fill His Heart...",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/5",
-      "thumbnail": "",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=5&language=sub"
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/7f5d9391a9a599a9a579be49c9f052491301566703_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=5&language=sub"
     },
     {
       "number": 6,
-      "title": "Episode 6",
+      "title": "The Path of Justice Leads to Light",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/6",
-      "thumbnail": "",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=6&language=sub"
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/84425a2e110133146b909c2b9e2e772b1301566124_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=6&language=sub"
     },
     {
       "number": 7,
-      "title": "Episode 7",
+      "title": "Does the Soul that was Devoured by the Wings, Dream of Its Beloved Child?",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/7",
-      "thumbnail": "",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=7&language=sub"
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/08d6b9fe6dc71acda1361a82c8835c961301570703_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=7&language=sub"
     },
     {
       "number": 8,
-      "title": "Episode 8",
+      "title": "Half of His Soul Arouses a Sad Awakening",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/8",
-      "thumbnail": "",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=8&language=sub"
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/50e197d0746e0de4cf2b0a5cfd43144b1301570367_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=8&language=sub"
     },
     {
       "number": 9,
-      "title": "Episode 9",
+      "title": "The Color of His Soul Will Be Forever...",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/9",
-      "thumbnail": "",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=9&language=sub"
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/49a26e26baa7652aed90f324d2039ed31301573172_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=9&language=sub"
     },
     {
       "number": 10,
-      "title": "Episode 10",
+      "title": "That is But One Form of Atonement",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/10",
-      "thumbnail": "",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=10&language=sub"
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/0124957c477e517e3d0b0c882b8354eb1302230361_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=10&language=sub"
     },
     {
       "number": 11,
-      "title": "Episode 11",
+      "title": "Atonement for Loved Ones is...",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/11",
-      "thumbnail": "",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=11&language=sub"
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/a3a1c8adfa6d32709b646cc6cc5539d41302230338_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=11&language=sub"
     },
     {
       "number": 12,
-      "title": "Episode 12",
+      "title": "The Darkness Called \"Pain\" Treads Ever Closer...",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/12",
-      "thumbnail": "",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=12&language=sub"
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/215f85cd8fff626f414acf50f5ea61731302233161_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=12&language=sub"
     },
     {
       "number": 13,
-      "title": "Episode 13",
+      "title": "Down the Path of Light I See...",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/13",
-      "thumbnail": "",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=13&language=sub"
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/d3790877f559d151511c405ca2083eea1302235663_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=13&language=sub"
     },
     {
       "number": 14,
-      "title": "Episode 14",
+      "title": "A Reason to Fight Together... The Right to be Called Brothers in Arms",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/14",
-      "thumbnail": "",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=14&language=sub"
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/2e7ec5aa9e6340073ccc0d89e91c8f501302236827_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=14&language=sub"
     },
     {
       "number": 15,
-      "title": "Episode 15",
+      "title": "That Day, I Was Certainly With Him",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/15",
-      "thumbnail": "",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=15&language=sub"
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/b9a03e324b4836732a0b5177e55424cc1305682600_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=15&language=sub"
     },
     {
       "number": 16,
-      "title": "Episode 16",
+      "title": "Truth Lies in the Dark Abyss Where the Light Cannot Reach",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/16",
-      "thumbnail": "",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=16&language=sub"
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/a78790207cfaf178be85839dfb9452291305681944_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=16&language=sub"
     },
     {
       "number": 17,
-      "title": "Episode 17",
+      "title": "The Family With Wings of Darkness, Enshrouded in Misery, Flies Down",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/17",
-      "thumbnail": "",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=17&language=sub"
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/7bac3f6c60f706c4bc0c9bd998f8c1d61305684592_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=17&language=sub"
     },
     {
       "number": 18,
-      "title": "Episode 18",
+      "title": "The One Who Must be Forgiven Drowns in Darkness...The One Who Loves Him is Filled With Tears",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/18",
-      "thumbnail": "",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=18&language=sub"
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/264f584447e2fe49084657b3ec090daa1305689222_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=18&language=sub"
     },
     {
       "number": 19,
-      "title": "Episode 19",
+      "title": "The One-Sided, Yet Never Dying Love Finds Itself...",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/19",
-      "thumbnail": "",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=19&language=sub"
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/74eba9ad269d4e6e426b2cb6ae729c9f1305686174_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=19&language=sub"
     },
     {
       "number": 20,
-      "title": "Episode 20",
+      "title": "They Both Offer A Requiem",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/20",
-      "thumbnail": "",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=20&language=sub"
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/f86c90f981d5a219acb09724b7c0486d1305688164_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=20&language=sub"
     },
     {
       "number": 21,
-      "title": "Episode 21",
+      "title": "Therefore, You Pass Through The Door Of The Defeated",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/21",
-      "thumbnail": "",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=21&language=sub"
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/c152f406f4e03bf43a4437f3029073ac1305690130_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=21&language=sub"
     },
     {
       "number": 22,
-      "title": "Episode 22",
+      "title": "Led By The Light In The Water's Depth, He Spies Upon...",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/22",
-      "thumbnail": "",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=22&language=sub"
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/f82a864a318dd0ae6e763d50a70ead951305690406_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=22&language=sub"
     },
     {
       "number": 23,
-      "title": "Episode 23",
+      "title": "Beyond The Heart's Darkness",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/23",
-      "thumbnail": "",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=23&language=sub"
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/a362b5f9335be93c599a507a219ebfcd1305694306_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=23&language=sub"
     },
     {
       "number": 24,
-      "title": "Episode 24",
+      "title": "The Justice of Those Who Lack Love Is... Oh Heart That Is Stolen By Darkness, Forever...",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/24",
-      "thumbnail": "",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=24&language=sub"
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/70b5cdd972712518bd1976357d5b6a051305695468_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=24&language=sub"
     },
     {
       "number": 25,
-      "title": "Episode 25",
+      "title": "The Heart Is Lead By The Truth On The Other Side...",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/25",
-      "thumbnail": "",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=25&language=sub"
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/fb6cfed55585e510f681c343be2d7fa61305694638_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=25&language=sub"
     }
   ],
   "episodeSources": {},
   "seasonEpisodeSources": {
     "1": {
-      "1": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=1&language=sub",
-      "2": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=2&language=sub",
-      "3": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=3&language=sub",
-      "4": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=4&language=sub",
-      "5": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=5&language=sub",
-      "6": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=6&language=sub",
-      "7": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=7&language=sub",
-      "8": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=8&language=sub",
-      "9": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=9&language=sub",
-      "10": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=10&language=sub",
-      "11": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=11&language=sub",
-      "12": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=12&language=sub",
-      "13": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=13&language=sub",
-      "14": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=14&language=sub",
-      "15": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=15&language=sub",
-      "16": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=16&language=sub",
-      "17": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=17&language=sub",
-      "18": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=18&language=sub",
-      "19": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=19&language=sub",
-      "20": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=20&language=sub",
-      "21": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=21&language=sub",
-      "22": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=22&language=sub",
-      "23": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=23&language=sub",
-      "24": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=24&language=sub",
-      "25": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=25&language=sub"
+      "1": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=1&language=sub",
+      "2": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=2&language=sub",
+      "3": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=3&language=sub",
+      "4": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=4&language=sub",
+      "5": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=5&language=sub",
+      "6": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=6&language=sub",
+      "7": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=7&language=sub",
+      "8": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=8&language=sub",
+      "9": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=9&language=sub",
+      "10": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=10&language=sub",
+      "11": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=11&language=sub",
+      "12": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=12&language=sub",
+      "13": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=13&language=sub",
+      "14": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=14&language=sub",
+      "15": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=15&language=sub",
+      "16": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=16&language=sub",
+      "17": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=17&language=sub",
+      "18": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=18&language=sub",
+      "19": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=19&language=sub",
+      "20": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=20&language=sub",
+      "21": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=21&language=sub",
+      "22": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=22&language=sub",
+      "23": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=23&language=sub",
+      "24": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=24&language=sub",
+      "25": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A5525&episode=25&language=sub"
     }
   },
   "seasonEpisodeCounts": {
