@@ -71,7 +71,8 @@ function renderWatch(data){
   optionsPanel.style.display=validViewingLinks.length?"block":"none";
   var url=seasonSources[episode];
   var episodeDetail=show.seasonData.find(function(ep){return Number(ep.number)===episode&&typeof ep.url==="string"&&/^https:\/\//i.test(ep.url)});
-  var sourceUrl=(typeof url==="string"&&/^https:\/\//i.test(url)&&url.indexOf("example.")===-1)?url:(episodeDetail?episodeDetail.url:"");
+  var isUnverifiedCataloguePlayer=typeof url==="string"&&/^https:\/\//i.test(url)&&/\/api\/catalogue\/player(?:[/?#]|$)/i.test(url);
+  var sourceUrl=(!isUnverifiedCataloguePlayer&&typeof url==="string"&&/^https:\/\//i.test(url)&&url.indexOf("example.")===-1)?url:(episodeDetail&&!(typeof episodeDetail.url==="string"&&/\/api\/catalogue\/player(?:[/?#]|$)/i.test(episodeDetail.url))?episodeDetail.url:"");
   var player=document.getElementById("player");
   function showExternalEpisode(href,titleText){
     var card=document.createElement("div");card.className="empty";
