@@ -128,8 +128,8 @@ async function importSdkMetadata(item,base=""){
  $("seasonData").value=JSON.stringify([...episodesByNumber.values()].sort((a,b)=>a.number-b.number),null,2);
  populateEpisodeSeasons();renderEpisodeList();updateEpisodeCount();
  metadataStatus(episodeItems.length
-  ?(episodeMetadataOnly?"Imported details and "+episodeItems.length+" episode numbers. No playable source was found; add authorized episode URLs in Manage Episodes, then save.":"Imported anime details and "+episodeItems.length+" episode entries from anime-sdk. Save anime to publish the episode list.")
-  :"Imported anime details, but anime-sdk did not return a provider episode list for this title.",!episodeItems.length);
+  ?(episodeMetadataOnly?"Imported details and "+episodesByNumber.size+" episode numbers. No playable source was found; add authorized episode URLs in Manage Episodes, then save.":"Imported anime details and "+episodeItems.length+" episode entries from anime-sdk. Save anime to publish the episode list.")
+  :(episodesByNumber.size?"Imported details and "+episodesByNumber.size+" episode numbers from AniList metadata. The provider did not return an episode list or playable sources; add authorized episode URLs in Manage Episodes, then save.":"Imported anime details, but no provider episode list or episode count was available. You can set the season episode count and add authorized episode URLs manually."),!episodeItems.length);
  showCatalogueViewingLinks(title,item.viewingLinks);
  if(!episodeItems.length)showOfficialViewingSearches(title);
 }
@@ -156,7 +156,7 @@ async function searchAnimeSdkMetadata(){
    box.append(name,detail);button.append(box);
    button.onclick=async()=>{
     button.disabled=true;metadataStatus("Loading anime details and episode links…");
-    try{const infoResponse=await fetch(base+"/api/catalogue/info?id="+encodeURIComponent(item.id),{headers:{Accept:"application/json"}});const infoPayload=await infoResponse.json().catch(()=>({}));if(!infoResponse.ok)throw Error(infoPayload.error||("Backend returned HTTP "+infoResponse.status));await importSdkMetadata(infoPayload.item||item,base)}
+    try{const infoResponse=await fetch(base+"/api/catalogue/info?id="+encodeURIComponent(item.id),{headers:{Accept:"application/json"}});const infoPayload=await infoResponse.json().catch(()=>({}));if(!infoResponse.ok)throw Error(infoPayload.error||("Backend returned HTTP "+infoResponse.status));await importSdkMetadata({...item,...(infoPayload.item||{}),episodes:Number(infoPayload.item?.episodes)||Number(item.episodes)||null},base)}
     catch(error){metadataStatus(error.message||"Could not load anime details.",true)}
     finally{button.disabled=false}
    };
