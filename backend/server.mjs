@@ -94,18 +94,64 @@ const server = createServer(async (req, res) => {
     if (url.pathname === "/api/catalogue/episodes") {
       const id = url.searchParams.get("id") || "";
       if (!/^anilist:\d+$/.test(id)) return send(res, 400, { error: "A valid AniList ID is required." }, origin);
-      const episodes = await meta.fetchContentUnits(id, contentProvider);
+      let episodes = [];
+      let providerError = "";
+      try {
+        episodes = await meta.fetchContentUnits(id, contentProvider);
+      } catch (error) {
+        providerError = error instanceof Error ? error.message : String(error);
+        console.warn("Episode provider lookup failed; trying AniList streaming metadata:", providerError);
+      }
+
+      if (Array.isArray(episodes) && episodes.length) {
+        return send(res, 200, {
+          provider: contentProvider.id,
+          fallback: false,
+          episodes: episodes.map(ep => ({
+            id: ep.id,
+            number: Number(ep.number),
+            title: ep.title || "Episode " + ep.number,
+            availableLanguages: ep.availableLanguages || [],
+            thumbnail: ep.thumbnailUrl || "",
+            isFiller: Boolean(ep.isFiller),
+            isRecap: Boolean(ep.isRecap)
+          })).filter(ep => Number.isFinite(ep.number) && ep.number > 0).sort((a, b) => a.number - b.number)
+        }, origin);
+      }
+
+      // Provider catalogue matching can fail even when AniList has official episode-page links.
+      // Use only HTTPS links published as AniList streaming episodes; never invent stream URLs.
+      const media = await meta.fetchMediaInfo(id);
+      const fallbackEpisodes = Array.isArray(media?.streamingEpisodes) ? media.streamingEpisodes
+        .map((ep, index) => {
+          const externalUrl = typeof ep?.externalUrl === "string" ? ep.externalUrl
+            : typeof ep?.url === "string" ? ep.url : "";
+          if (!/^https:\/\//i.test(externalUrl)) return null;
+          const title = String(ep.title || "");
+          const match = title.match(/(?:episode|ep\.?|#)\s*(\d+)/i);
+          const number = Number(ep.number) || Number(match?.[1]) || index + 1;
+          return {
+            id: `anilist:${id.split(":")[1]}:streaming:${number}`,
+            number,
+            title: title || `Episode ${number}`,
+            availableLanguages: [],
+            thumbnail: typeof ep.thumbnail === "string" ? ep.thumbnail : "",
+            isFiller: false,
+            isRecap: false,
+            externalUrl
+          };
+        }).filter(Boolean)
+        .filter((ep, index, all) => all.findIndex(other => other.number === ep.number) === index)
+        .sort((a, b) => a.number - b.number) : [];
+
       return send(res, 200, {
-        provider: contentProvider.id,
-        episodes: (episodes || []).map(ep => ({
-          id: ep.id,
-          number: Number(ep.number),
-          title: ep.title || "Episode " + ep.number,
-          availableLanguages: ep.availableLanguages || [],
-          thumbnail: ep.thumbnailUrl || "",
-          isFiller: Boolean(ep.isFiller),
-          isRecap: Boolean(ep.isRecap)
-        })).filter(ep => Number.isFinite(ep.number) && ep.number > 0).sort((a, b) => a.number - b.number)
+        provider: fallbackEpisodes.length ? "anilist-streaming-metadata" : contentProvider.id,
+        fallback: true,
+        notice: fallbackEpisodes.length
+          ? "The episode provider could not match this title. These are external episode links supplied by AniList, not playable streams hosted by KitsuNest."
+          : "The episode provider could not match this title, and AniList has no episode-level streaming links for it.",
+        providerError,
+        episodes: fallbackEpisodes
       }, origin);
     }
     if (url.pathname === "/api/catalogue/player") {
@@ -115,7 +161,15 @@ const server = createServer(async (req, res) => {
       if (!/^anilist:\d+$/.test(id) || !Number.isFinite(episode) || episode < 1 || episode > 500) {
         return send(res, 400, { error: "A valid anime ID and episode number are required." }, origin);
       }
-      const resolved = await meta.resolveStream(id, episode, contentProvider, language);
+      let resolved;
+      try {
+        resolved = await meta.resolveStream(id, episode, contentProvider, language);
+      } catch (error) {
+        const message = error instanceof Error ? error.message : String(error);
+        console.warn("Stream provider could not resolve episode:", message);
+        res.writeHead(404, { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store", "Access-Control-Allow-Origin": origin });
+        return res.end("<!doctype html><meta charset=utf-8><title>Episode unavailable</title><body style='background:#090a12;color:white;font:16px system-ui;padding:24px'><h2>Episode unavailable</h2><p>The configured provider did not return a playable source. Try an official viewing link listed for this anime.</p></body>");
+      }
       if (!resolved || resolved.type !== "video" || !resolved.streams?.length) {
         res.writeHead(404, { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store", "Access-Control-Allow-Origin": origin });
         return res.end("<!doctype html><meta charset=utf-8><title>Episode unavailable</title><body style='background:#090a12;color:white;font:16px system-ui;padding:24px'><h2>Episode unavailable</h2><p>The provider did not return a playable stream for this episode. Try another language or check back later.</p></body>");
