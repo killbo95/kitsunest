@@ -1,9 +1,11 @@
 import { createServer } from "node:http";
-import { AnilistMeta, HttpClient } from "anime-sdk";
+import { AnilistMeta, AllmangaProvider, HttpClient } from "anime-sdk";
 
 const port = Number(process.env.PORT || 8788);
 const allowedOrigin = process.env.ALLOWED_ORIGIN || "https://killbo95.github.io";
-const meta = new AnilistMeta(new HttpClient({ timeoutMs: 15000 }));
+const http = new HttpClient({ timeoutMs: 25000 });
+const meta = new AnilistMeta(http);
+const contentProvider = new AllmangaProvider(http);
 
 function titleText(title) {
   if (typeof title === "string") return title;
@@ -88,6 +90,23 @@ const server = createServer(async (req, res) => {
       if (q.length < 2 || q.length > 100) return send(res, 400, { error: "Search must be 2–100 characters." }, origin);
       const results = await meta.search(q);
       return send(res, 200, { results: (results || []).slice(0, 10).map(normalizeSearch) }, origin);
+    }
+    if (url.pathname === "/api/catalogue/episodes") {
+      const id = url.searchParams.get("id") || "";
+      if (!/^anilist:\d+$/.test(id)) return send(res, 400, { error: "A valid AniList ID is required." }, origin);
+      const episodes = await meta.fetchContentUnits(id, contentProvider);
+      return send(res, 200, {
+        provider: contentProvider.id,
+        episodes: (episodes || []).map(ep => ({
+          id: ep.id,
+          number: Number(ep.number),
+          title: ep.title || \`Episode \${ep.number}\`,
+          availableLanguages: ep.availableLanguages || [],
+          thumbnail: ep.thumbnailUrl || "",
+          isFiller: Boolean(ep.isFiller),
+          isRecap: Boolean(ep.isRecap)
+        })).filter(ep => Number.isFinite(ep.number) && ep.number > 0).sort((a, b) => a.number - b.number)
+      }, origin);
     }
     if (url.pathname === "/api/catalogue/info") {
       const id = url.searchParams.get("id") || "";
