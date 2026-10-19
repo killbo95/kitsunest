@@ -128,9 +128,9 @@ const server = createServer(async (req, res) => {
           const lang = String(track.language || "en").replace(/[^a-z-]/gi, "");
           const label = String(track.label || track.language || "Subtitles").replace(/[&<>"]/g, "");
           const src = String(track.url).replace(/&/g, "&amp;").replace(/"/g, "&quot;");
-          return \`<track kind="subtitles" srclang="\${lang}" label="\${label}" src="\${src}">\`;
+          return `<track kind="subtitles" srclang="${lang}" label="${label}" src="${src}">`;
         }).join("");
-      const html = \`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KitsuNest Player</title><style>html,body{margin:0;background:#080910;color:#fff;font:15px system-ui;height:100%}main{height:100%;display:grid;place-items:center}video{width:100%;height:100%;max-height:100vh;background:#000}p{padding:20px}</style></head><body><main><video id="v" controls playsinline crossorigin="anonymous">\${trackTags}</video></main><script src="https://cdn.jsdelivr.net/npm/hls.js@1"></script><script>const v=document.getElementById('v'),src=\${source};if(src.includes('.m3u8')&&window.Hls&&Hls.isSupported()){const h=new Hls();h.loadSource(src);h.attachMedia(v)}else{v.src=src}</script></body></html>\`;
+      const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KitsuNest Player</title><style>html,body{margin:0;background:#080910;color:#fff;font:15px system-ui;height:100%}main{height:100%;display:grid;place-items:center}video{width:100%;height:100%;max-height:100vh;background:#000}p{padding:20px}</style></head><body><main><video id="v" controls playsinline crossorigin="anonymous">${trackTags}</video></main><script src="https://cdn.jsdelivr.net/npm/hls.js@1"></script><script>const v=document.getElementById('v'),src=${source};if(src.includes('.m3u8')&&window.Hls&&Hls.isSupported()){const h=new Hls();h.loadSource(src);h.attachMedia(v)}else{v.src=src}</script></body></html>`;
       res.writeHead(200, { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store", "Access-Control-Allow-Origin": origin, "X-Content-Type-Options": "nosniff" });
       return res.end(html);
     }
