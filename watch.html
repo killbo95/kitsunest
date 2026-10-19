@@ -8,6 +8,7 @@
 <h1 id="heading">Watch episode</h1><div class="muted" id="subheading">Loading anime details…</div><p id="animeDetails" class="muted" style="margin:8px 0 0"></p>
 <div class="player" id="player"><div class="empty"><div class="symbol">▶</div><h2>Player not configured yet</h2><p>This episode has no usable source in this anime’s JSON file. Add an authorized HTTPS embed URL under <code>episodeSources</code> in <code>anime/{id}.json</code>.</p><a class="pill" href="./index.html">Browse anime</a></div></div>
 <div class="notice">Only use embed URLs from official providers or sources that expressly allow you to embed and share the video. A normal watch-page URL may not work in an iframe.</div>
+<section class="panel" id="viewingOptions" style="display:none;margin-top:14px"><h2>Official viewing options</h2><p class="muted" style="font-size:13px;margin-top:0">Open a listed service to check availability in your region.</p><div id="viewingLinks" style="display:flex;flex-wrap:wrap;gap:8px"></div></section>
 <div class="below"><section class="panel"><h2>Episodes</h2><div class="episodes" id="episodes"></div></section><aside class="panel"><h2>About this player</h2><p class="muted" style="font-size:13px;margin-bottom:0">KitsuNest displays an external authorized player inside this page. The video is streamed by its source, not stored on GitHub Pages. Some providers block embedding; use their official embed feature and follow their terms.</p></aside></div></main>
 <footer><div class="wrap">KitsuNest · Fan-made anime guide · Not affiliated with anime studios or distributors.</div></footer>
 <script>
@@ -29,6 +30,7 @@ function renderWatch(data){
     year:data.year||"",
     description:data.description||data.desc||"",
     official:data.official||"",
+    viewingLinks:Array.isArray(data.viewingLinks)?data.viewingLinks:[],
     episodeSources:data.episodeSources||{},
     seasonEpisodeSources:data.seasonEpisodeSources||{},
     seasonEpisodeCounts:data.seasonEpisodeCounts||{},
@@ -56,6 +58,12 @@ function renderWatch(data){
     officialLink.textContent=" Official site ↗";officialLink.style.marginLeft="6px";
     detailsEl.appendChild(officialLink);
   }
+  var optionsPanel=document.getElementById("viewingOptions");
+  var optionsList=document.getElementById("viewingLinks");
+  optionsList.replaceChildren();
+  var validViewingLinks=show.viewingLinks.filter(function(link){return link&&typeof link.url==="string"&&/^https:\/\//i.test(link.url)});
+  validViewingLinks.forEach(function(link){var a=document.createElement("a");a.className="pill";a.href=link.url;a.target="_blank";a.rel="noopener noreferrer";a.textContent=(link.site||"Streaming service")+" ↗";optionsList.appendChild(a)});
+  optionsPanel.style.display=validViewingLinks.length?"block":"none";
   var url=seasonSources[episode];
   var episodeDetail=show.seasonData.find(function(ep){return Number(ep.number)===episode&&typeof ep.url==="string"&&/^https:\/\//i.test(ep.url)});
   var player=document.getElementById("player");
