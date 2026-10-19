@@ -57,7 +57,7 @@ function showCatalogueViewingLinks(title,viewingLinks){
  const valid=viewingLinks.filter(link=>link&&typeof link.url==="string"&&/^https:\/\//i.test(link.url));
  if(!valid.length)return;
  const section=document.createElement("section");section.id="catalogueViewingLinks";section.style.cssText="display:grid;gap:8px;margin-top:12px;padding:12px;border:1px solid var(--line);border-radius:10px";
- const heading=document.createElement("strong");heading.textContent="Official streaming links listed for "+title;section.append(heading);
+ const heading=document.createElement("strong");heading.textContent="Streaming links listed by the catalogue for "+title;section.append(heading);
  const note=document.createElement("small");note.className="hint";note.textContent="These are links listed by the anime catalogue. They open the service's own page; availability and playback depend on the service and your region.";section.append(note);
  const links=document.createElement("div");links.style.cssText="display:flex;gap:8px;flex-wrap:wrap";
  for(const item of valid){const a=document.createElement("a");a.className="btn secondary";a.href=item.url;a.target="_blank";a.rel="noopener noreferrer";a.textContent=(item.site||"Streaming service")+" ↗";a.style.textDecoration="none";links.append(a)}
