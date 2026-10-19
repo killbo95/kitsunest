@@ -23,6 +23,9 @@ var season=Math.max(1,parseInt(getParam("season")||"1",10)||1);
 function renderWatch(data){
   var show={
     id:data.id||id,
+    catalogueId:data.catalogueId||"",
+    catalogueEpisodes:Array.isArray(data.catalogueEpisodes)?data.catalogueEpisodes:[],
+    catalogueNotice:data.catalogueNotice||"",
     title:data.title||("Anime: "+id),
     episodes:Math.max(1,parseInt(data.episodes,10)||12),
     seasons:Math.max(1,parseInt(data.seasons,10)||1),
@@ -41,7 +44,8 @@ function renderWatch(data){
   var configuredCount=parseInt(show.seasonEpisodeCounts[String(season)],10)||0;
   var sourceNumbers=Object.keys(seasonSources).map(Number).filter(function(n){return Number.isInteger(n)&&n>0});
   var fallbackCount=season===1?(parseInt(show.episodes,10)||12):(sourceNumbers.length?Math.max.apply(null,sourceNumbers):12);
-  var seasonCount=Math.max(1,configuredCount||fallbackCount,...sourceNumbers);
+  var catalogueCount=season===1?show.catalogueEpisodes.reduce(function(max,ep){return Math.max(max,Number(ep.number)||0)},0):0;
+  var seasonCount=Math.max(1,configuredCount||fallbackCount,...sourceNumbers,catalogueCount);
   episode=Math.min(episode,seasonCount);
   document.title=show.title+" — Episode "+episode+" | KitsuNest";
   document.getElementById("heading").textContent=show.title+" — Episode "+episode;
@@ -52,6 +56,7 @@ function renderWatch(data){
   if(show.description) details+=(details?" — ":"")+show.description;
   var detailsEl=document.getElementById("animeDetails");
   detailsEl.textContent=details;
+  if(show.catalogueNotice){var noticeEl=document.querySelector(".notice");noticeEl.textContent=show.catalogueNotice+" Episode numbers are catalogue metadata only; add an authorized viewing URL in Admin to enable an episode.";}
   if(show.official && /^https:\/\//i.test(show.official)){
     var officialLink=document.createElement("a");
     officialLink.href=show.official;officialLink.target="_blank";officialLink.rel="noopener noreferrer";
@@ -99,14 +104,25 @@ function renderWatch(data){
     a.href="?show="+encodeURIComponent(id)+"&season="+season+"&episode="+i;
     a.setAttribute("aria-current",i===episode?"page":"false");
     var epDetail=show.seasonData.find(function(ep){return Number(ep.number)===i});
-    var label=document.createElement("span");label.textContent=epDetail?.title||("Episode "+i);
-    var sub=document.createElement("small");sub.textContent=seasonSources[i]?(function(){var u=seasonSources[i];try{var p=new URL(u);return p.pathname.toLowerCase().includes("/embed/")||/[?&](?:embed|player)=/i.test(p.search)?"Authorized embed link":"Viewing link added"}catch{return "Viewing link added"}})():(epDetail?.url?"External viewing link":"Source not added");
+    var catalogueEpisode=season===1?show.catalogueEpisodes.find(function(ep){return Number(ep.number)===i}):null;
+    var label=document.createElement("span");label.textContent=epDetail?.title||catalogueEpisode?.title||("Episode "+i);
+    var sub=document.createElement("small");sub.textContent=seasonSources[i]?(function(){var u=seasonSources[i];try{var p=new URL(u);return p.pathname.toLowerCase().includes("/embed/")||/[?&](?:embed|player)=/i.test(p.search)?"Authorized embed link":"Viewing link added"}catch{return "Viewing link added"}})():(epDetail?.url?"External viewing link":(catalogueEpisode?.sourceAvailable===false?"Catalogue listing · source needed":"Source not added"));
     a.append(label,sub);
     list.appendChild(a);
   }
 }
 fetch("./anime/"+encodeURIComponent(id)+".json",{cache:"no-store"})
   .then(function(response){if(!response.ok)throw new Error("Anime file not found");return response.json();})
+  .then(async function(data){
+    if(data.catalogueId&&/^anilist:\\d+$/.test(data.catalogueId)){
+      try{
+        var catalogueResponse=await fetch("https://kitsunest-anime-backend.onrender.com/api/catalogue/episodes?id="+encodeURIComponent(data.catalogueId),{headers:{Accept:"application/json"},cache:"no-store"});
+        var cataloguePayload=await catalogueResponse.json();
+        if(catalogueResponse.ok){data.catalogueEpisodes=Array.isArray(cataloguePayload.episodes)?cataloguePayload.episodes:[];data.catalogueNotice=cataloguePayload.metadataOnly?cataloguePayload.notice||"":"";}
+      }catch(error){console.warn("Could not load catalogue episode metadata:",error)}
+    }
+    return data;
+  })
   .then(renderWatch)
   .catch(function(){
     document.getElementById("heading").textContent="Anime details unavailable";
