@@ -128,7 +128,8 @@ const server = createServer(async (req, res) => {
             availableLanguages: ep.availableLanguages || [],
             thumbnail: ep.thumbnailUrl || "",
             isFiller: Boolean(ep.isFiller),
-            isRecap: Boolean(ep.isRecap)
+            isRecap: Boolean(ep.isRecap),
+            sourceAvailable: false
           })).filter(ep => Number.isFinite(ep.number) && ep.number > 0).sort((a, b) => a.number - b.number)
         }, origin);
       }
