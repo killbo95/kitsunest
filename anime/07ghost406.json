@@ -1,5 +1,6 @@
 {
   "id": "07ghost406",
+  "catalogueId": "anilist:31349",
   "title": "07-Ghost",
   "poster": "https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/nx31349-bZZeeBYXcqL1.jpg",
   "genre": "Action, Adventure, Comedy, Drama",
@@ -20,176 +21,176 @@
       "number": 1,
       "title": "Episode 1",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/1",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=1&language=sub",
-      "thumbnail": ""
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=1&language=sub"
     },
     {
       "number": 2,
       "title": "Episode 2",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/2",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=2&language=sub",
-      "thumbnail": ""
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=2&language=sub"
     },
     {
       "number": 3,
       "title": "Episode 3",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/3",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=3&language=sub",
-      "thumbnail": ""
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=3&language=sub"
     },
     {
       "number": 4,
       "title": "Episode 4",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/4",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=4&language=sub",
-      "thumbnail": ""
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=4&language=sub"
     },
     {
       "number": 5,
       "title": "Episode 5",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/5",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=5&language=sub",
-      "thumbnail": ""
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=5&language=sub"
     },
     {
       "number": 6,
       "title": "Episode 6",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/6",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=6&language=sub",
-      "thumbnail": ""
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=6&language=sub"
     },
     {
       "number": 7,
       "title": "Episode 7",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/7",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=7&language=sub",
-      "thumbnail": ""
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=7&language=sub"
     },
     {
       "number": 8,
       "title": "Episode 8",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/8",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=8&language=sub",
-      "thumbnail": ""
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=8&language=sub"
     },
     {
       "number": 9,
       "title": "Episode 9",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/9",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=9&language=sub",
-      "thumbnail": ""
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=9&language=sub"
     },
     {
       "number": 10,
       "title": "Episode 10",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/10",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=10&language=sub",
-      "thumbnail": ""
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=10&language=sub"
     },
     {
       "number": 11,
       "title": "Episode 11",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/11",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=11&language=sub",
-      "thumbnail": ""
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=11&language=sub"
     },
     {
       "number": 12,
       "title": "Episode 12",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/12",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=12&language=sub",
-      "thumbnail": ""
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=12&language=sub"
     },
     {
       "number": 13,
       "title": "Episode 13",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/13",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=13&language=sub",
-      "thumbnail": ""
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=13&language=sub"
     },
     {
       "number": 14,
       "title": "Episode 14",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/14",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=14&language=sub",
-      "thumbnail": ""
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=14&language=sub"
     },
     {
       "number": 15,
       "title": "Episode 15",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/15",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=15&language=sub",
-      "thumbnail": ""
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=15&language=sub"
     },
     {
       "number": 16,
       "title": "Episode 16",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/16",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=16&language=sub",
-      "thumbnail": ""
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=16&language=sub"
     },
     {
       "number": 17,
       "title": "Episode 17",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/17",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=17&language=sub",
-      "thumbnail": ""
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=17&language=sub"
     },
     {
       "number": 18,
       "title": "Episode 18",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/18",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=18&language=sub",
-      "thumbnail": ""
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=18&language=sub"
     },
     {
       "number": 19,
       "title": "Episode 19",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/19",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=19&language=sub",
-      "thumbnail": ""
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=19&language=sub"
     },
     {
       "number": 20,
       "title": "Episode 20",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/20",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=20&language=sub",
-      "thumbnail": ""
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=20&language=sub"
     },
     {
       "number": 21,
       "title": "Episode 21",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/21",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=21&language=sub",
-      "thumbnail": ""
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=21&language=sub"
     },
     {
       "number": 22,
       "title": "Episode 22",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/22",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=22&language=sub",
-      "thumbnail": ""
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=22&language=sub"
     },
     {
       "number": 23,
       "title": "Episode 23",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/23",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=23&language=sub",
-      "thumbnail": ""
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=23&language=sub"
     },
     {
       "number": 24,
       "title": "Episode 24",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/24",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=24&language=sub",
-      "thumbnail": ""
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=24&language=sub"
     },
     {
       "number": 25,
       "title": "Episode 25",
       "providerEpisodeId": "allmanga:Hayiee5Dc9yJ56R5o/25",
-      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=25&language=sub",
-      "thumbnail": ""
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A31349&episode=25&language=sub"
     }
   ],
   "episodeSources": {},
