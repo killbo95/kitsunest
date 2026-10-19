@@ -100,7 +100,7 @@ const server = createServer(async (req, res) => {
         episodes: (episodes || []).map(ep => ({
           id: ep.id,
           number: Number(ep.number),
-          title: ep.title || \`Episode \${ep.number}\`,
+          title: ep.title || "Episode " + ep.number,
           availableLanguages: ep.availableLanguages || [],
           thumbnail: ep.thumbnailUrl || "",
           isFiller: Boolean(ep.isFiller),
