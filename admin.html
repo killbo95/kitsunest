@@ -64,9 +64,13 @@ function importSdkMetadata(item){
  const episodes=Number(item.episodes);
  if(Number.isInteger(episodes)&&episodes>0){$("episodes").value=episodes;seasonEpisodeCounts={...(seasonEpisodeCounts||{}),"1":episodes};$("seasonEpisodeCount").value=episodes}
  const links=Array.isArray(item.streamingEpisodes)?item.streamingEpisodes:[];
- $("seasonData").value=JSON.stringify(links.map((ep,i)=>({number:Number(ep.number)||i+1,title:ep.title||("Episode "+(i+1)),url:ep.url,thumbnail:ep.thumbnail||""})),null,2);
+ const episodeCount=Math.max(0,Math.min(500,Number(item.episodes)||0));
+ const episodesByNumber=new Map(links.map((ep,i)=>[Number(ep.number)||i+1,{number:Number(ep.number)||i+1,title:ep.title||("Episode "+(Number(ep.number)||i+1)),url:ep.url,thumbnail:ep.thumbnail||""}]));
+ // AniList often has an episode count but no streaming URLs. Prepare the episode list without inventing URLs.
+ if(episodeCount>0){for(let n=1;n<=episodeCount;n++){if(!episodesByNumber.has(n))episodesByNumber.set(n,{number:n,title:"Episode "+n})}}
+ $("seasonData").value=JSON.stringify([...episodesByNumber.values()].sort((a,b)=>a.number-b.number),null,2);
  populateEpisodeSeasons();renderEpisodeList();updateEpisodeCount();
- metadataStatus("Imported anime-sdk details"+(links.length?" and "+links.length+" external episode link(s)":"")+". Save the anime to publish. External links open on their provider; KitsuNest does not host those videos.");
+ metadataStatus("Imported anime-sdk details and prepared "+(episodeCount||episodesByNumber.size)+" episode entries. "+(links.length?"The catalogue supplied "+links.length+" external viewing link(s). ":"No viewing URLs were supplied, so episodes without links will show Source not added. ")+ "Save the anime to publish. Only authorized provider links can be used for viewing.");
 }
 async function searchAnimeSdkMetadata(){
  const query=$("metadataQuery").value.trim();
