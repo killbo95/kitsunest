@@ -15,6 +15,20 @@ function posterUrl(cover) {
   if (typeof cover === "string") return cover;
   return cover?.extraLarge || cover?.large || cover?.medium || "";
 }
+const AUTHORIZED_STREAMING_HOSTS = [
+  "crunchyroll.com", "netflix.com", "hulu.com", "disneyplus.com",
+  "primevideo.com", "hidive.com", "tubitv.com", "tubi.tv"
+];
+function isAuthorizedViewingUrl(value) {
+  try {
+    const parsed = new URL(value);
+    return parsed.protocol === "https:" && AUTHORIZED_STREAMING_HOSTS.some(host =>
+      parsed.hostname === host || parsed.hostname.endsWith("." + host)
+    );
+  } catch {
+    return false;
+  }
+}
 function normalizeSearch(item) {
   return {
     id: item.id,
@@ -33,7 +47,7 @@ function normalizeInfo(item) {
     .map((ep, i) => {
       const externalUrl = typeof ep?.externalUrl === "string" ? ep.externalUrl
         : typeof ep?.url === "string" ? ep.url : "";
-      if (!/^https:\/\//i.test(externalUrl)) return null;
+      if (!isAuthorizedViewingUrl(externalUrl)) return null;
       const title = ep.title || "";
       const match = title.match(/(?:episode|ep\.?|#)\s*(\d+)/i);
       return {
@@ -120,7 +134,7 @@ const server = createServer(async (req, res) => {
       }
 
       // Provider catalogue matching can fail even when AniList has official episode-page links.
-      // Use only HTTPS links published as AniList streaming episodes; never invent stream URLs.
+      // Only expose HTTPS episode links on known licensed streaming-service domains.
       const media = await meta.fetchMediaInfo(id);
       const fallbackEpisodes = Array.isArray(media?.streamingEpisodes) ? media.streamingEpisodes
         .map((ep, index) => {
