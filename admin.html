@@ -108,7 +108,8 @@ async function importSdkMetadata(item,base=""){
   const number=Number(ep.number);
   if(!Number.isInteger(number)||number<1||number>500)continue;
   const entry={number,title:ep.title||("Episode "+number),providerEpisodeId:ep.id||"",thumbnail:ep.thumbnail||""};
-  if(ep.sourceAvailable!==false&&!episodeMetadataOnly){const playerUrl=base+"/api/catalogue/player?id="+encodeURIComponent(item.id)+"&episode="+encodeURIComponent(number)+"&language=sub";entry.url=playerUrl;importedSources[String(number)]=playerUrl;}
+  if(typeof ep.externalUrl==="string"&&/^https:\/\//i.test(ep.externalUrl)){entry.url=ep.externalUrl;importedSources[String(number)]=ep.externalUrl;}
+  else if(ep.sourceAvailable!==false&&!episodeMetadataOnly){const playerUrl=base+"/api/catalogue/player?id="+encodeURIComponent(item.id)+"&episode="+encodeURIComponent(number)+"&language=sub";entry.url=playerUrl;importedSources[String(number)]=playerUrl;}
   episodesByNumber.set(number,entry);
  }
  if(episodeItems.length){
