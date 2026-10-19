@@ -80,7 +80,7 @@ function showOfficialViewingSearches(title){
  for(const provider of providers){const a=document.createElement("a");a.className="btn secondary";a.href=provider.url;a.target="_blank";a.rel="noopener noreferrer";a.textContent="Search "+provider.name+" ↗";a.style.textDecoration="none";links.append(a)}
  section.append(links);root.append(section);
 }
-function importSdkMetadata(item){
+async function importSdkMetadata(item,base=""){
  const title=item.title||"";
  if(!title){metadataStatus("That anime-sdk result has no usable title.",true);return}
  if(!$("id").disabled&&!$("id").value.trim())$("id").value=slugifyMetadataTitle(title);
@@ -90,30 +90,41 @@ function importSdkMetadata(item){
  if(item.poster){$("poster").value=item.poster;if(typeof updatePosterPreview==="function")updatePosterPreview(item.poster)}
  if(item.description)$("description").value=String(item.description).replace(/<[^>]*>/g," ").trim();
  if(item.official)$("official").value=item.official;
- const episodes=Number(item.episodes);
- if(Number.isInteger(episodes)&&episodes>0){$("episodes").value=episodes;seasonEpisodeCounts={...(seasonEpisodeCounts||{}),"1":episodes};$("seasonEpisodeCount").value=episodes}
- catalogueViewingLinks=Array.isArray(item.viewingLinks)?item.viewingLinks.filter(link=>link&&typeof link.url==="string"&&/^https:\/\//i.test(link.url)).map(link=>({site:String(link.site||"Streaming service"),url:link.url})):[];
- const links=Array.isArray(item.streamingEpisodes)?item.streamingEpisodes.filter(ep=>ep&&typeof ep.url==="string"&&/^https:\/\//i.test(ep.url)):[];
- const episodeCount=Math.max(0,Math.min(500,Number(item.episodes)||0));
- const episodesByNumber=new Map();
- const importedSources={...(seasonEpisodeSources["1"]||{})};
- for(let i=0;i<links.length;i++){
-  const ep=links[i];
-  const parsed=String(ep.title||"").match(/(?:episode|ep\.?|#)\s*(\d+)/i);
-  const number=Math.max(1,Number(ep.number)||Number(parsed?.[1])||i+1);
-  const title=ep.title||("Episode "+number);
-  episodesByNumber.set(number,{number,title,url:ep.url,thumbnail:ep.thumbnail||""});
-  // Save real HTTPS links into the same episode-source map used by the episode manager.
-  importedSources[String(number)]=ep.url;
+ let episodeItems=[];
+ if(base&&/^anilist:\d+$/.test(String(item.id||""))){
+  metadataStatus("Anime details loaded. Fetching episode entries from anime-sdk…");
+  const episodeResponse=await fetch(base+"/api/catalogue/episodes?id="+encodeURIComponent(item.id),{headers:{Accept:"application/json"}});
+  const episodePayload=await episodeResponse.json().catch(()=>({}));
+  if(!episodeResponse.ok)throw Error(episodePayload.error||("Episode catalogue returned HTTP "+episodeResponse.status));
+  episodeItems=Array.isArray(episodePayload.episodes)?episodePayload.episodes:[];
  }
- if(links.length)seasonEpisodeSources={...(seasonEpisodeSources||{}),"1":importedSources};
- // Keep episode details and source URLs in sync; never fabricate URLs for missing episodes.
- if(episodeCount>0){for(let n=1;n<=episodeCount;n++){if(!episodesByNumber.has(n))episodesByNumber.set(n,{number:n,title:"Episode "+n,...(importedSources[String(n)]?{url:importedSources[String(n)]}:{})})}}
+ catalogueViewingLinks=Array.isArray(item.viewingLinks)?item.viewingLinks.filter(link=>link&&typeof link.url==="string"&&/^https:\/\//i.test(link.url)).map(link=>({site:String(link.site||"Streaming service"),url:link.url})):[];
+ const importedSources={...(seasonEpisodeSources["1"]||{})};
+ const episodesByNumber=new Map();
+ for(const ep of episodeItems){
+  const number=Number(ep.number);
+  if(!Number.isInteger(number)||number<1||number>500)continue;
+  episodesByNumber.set(number,{number,title:ep.title||("Episode "+number),providerEpisodeId:ep.id||"",thumbnail:ep.thumbnail||""});
+ }
+ if(episodeItems.length){
+  const count=Math.max(...episodeItems.map(ep=>Number(ep.number)||0));
+  $("episodes").value=count;seasonEpisodeCounts={...(seasonEpisodeCounts||{}),"1":count};$("seasonEpisodeCount").value=count;
+ }else{
+  const episodeCount=Number(item.episodes);
+  if(Number.isInteger(episodeCount)&&episodeCount>0){$("episodes").value=episodeCount;seasonEpisodeCounts={...(seasonEpisodeCounts||{}),"1":episodeCount};$("seasonEpisodeCount").value=episodeCount}
+  const links=Array.isArray(item.streamingEpisodes)?item.streamingEpisodes.filter(ep=>ep&&typeof ep.url==="string"&&/^https:\/\//i.test(ep.url)):[];
+  for(let i=0;i<links.length;i++){const ep=links[i];const number=Math.max(1,Number(ep.number)||i+1);episodesByNumber.set(number,{number,title:ep.title||("Episode "+number),url:ep.url,thumbnail:ep.thumbnail||""});importedSources[String(number)]=ep.url}
+  if(links.length)seasonEpisodeSources={...(seasonEpisodeSources||{}),"1":importedSources};
+ }
+ const count=Math.max(0,Math.min(500,Number($("episodes").value)||0));
+ if(count>0)for(let n=1;n<=count;n++)if(!episodesByNumber.has(n))episodesByNumber.set(n,{number:n,title:"Episode "+n,...(importedSources[String(n)]?{url:importedSources[String(n)]}:{})});
  $("seasonData").value=JSON.stringify([...episodesByNumber.values()].sort((a,b)=>a.number-b.number),null,2);
  populateEpisodeSeasons();renderEpisodeList();updateEpisodeCount();
- metadataStatus("Imported anime details and prepared "+(episodeCount||episodesByNumber.size)+" episode entries. Added "+links.length+" real external episode URL(s) to Season 1. "+(links.length?"Save anime to publish these links. ":"This catalogue returned no episode URLs for this anime; no fake links were created. ")+ "Only links supplied by the catalogue are imported.");
+ metadataStatus(episodeItems.length
+  ?"Imported anime details and "+episodeItems.length+" episode entries from anime-sdk. Save anime to publish the episode list."
+  :"Imported anime details, but anime-sdk did not return a provider episode list for this title.",!episodeItems.length);
  showCatalogueViewingLinks(title,item.viewingLinks);
- if(!links.length)showOfficialViewingSearches(title);
+ if(!episodeItems.length)showOfficialViewingSearches(title);
 }
 async function searchAnimeSdkMetadata(){
  const query=$("metadataQuery").value.trim();
@@ -138,7 +149,7 @@ async function searchAnimeSdkMetadata(){
    box.append(name,detail);button.append(box);
    button.onclick=async()=>{
     button.disabled=true;metadataStatus("Loading anime details and episode links…");
-    try{const infoResponse=await fetch(base+"/api/catalogue/info?id="+encodeURIComponent(item.id),{headers:{Accept:"application/json"}});const infoPayload=await infoResponse.json().catch(()=>({}));if(!infoResponse.ok)throw Error(infoPayload.error||("Backend returned HTTP "+infoResponse.status));importSdkMetadata(infoPayload.item||item)}
+    try{const infoResponse=await fetch(base+"/api/catalogue/info?id="+encodeURIComponent(item.id),{headers:{Accept:"application/json"}});const infoPayload=await infoResponse.json().catch(()=>({}));if(!infoResponse.ok)throw Error(infoPayload.error||("Backend returned HTTP "+infoResponse.status));await importSdkMetadata(infoPayload.item||item,base)}
     catch(error){metadataStatus(error.message||"Could not load anime details.",true)}
     finally{button.disabled=false}
    };
