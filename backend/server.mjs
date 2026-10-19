@@ -136,7 +136,7 @@ const server = createServer(async (req, res) => {
       // Provider catalogue matching can fail even when AniList has official episode-page links.
       // Only expose HTTPS episode links on known licensed streaming-service domains.
       const media = await meta.fetchMediaInfo(id);
-      const fallbackEpisodes = Array.isArray(media?.streamingEpisodes) ? media.streamingEpisodes
+      const linkedEpisodes = Array.isArray(media?.streamingEpisodes) ? media.streamingEpisodes
         .map((ep, index) => {
           const externalUrl = typeof ep?.externalUrl === "string" ? ep.externalUrl
             : typeof ep?.url === "string" ? ep.url : "";
@@ -152,18 +152,40 @@ const server = createServer(async (req, res) => {
             thumbnail: typeof ep.thumbnail === "string" ? ep.thumbnail : "",
             isFiller: false,
             isRecap: false,
-            externalUrl
+            externalUrl,
+            sourceAvailable: true
           };
         }).filter(Boolean)
         .filter((ep, index, all) => all.findIndex(other => other.number === ep.number) === index)
         .sort((a, b) => a.number - b.number) : [];
 
+      // Even when neither provider supplies episode links, return the known episode
+      // numbers so catalogue UIs can display the season list instead of an empty state.
+      // These entries are metadata only and are not playable until an authorized source is added.
+      const declaredCount = Number(media?.episodeCount || media?.episodes || media?.episodesCount || 0);
+      const metadataEpisodes = Number.isFinite(declaredCount) && declaredCount > 0 && declaredCount <= 500
+        ? Array.from({ length: Math.floor(declaredCount) }, (_, index) => ({
+            id: `anilist:${id.split(":")[1]}:metadata:${index + 1}`,
+            number: index + 1,
+            title: `Episode ${index + 1}`,
+            availableLanguages: [],
+            thumbnail: "",
+            isFiller: false,
+            isRecap: false,
+            sourceAvailable: false
+          }))
+        : [];
+      const fallbackEpisodes = linkedEpisodes.length ? linkedEpisodes : metadataEpisodes;
+
       return send(res, 200, {
-        provider: fallbackEpisodes.length ? "anilist-streaming-metadata" : contentProvider.id,
+        provider: linkedEpisodes.length ? "anilist-streaming-metadata" : contentProvider.id,
         fallback: true,
-        notice: fallbackEpisodes.length
-          ? "The episode provider could not match this title. These are external episode links supplied by AniList, not playable streams hosted by KitsuNest."
-          : "The episode provider could not match this title, and AniList has no episode-level streaming links for it.",
+        metadataOnly: linkedEpisodes.length === 0,
+        notice: linkedEpisodes.length
+          ? "The provider could not match this title. These external episode links are listed from AniList metadata; KitsuNest does not host the streams."
+          : metadataEpisodes.length
+            ? "Episode numbers are shown from catalogue metadata only. No authorized episode viewing links were found, so these entries are not playable yet."
+            : "The provider could not match this title, and the catalogue did not provide an episode count or authorized episode links.",
         providerError,
         episodes: fallbackEpisodes
       }, origin);
