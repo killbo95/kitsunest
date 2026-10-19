@@ -82,7 +82,7 @@ function showOfficialViewingSearches(title){
 }
 async function importSdkMetadata(item,base=""){
  const title=item.title||"";
- catalogueId=/^anilist:\\d+$/.test(String(item.id||""))?String(item.id):"";
+ catalogueId=/^anilist:\d+$/.test(String(item.id||""))?String(item.id):"";
  if(!title){metadataStatus("That anime-sdk result has no usable title.",true);return}
  if(!$("id").disabled&&!$("id").value.trim())$("id").value=slugifyMetadataTitle(title);
  $("title").value=title;
@@ -102,6 +102,7 @@ async function importSdkMetadata(item,base=""){
  }
  catalogueViewingLinks=Array.isArray(item.viewingLinks)?item.viewingLinks.filter(link=>link&&typeof link.url==="string"&&/^https:\/\//i.test(link.url)).map(link=>({site:String(link.site||"Streaming service"),url:link.url})):[];
  const importedSources={...(seasonEpisodeSources["1"]||{})};
+ if(episodeMetadataOnly){for(const [number,url] of Object.entries(importedSources)){try{const parsed=new URL(url);if(parsed.pathname.endsWith("/api/catalogue/player")&&parsed.searchParams.get("id")===item.id)delete importedSources[number]}catch{}}}
  const episodesByNumber=new Map();
  for(const ep of episodeItems){
   const number=Number(ep.number);
