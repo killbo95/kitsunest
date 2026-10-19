@@ -108,6 +108,32 @@ const server = createServer(async (req, res) => {
         })).filter(ep => Number.isFinite(ep.number) && ep.number > 0).sort((a, b) => a.number - b.number)
       }, origin);
     }
+    if (url.pathname === "/api/catalogue/player") {
+      const id = url.searchParams.get("id") || "";
+      const episode = Number(url.searchParams.get("episode"));
+      const language = ["sub", "dub", "raw"].includes(url.searchParams.get("language")) ? url.searchParams.get("language") : "sub";
+      if (!/^anilist:\d+$/.test(id) || !Number.isFinite(episode) || episode < 1 || episode > 500) {
+        return send(res, 400, { error: "A valid anime ID and episode number are required." }, origin);
+      }
+      const resolved = await meta.resolveStream(id, episode, contentProvider, language);
+      if (!resolved || resolved.type !== "video" || !resolved.streams?.length) {
+        res.writeHead(404, { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store", "Access-Control-Allow-Origin": origin });
+        return res.end("<!doctype html><meta charset=utf-8><title>Episode unavailable</title><body style='background:#090a12;color:white;font:16px system-ui;padding:24px'><h2>Episode unavailable</h2><p>The provider did not return a playable stream for this episode. Try another language or check back later.</p></body>");
+      }
+      const stream = resolved.streams[0];
+      if (!/^https:\/\//i.test(stream.sourceUrl || "")) return send(res, 502, { error: "The provider returned an invalid stream URL." }, origin);
+      const source = JSON.stringify(stream.sourceUrl).replace(/</g, "\\u003c");
+      const trackTags = (stream.subtitles || []).filter(track => /^https:\/\//i.test(track.url || "") && /\.vtt(?:$|[?#])/i.test(track.url))
+        .map(track => {
+          const lang = String(track.language || "en").replace(/[^a-z-]/gi, "");
+          const label = String(track.label || track.language || "Subtitles").replace(/[&<>"]/g, "");
+          const src = String(track.url).replace(/&/g, "&amp;").replace(/"/g, "&quot;");
+          return \`<track kind="subtitles" srclang="\${lang}" label="\${label}" src="\${src}">\`;
+        }).join("");
+      const html = \`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KitsuNest Player</title><style>html,body{margin:0;background:#080910;color:#fff;font:15px system-ui;height:100%}main{height:100%;display:grid;place-items:center}video{width:100%;height:100%;max-height:100vh;background:#000}p{padding:20px}</style></head><body><main><video id="v" controls playsinline crossorigin="anonymous">\${trackTags}</video></main><script src="https://cdn.jsdelivr.net/npm/hls.js@1"></script><script>const v=document.getElementById('v'),src=\${source};if(src.includes('.m3u8')&&window.Hls&&Hls.isSupported()){const h=new Hls();h.loadSource(src);h.attachMedia(v)}else{v.src=src}</script></body></html>\`;
+      res.writeHead(200, { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store", "Access-Control-Allow-Origin": origin, "X-Content-Type-Options": "nosniff" });
+      return res.end(html);
+    }
     if (url.pathname === "/api/catalogue/info") {
       const id = url.searchParams.get("id") || "";
       if (!/^anilist:\d+$/.test(id)) return send(res, 400, { error: "A valid AniList ID is required." }, origin);
