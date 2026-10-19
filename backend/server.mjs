@@ -26,8 +26,7 @@ function normalizeSearch(item) {
   };
 }
 function normalizeInfo(item) {
-  // anime-sdk normalizes AniList episode URLs into externalUrl (not url).
-  // Convert them to the url field that the KitsuNest admin import expects.
+  // AniList may supply direct episode-page links, but coverage varies by title.
   const streamingEpisodes = Array.isArray(item.streamingEpisodes) ? item.streamingEpisodes
     .map((ep, i) => {
       const externalUrl = typeof ep?.externalUrl === "string" ? ep.externalUrl
@@ -42,6 +41,15 @@ function normalizeInfo(item) {
         thumbnail: ep.thumbnail || ""
       };
     }).filter(Boolean) : [];
+  const externalLinks = Array.isArray(item.externalLinks) ? item.externalLinks : [];
+  const viewingLinks = externalLinks
+    .filter(link => /^https:\/\//i.test(link?.url || "") && String(link?.type || "").toUpperCase() === "STREAMING")
+    .map(link => ({ site: String(link.site || "Streaming service"), url: link.url }))
+    .filter((link, index, all) => all.findIndex(other => other.url === link.url) === index);
+  const official = externalLinks.find(link =>
+    /^https:\/\//i.test(link?.url || "") &&
+    (/official|website/i.test(String(link?.site || "")) || String(link?.type || "").toUpperCase() === "INFO")
+  )?.url || "";
   return {
     id: item.id,
     title: titleText(item.title),
@@ -50,7 +58,8 @@ function normalizeInfo(item) {
     episodes: Number(item.episodeCount) || streamingEpisodes.length || null,
     description: item.description || "",
     genres: item.genres || [],
-    official: (item.externalLinks || []).find(link => /^https:\/\//i.test(link.url || "") && /official|website/i.test(link.site || link.type || ""))?.url || "",
+    official,
+    viewingLinks,
     streamingEpisodes
   };
 }
