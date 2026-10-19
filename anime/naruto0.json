@@ -1,0 +1,1819 @@
+{
+  "id": "naruto0",
+  "catalogueId": "anilist:20",
+  "title": "Naruto",
+  "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20-dE6UHbFFg1A5.jpg",
+  "genre": "Action, Adventure, Comedy, Drama",
+  "year": "2002",
+  "mark": "N",
+  "art": "DISCOVER THE STORY",
+  "official": "https://www.tv-tokyo.co.jp/anime/naruto2002/",
+  "viewingLinks": [
+    {
+      "site": "Netflix",
+      "url": "https://www.netflix.com/title/70205012"
+    },
+    {
+      "site": "Tubi TV",
+      "url": "https://tubitv.com/series/1622/naruto"
+    },
+    {
+      "site": "Bilibili",
+      "url": "https://www.bilibili.tv/en/play/1005144"
+    },
+    {
+      "site": "iQ",
+      "url": "https://www.iq.com/album/naruto-1evx2uy83ah"
+    },
+    {
+      "site": "YouTube",
+      "url": "https://youtube.com/playlist?list=PLDDFkfLheQ9hNru7WoTa26dpn6o9-AEJK"
+    },
+    {
+      "site": "Hoopla",
+      "url": "https://www.hoopladigital.com/series/naruto-dubbed/11802118009"
+    },
+    {
+      "site": "Hoopla",
+      "url": "https://www.hoopladigital.com/television/naruto-subbed-season-1/14608874"
+    }
+  ],
+  "colors": [
+    "#d96d56",
+    "#34203d"
+  ],
+  "description": "Naruto Uzumaki, a hyperactive and knuckle-headed ninja, lives in Konohagakure, the Hidden Leaf village. Moments prior to his birth, a huge demon known as the Kyuubi, the Nine-tailed Fox, attacked Konohagakure and wreaked havoc. In order to put an end to the Kyuubi's rampage, the leader of the village, the 4th Hokage, sacrificed his life and sealed the monstrous beast inside the newborn Naruto.   \nShunned because of the presence of the Kyuubi inside him, Naruto struggles to find his place in the village. He strives to become the Hokage of Konohagakure, and he meets many friends and foes along the way.   \n(Source: MAL Rewrite)",
+  "seasons": 1,
+  "episodes": 220,
+  "seasonData": [
+    {
+      "number": 1,
+      "title": "Enter: Naruto Uzumaki!",
+      "providerEpisodeId": "megaplay:20:1",
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/ea976df50bf201db97c78c2e2ed72f641233900918_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=1&language=sub"
+    },
+    {
+      "number": 2,
+      "title": "My Name is Konohamaru!",
+      "providerEpisodeId": "megaplay:20:2",
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/1e6648f8636de8fd224e3aa9b1901f3e1233899665_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=2&language=sub"
+    },
+    {
+      "number": 3,
+      "title": "Sasuke and Sakura: Friends or Foes?",
+      "providerEpisodeId": "megaplay:20:3",
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/732076f3b53c9eecc4e21002c1668a1f1233902304_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=3&language=sub"
+    },
+    {
+      "number": 4,
+      "title": "Pass or Fail: Survival Test",
+      "providerEpisodeId": "megaplay:20:4",
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/628eda0744f33b26eb2109ee7d86217b1233903583_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=4&language=sub"
+    },
+    {
+      "number": 5,
+      "title": "You Failed! Kakashi's Final Decision",
+      "providerEpisodeId": "megaplay:20:5",
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/beaa9dbd3c851e7edb34f888840fdb541233901039_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=5&language=sub"
+    },
+    {
+      "number": 6,
+      "title": "A Dangerous Mission! Journey to the Land of Waves!",
+      "providerEpisodeId": "megaplay:20:6",
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/6369edad5c49d017efd508d26be35fc21233901038_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=6&language=sub"
+    },
+    {
+      "number": 7,
+      "title": "The Assassin of the Mist!",
+      "providerEpisodeId": "megaplay:20:7",
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/7ba79a8d58748f28eb7936ea33243d511233901096_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=7&language=sub"
+    },
+    {
+      "number": 8,
+      "title": "The Oath of Pain",
+      "providerEpisodeId": "megaplay:20:8",
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/8587a0b48de7a0924485c0b7cb2bfca91233902952_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=8&language=sub"
+    },
+    {
+      "number": 9,
+      "title": "Kakashi: Sharingan Warrior!",
+      "providerEpisodeId": "megaplay:20:9",
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/89158a698894e941ab1b2b76bdd8acb11233905153_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=9&language=sub"
+    },
+    {
+      "number": 10,
+      "title": "The Forest of Chakra",
+      "providerEpisodeId": "megaplay:20:10",
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/f9426116306b2388fa06de84752a4bab1233903447_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=10&language=sub"
+    },
+    {
+      "number": 11,
+      "title": "The Land Where a Hero Once Lived",
+      "providerEpisodeId": "megaplay:20:11",
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/3bd485e2707578b2e69be7f1596768591233899639_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=11&language=sub"
+    },
+    {
+      "number": 12,
+      "title": "Battle on the Bridge! Zabuza Returns!",
+      "providerEpisodeId": "megaplay:20:12",
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/1d671253e8b8674463fca562ee3dbf531233899593_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=12&language=sub"
+    },
+    {
+      "number": 13,
+      "title": "Haku's Secret Jutsu: Crystal Ice Mirrors",
+      "providerEpisodeId": "megaplay:20:13",
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/9c8627b71df02dcc7e5647fbb51ef6671234325534_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=13&language=sub"
+    },
+    {
+      "number": 14,
+      "title": "The Number One Hyperactive, Knucklehead Ninja Joins the Fight!",
+      "providerEpisodeId": "megaplay:20:14",
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/cb90198f0ed1df5cb0bf36828a07891b1234329464_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=14&language=sub"
+    },
+    {
+      "number": 15,
+      "title": "Zero Visibility: The Sharingan Shatters",
+      "providerEpisodeId": "megaplay:20:15",
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/b6fce9d24590fef7edda662a52648bbf1234330721_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=15&language=sub"
+    },
+    {
+      "number": 16,
+      "title": "The Broken Seal",
+      "providerEpisodeId": "megaplay:20:16",
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/2f4f04fe9370de2432301b558e479d8a1234329650_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=16&language=sub"
+    },
+    {
+      "number": 17,
+      "title": "White Past: Hidden Ambition",
+      "providerEpisodeId": "megaplay:20:17",
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/cead3f1685a32f7d28fd539f6773831d1234329942_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=17&language=sub"
+    },
+    {
+      "number": 18,
+      "title": "The Weapons Known as Shinobi",
+      "providerEpisodeId": "megaplay:20:18",
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/b480b0c71b50dd1490bb03b14ac70ba31234330310_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=18&language=sub"
+    },
+    {
+      "number": 19,
+      "title": "The Demon in the Snow",
+      "providerEpisodeId": "megaplay:20:19",
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire2-tmb/90ea795e3acb23a8f0a1b48f3b6f98f61234331010_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=19&language=sub"
+    },
+    {
+      "number": 20,
+      "title": "A New Chapter Begins: The Chūnin Exam!",
+      "providerEpisodeId": "megaplay:20:20",
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/f3404b85d3d49679ce3f5d00bc6167391234330944_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=20&language=sub"
+    },
+    {
+      "number": 21,
+      "title": "Identify Yourself: Powerful New Rivals",
+      "providerEpisodeId": "megaplay:20:21",
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/01d92833730507a6883770cd547a73641234331344_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=21&language=sub"
+    },
+    {
+      "number": 22,
+      "title": "Chūnin Challenge: Rock Lee vs. Sasuke!",
+      "providerEpisodeId": "megaplay:20:22",
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire1-tmb/64a13c04ae1dffb1dfc91ce87777beed1234331688_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=22&language=sub"
+    },
+    {
+      "number": 23,
+      "title": "Genin Takedown! All Nine Rookies Face Off!",
+      "providerEpisodeId": "megaplay:20:23",
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/ae3db32043055f3a1c0f85d76e62773c1234333305_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=23&language=sub"
+    },
+    {
+      "number": 24,
+      "title": "Start Your Engines: The Chūnin Exam Begins!",
+      "providerEpisodeId": "megaplay:20:24",
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire4-tmb/215e74fe403867e351e3ad12ddde881e1234332307_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=24&language=sub"
+    },
+    {
+      "number": 25,
+      "title": "The Tenth Question: All or Nothing!",
+      "providerEpisodeId": "megaplay:20:25",
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/b98f7b16bf95310f399a81e00be459951234332670_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=25&language=sub"
+    },
+    {
+      "number": 26,
+      "title": "Special Report: Live from the Forest of Death!",
+      "providerEpisodeId": "megaplay:20:26",
+      "thumbnail": "https://img1.ak.crunchyroll.com/i/spire3-tmb/4602dbfcd777f038fde7abefcd8543091234332769_full.jpg",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=26&language=sub"
+    },
+    {
+      "number": 27,
+      "title": "Episode 27",
+      "providerEpisodeId": "megaplay:20:27",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=27&language=sub"
+    },
+    {
+      "number": 28,
+      "title": "Episode 28",
+      "providerEpisodeId": "megaplay:20:28",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=28&language=sub"
+    },
+    {
+      "number": 29,
+      "title": "Episode 29",
+      "providerEpisodeId": "megaplay:20:29",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=29&language=sub"
+    },
+    {
+      "number": 30,
+      "title": "Episode 30",
+      "providerEpisodeId": "megaplay:20:30",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=30&language=sub"
+    },
+    {
+      "number": 31,
+      "title": "Episode 31",
+      "providerEpisodeId": "megaplay:20:31",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=31&language=sub"
+    },
+    {
+      "number": 32,
+      "title": "Episode 32",
+      "providerEpisodeId": "megaplay:20:32",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=32&language=sub"
+    },
+    {
+      "number": 33,
+      "title": "Episode 33",
+      "providerEpisodeId": "megaplay:20:33",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=33&language=sub"
+    },
+    {
+      "number": 34,
+      "title": "Episode 34",
+      "providerEpisodeId": "megaplay:20:34",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=34&language=sub"
+    },
+    {
+      "number": 35,
+      "title": "Episode 35",
+      "providerEpisodeId": "megaplay:20:35",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=35&language=sub"
+    },
+    {
+      "number": 36,
+      "title": "Episode 36",
+      "providerEpisodeId": "megaplay:20:36",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=36&language=sub"
+    },
+    {
+      "number": 37,
+      "title": "Episode 37",
+      "providerEpisodeId": "megaplay:20:37",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=37&language=sub"
+    },
+    {
+      "number": 38,
+      "title": "Episode 38",
+      "providerEpisodeId": "megaplay:20:38",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=38&language=sub"
+    },
+    {
+      "number": 39,
+      "title": "Episode 39",
+      "providerEpisodeId": "megaplay:20:39",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=39&language=sub"
+    },
+    {
+      "number": 40,
+      "title": "Episode 40",
+      "providerEpisodeId": "megaplay:20:40",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=40&language=sub"
+    },
+    {
+      "number": 41,
+      "title": "Episode 41",
+      "providerEpisodeId": "megaplay:20:41",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=41&language=sub"
+    },
+    {
+      "number": 42,
+      "title": "Episode 42",
+      "providerEpisodeId": "megaplay:20:42",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=42&language=sub"
+    },
+    {
+      "number": 43,
+      "title": "Episode 43",
+      "providerEpisodeId": "megaplay:20:43",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=43&language=sub"
+    },
+    {
+      "number": 44,
+      "title": "Episode 44",
+      "providerEpisodeId": "megaplay:20:44",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=44&language=sub"
+    },
+    {
+      "number": 45,
+      "title": "Episode 45",
+      "providerEpisodeId": "megaplay:20:45",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=45&language=sub"
+    },
+    {
+      "number": 46,
+      "title": "Episode 46",
+      "providerEpisodeId": "megaplay:20:46",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=46&language=sub"
+    },
+    {
+      "number": 47,
+      "title": "Episode 47",
+      "providerEpisodeId": "megaplay:20:47",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=47&language=sub"
+    },
+    {
+      "number": 48,
+      "title": "Episode 48",
+      "providerEpisodeId": "megaplay:20:48",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=48&language=sub"
+    },
+    {
+      "number": 49,
+      "title": "Episode 49",
+      "providerEpisodeId": "megaplay:20:49",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=49&language=sub"
+    },
+    {
+      "number": 50,
+      "title": "Episode 50",
+      "providerEpisodeId": "megaplay:20:50",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=50&language=sub"
+    },
+    {
+      "number": 51,
+      "title": "Episode 51",
+      "providerEpisodeId": "megaplay:20:51",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=51&language=sub"
+    },
+    {
+      "number": 52,
+      "title": "Episode 52",
+      "providerEpisodeId": "megaplay:20:52",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=52&language=sub"
+    },
+    {
+      "number": 53,
+      "title": "Episode 53",
+      "providerEpisodeId": "megaplay:20:53",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=53&language=sub"
+    },
+    {
+      "number": 54,
+      "title": "Episode 54",
+      "providerEpisodeId": "megaplay:20:54",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=54&language=sub"
+    },
+    {
+      "number": 55,
+      "title": "Episode 55",
+      "providerEpisodeId": "megaplay:20:55",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=55&language=sub"
+    },
+    {
+      "number": 56,
+      "title": "Episode 56",
+      "providerEpisodeId": "megaplay:20:56",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=56&language=sub"
+    },
+    {
+      "number": 57,
+      "title": "Episode 57",
+      "providerEpisodeId": "megaplay:20:57",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=57&language=sub"
+    },
+    {
+      "number": 58,
+      "title": "Episode 58",
+      "providerEpisodeId": "megaplay:20:58",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=58&language=sub"
+    },
+    {
+      "number": 59,
+      "title": "Episode 59",
+      "providerEpisodeId": "megaplay:20:59",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=59&language=sub"
+    },
+    {
+      "number": 60,
+      "title": "Episode 60",
+      "providerEpisodeId": "megaplay:20:60",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=60&language=sub"
+    },
+    {
+      "number": 61,
+      "title": "Episode 61",
+      "providerEpisodeId": "megaplay:20:61",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=61&language=sub"
+    },
+    {
+      "number": 62,
+      "title": "Episode 62",
+      "providerEpisodeId": "megaplay:20:62",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=62&language=sub"
+    },
+    {
+      "number": 63,
+      "title": "Episode 63",
+      "providerEpisodeId": "megaplay:20:63",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=63&language=sub"
+    },
+    {
+      "number": 64,
+      "title": "Episode 64",
+      "providerEpisodeId": "megaplay:20:64",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=64&language=sub"
+    },
+    {
+      "number": 65,
+      "title": "Episode 65",
+      "providerEpisodeId": "megaplay:20:65",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=65&language=sub"
+    },
+    {
+      "number": 66,
+      "title": "Episode 66",
+      "providerEpisodeId": "megaplay:20:66",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=66&language=sub"
+    },
+    {
+      "number": 67,
+      "title": "Episode 67",
+      "providerEpisodeId": "megaplay:20:67",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=67&language=sub"
+    },
+    {
+      "number": 68,
+      "title": "Episode 68",
+      "providerEpisodeId": "megaplay:20:68",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=68&language=sub"
+    },
+    {
+      "number": 69,
+      "title": "Episode 69",
+      "providerEpisodeId": "megaplay:20:69",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=69&language=sub"
+    },
+    {
+      "number": 70,
+      "title": "Episode 70",
+      "providerEpisodeId": "megaplay:20:70",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=70&language=sub"
+    },
+    {
+      "number": 71,
+      "title": "Episode 71",
+      "providerEpisodeId": "megaplay:20:71",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=71&language=sub"
+    },
+    {
+      "number": 72,
+      "title": "Episode 72",
+      "providerEpisodeId": "megaplay:20:72",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=72&language=sub"
+    },
+    {
+      "number": 73,
+      "title": "Episode 73",
+      "providerEpisodeId": "megaplay:20:73",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=73&language=sub"
+    },
+    {
+      "number": 74,
+      "title": "Episode 74",
+      "providerEpisodeId": "megaplay:20:74",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=74&language=sub"
+    },
+    {
+      "number": 75,
+      "title": "Episode 75",
+      "providerEpisodeId": "megaplay:20:75",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=75&language=sub"
+    },
+    {
+      "number": 76,
+      "title": "Episode 76",
+      "providerEpisodeId": "megaplay:20:76",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=76&language=sub"
+    },
+    {
+      "number": 77,
+      "title": "Episode 77",
+      "providerEpisodeId": "megaplay:20:77",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=77&language=sub"
+    },
+    {
+      "number": 78,
+      "title": "Episode 78",
+      "providerEpisodeId": "megaplay:20:78",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=78&language=sub"
+    },
+    {
+      "number": 79,
+      "title": "Episode 79",
+      "providerEpisodeId": "megaplay:20:79",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=79&language=sub"
+    },
+    {
+      "number": 80,
+      "title": "Episode 80",
+      "providerEpisodeId": "megaplay:20:80",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=80&language=sub"
+    },
+    {
+      "number": 81,
+      "title": "Episode 81",
+      "providerEpisodeId": "megaplay:20:81",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=81&language=sub"
+    },
+    {
+      "number": 82,
+      "title": "Episode 82",
+      "providerEpisodeId": "megaplay:20:82",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=82&language=sub"
+    },
+    {
+      "number": 83,
+      "title": "Episode 83",
+      "providerEpisodeId": "megaplay:20:83",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=83&language=sub"
+    },
+    {
+      "number": 84,
+      "title": "Episode 84",
+      "providerEpisodeId": "megaplay:20:84",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=84&language=sub"
+    },
+    {
+      "number": 85,
+      "title": "Episode 85",
+      "providerEpisodeId": "megaplay:20:85",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=85&language=sub"
+    },
+    {
+      "number": 86,
+      "title": "Episode 86",
+      "providerEpisodeId": "megaplay:20:86",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=86&language=sub"
+    },
+    {
+      "number": 87,
+      "title": "Episode 87",
+      "providerEpisodeId": "megaplay:20:87",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=87&language=sub"
+    },
+    {
+      "number": 88,
+      "title": "Episode 88",
+      "providerEpisodeId": "megaplay:20:88",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=88&language=sub"
+    },
+    {
+      "number": 89,
+      "title": "Episode 89",
+      "providerEpisodeId": "megaplay:20:89",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=89&language=sub"
+    },
+    {
+      "number": 90,
+      "title": "Episode 90",
+      "providerEpisodeId": "megaplay:20:90",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=90&language=sub"
+    },
+    {
+      "number": 91,
+      "title": "Episode 91",
+      "providerEpisodeId": "megaplay:20:91",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=91&language=sub"
+    },
+    {
+      "number": 92,
+      "title": "Episode 92",
+      "providerEpisodeId": "megaplay:20:92",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=92&language=sub"
+    },
+    {
+      "number": 93,
+      "title": "Episode 93",
+      "providerEpisodeId": "megaplay:20:93",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=93&language=sub"
+    },
+    {
+      "number": 94,
+      "title": "Episode 94",
+      "providerEpisodeId": "megaplay:20:94",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=94&language=sub"
+    },
+    {
+      "number": 95,
+      "title": "Episode 95",
+      "providerEpisodeId": "megaplay:20:95",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=95&language=sub"
+    },
+    {
+      "number": 96,
+      "title": "Episode 96",
+      "providerEpisodeId": "megaplay:20:96",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=96&language=sub"
+    },
+    {
+      "number": 97,
+      "title": "Episode 97",
+      "providerEpisodeId": "megaplay:20:97",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=97&language=sub"
+    },
+    {
+      "number": 98,
+      "title": "Episode 98",
+      "providerEpisodeId": "megaplay:20:98",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=98&language=sub"
+    },
+    {
+      "number": 99,
+      "title": "Episode 99",
+      "providerEpisodeId": "megaplay:20:99",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=99&language=sub"
+    },
+    {
+      "number": 100,
+      "title": "Episode 100",
+      "providerEpisodeId": "megaplay:20:100",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=100&language=sub"
+    },
+    {
+      "number": 101,
+      "title": "Episode 101",
+      "providerEpisodeId": "megaplay:20:101",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=101&language=sub"
+    },
+    {
+      "number": 102,
+      "title": "Episode 102",
+      "providerEpisodeId": "megaplay:20:102",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=102&language=sub"
+    },
+    {
+      "number": 103,
+      "title": "Episode 103",
+      "providerEpisodeId": "megaplay:20:103",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=103&language=sub"
+    },
+    {
+      "number": 104,
+      "title": "Episode 104",
+      "providerEpisodeId": "megaplay:20:104",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=104&language=sub"
+    },
+    {
+      "number": 105,
+      "title": "Episode 105",
+      "providerEpisodeId": "megaplay:20:105",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=105&language=sub"
+    },
+    {
+      "number": 106,
+      "title": "Episode 106",
+      "providerEpisodeId": "megaplay:20:106",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=106&language=sub"
+    },
+    {
+      "number": 107,
+      "title": "Episode 107",
+      "providerEpisodeId": "megaplay:20:107",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=107&language=sub"
+    },
+    {
+      "number": 108,
+      "title": "Episode 108",
+      "providerEpisodeId": "megaplay:20:108",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=108&language=sub"
+    },
+    {
+      "number": 109,
+      "title": "Episode 109",
+      "providerEpisodeId": "megaplay:20:109",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=109&language=sub"
+    },
+    {
+      "number": 110,
+      "title": "Episode 110",
+      "providerEpisodeId": "megaplay:20:110",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=110&language=sub"
+    },
+    {
+      "number": 111,
+      "title": "Episode 111",
+      "providerEpisodeId": "megaplay:20:111",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=111&language=sub"
+    },
+    {
+      "number": 112,
+      "title": "Episode 112",
+      "providerEpisodeId": "megaplay:20:112",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=112&language=sub"
+    },
+    {
+      "number": 113,
+      "title": "Episode 113",
+      "providerEpisodeId": "megaplay:20:113",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=113&language=sub"
+    },
+    {
+      "number": 114,
+      "title": "Episode 114",
+      "providerEpisodeId": "megaplay:20:114",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=114&language=sub"
+    },
+    {
+      "number": 115,
+      "title": "Episode 115",
+      "providerEpisodeId": "megaplay:20:115",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=115&language=sub"
+    },
+    {
+      "number": 116,
+      "title": "Episode 116",
+      "providerEpisodeId": "megaplay:20:116",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=116&language=sub"
+    },
+    {
+      "number": 117,
+      "title": "Episode 117",
+      "providerEpisodeId": "megaplay:20:117",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=117&language=sub"
+    },
+    {
+      "number": 118,
+      "title": "Episode 118",
+      "providerEpisodeId": "megaplay:20:118",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=118&language=sub"
+    },
+    {
+      "number": 119,
+      "title": "Episode 119",
+      "providerEpisodeId": "megaplay:20:119",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=119&language=sub"
+    },
+    {
+      "number": 120,
+      "title": "Episode 120",
+      "providerEpisodeId": "megaplay:20:120",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=120&language=sub"
+    },
+    {
+      "number": 121,
+      "title": "Episode 121",
+      "providerEpisodeId": "megaplay:20:121",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=121&language=sub"
+    },
+    {
+      "number": 122,
+      "title": "Episode 122",
+      "providerEpisodeId": "megaplay:20:122",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=122&language=sub"
+    },
+    {
+      "number": 123,
+      "title": "Episode 123",
+      "providerEpisodeId": "megaplay:20:123",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=123&language=sub"
+    },
+    {
+      "number": 124,
+      "title": "Episode 124",
+      "providerEpisodeId": "megaplay:20:124",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=124&language=sub"
+    },
+    {
+      "number": 125,
+      "title": "Episode 125",
+      "providerEpisodeId": "megaplay:20:125",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=125&language=sub"
+    },
+    {
+      "number": 126,
+      "title": "Episode 126",
+      "providerEpisodeId": "megaplay:20:126",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=126&language=sub"
+    },
+    {
+      "number": 127,
+      "title": "Episode 127",
+      "providerEpisodeId": "megaplay:20:127",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=127&language=sub"
+    },
+    {
+      "number": 128,
+      "title": "Episode 128",
+      "providerEpisodeId": "megaplay:20:128",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=128&language=sub"
+    },
+    {
+      "number": 129,
+      "title": "Episode 129",
+      "providerEpisodeId": "megaplay:20:129",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=129&language=sub"
+    },
+    {
+      "number": 130,
+      "title": "Episode 130",
+      "providerEpisodeId": "megaplay:20:130",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=130&language=sub"
+    },
+    {
+      "number": 131,
+      "title": "Episode 131",
+      "providerEpisodeId": "megaplay:20:131",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=131&language=sub"
+    },
+    {
+      "number": 132,
+      "title": "Episode 132",
+      "providerEpisodeId": "megaplay:20:132",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=132&language=sub"
+    },
+    {
+      "number": 133,
+      "title": "Episode 133",
+      "providerEpisodeId": "megaplay:20:133",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=133&language=sub"
+    },
+    {
+      "number": 134,
+      "title": "Episode 134",
+      "providerEpisodeId": "megaplay:20:134",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=134&language=sub"
+    },
+    {
+      "number": 135,
+      "title": "Episode 135",
+      "providerEpisodeId": "megaplay:20:135",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=135&language=sub"
+    },
+    {
+      "number": 136,
+      "title": "Episode 136",
+      "providerEpisodeId": "megaplay:20:136",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=136&language=sub"
+    },
+    {
+      "number": 137,
+      "title": "Episode 137",
+      "providerEpisodeId": "megaplay:20:137",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=137&language=sub"
+    },
+    {
+      "number": 138,
+      "title": "Episode 138",
+      "providerEpisodeId": "megaplay:20:138",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=138&language=sub"
+    },
+    {
+      "number": 139,
+      "title": "Episode 139",
+      "providerEpisodeId": "megaplay:20:139",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=139&language=sub"
+    },
+    {
+      "number": 140,
+      "title": "Episode 140",
+      "providerEpisodeId": "megaplay:20:140",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=140&language=sub"
+    },
+    {
+      "number": 141,
+      "title": "Episode 141",
+      "providerEpisodeId": "megaplay:20:141",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=141&language=sub"
+    },
+    {
+      "number": 142,
+      "title": "Episode 142",
+      "providerEpisodeId": "megaplay:20:142",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=142&language=sub"
+    },
+    {
+      "number": 143,
+      "title": "Episode 143",
+      "providerEpisodeId": "megaplay:20:143",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=143&language=sub"
+    },
+    {
+      "number": 144,
+      "title": "Episode 144",
+      "providerEpisodeId": "megaplay:20:144",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=144&language=sub"
+    },
+    {
+      "number": 145,
+      "title": "Episode 145",
+      "providerEpisodeId": "megaplay:20:145",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=145&language=sub"
+    },
+    {
+      "number": 146,
+      "title": "Episode 146",
+      "providerEpisodeId": "megaplay:20:146",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=146&language=sub"
+    },
+    {
+      "number": 147,
+      "title": "Episode 147",
+      "providerEpisodeId": "megaplay:20:147",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=147&language=sub"
+    },
+    {
+      "number": 148,
+      "title": "Episode 148",
+      "providerEpisodeId": "megaplay:20:148",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=148&language=sub"
+    },
+    {
+      "number": 149,
+      "title": "Episode 149",
+      "providerEpisodeId": "megaplay:20:149",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=149&language=sub"
+    },
+    {
+      "number": 150,
+      "title": "Episode 150",
+      "providerEpisodeId": "megaplay:20:150",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=150&language=sub"
+    },
+    {
+      "number": 151,
+      "title": "Episode 151",
+      "providerEpisodeId": "megaplay:20:151",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=151&language=sub"
+    },
+    {
+      "number": 152,
+      "title": "Episode 152",
+      "providerEpisodeId": "megaplay:20:152",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=152&language=sub"
+    },
+    {
+      "number": 153,
+      "title": "Episode 153",
+      "providerEpisodeId": "megaplay:20:153",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=153&language=sub"
+    },
+    {
+      "number": 154,
+      "title": "Episode 154",
+      "providerEpisodeId": "megaplay:20:154",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=154&language=sub"
+    },
+    {
+      "number": 155,
+      "title": "Episode 155",
+      "providerEpisodeId": "megaplay:20:155",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=155&language=sub"
+    },
+    {
+      "number": 156,
+      "title": "Episode 156",
+      "providerEpisodeId": "megaplay:20:156",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=156&language=sub"
+    },
+    {
+      "number": 157,
+      "title": "Episode 157",
+      "providerEpisodeId": "megaplay:20:157",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=157&language=sub"
+    },
+    {
+      "number": 158,
+      "title": "Episode 158",
+      "providerEpisodeId": "megaplay:20:158",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=158&language=sub"
+    },
+    {
+      "number": 159,
+      "title": "Episode 159",
+      "providerEpisodeId": "megaplay:20:159",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=159&language=sub"
+    },
+    {
+      "number": 160,
+      "title": "Episode 160",
+      "providerEpisodeId": "megaplay:20:160",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=160&language=sub"
+    },
+    {
+      "number": 161,
+      "title": "Episode 161",
+      "providerEpisodeId": "megaplay:20:161",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=161&language=sub"
+    },
+    {
+      "number": 162,
+      "title": "Episode 162",
+      "providerEpisodeId": "megaplay:20:162",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=162&language=sub"
+    },
+    {
+      "number": 163,
+      "title": "Episode 163",
+      "providerEpisodeId": "megaplay:20:163",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=163&language=sub"
+    },
+    {
+      "number": 164,
+      "title": "Episode 164",
+      "providerEpisodeId": "megaplay:20:164",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=164&language=sub"
+    },
+    {
+      "number": 165,
+      "title": "Episode 165",
+      "providerEpisodeId": "megaplay:20:165",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=165&language=sub"
+    },
+    {
+      "number": 166,
+      "title": "Episode 166",
+      "providerEpisodeId": "megaplay:20:166",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=166&language=sub"
+    },
+    {
+      "number": 167,
+      "title": "Episode 167",
+      "providerEpisodeId": "megaplay:20:167",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=167&language=sub"
+    },
+    {
+      "number": 168,
+      "title": "Episode 168",
+      "providerEpisodeId": "megaplay:20:168",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=168&language=sub"
+    },
+    {
+      "number": 169,
+      "title": "Episode 169",
+      "providerEpisodeId": "megaplay:20:169",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=169&language=sub"
+    },
+    {
+      "number": 170,
+      "title": "Episode 170",
+      "providerEpisodeId": "megaplay:20:170",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=170&language=sub"
+    },
+    {
+      "number": 171,
+      "title": "Episode 171",
+      "providerEpisodeId": "megaplay:20:171",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=171&language=sub"
+    },
+    {
+      "number": 172,
+      "title": "Episode 172",
+      "providerEpisodeId": "megaplay:20:172",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=172&language=sub"
+    },
+    {
+      "number": 173,
+      "title": "Episode 173",
+      "providerEpisodeId": "megaplay:20:173",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=173&language=sub"
+    },
+    {
+      "number": 174,
+      "title": "Episode 174",
+      "providerEpisodeId": "megaplay:20:174",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=174&language=sub"
+    },
+    {
+      "number": 175,
+      "title": "Episode 175",
+      "providerEpisodeId": "megaplay:20:175",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=175&language=sub"
+    },
+    {
+      "number": 176,
+      "title": "Episode 176",
+      "providerEpisodeId": "megaplay:20:176",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=176&language=sub"
+    },
+    {
+      "number": 177,
+      "title": "Episode 177",
+      "providerEpisodeId": "megaplay:20:177",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=177&language=sub"
+    },
+    {
+      "number": 178,
+      "title": "Episode 178",
+      "providerEpisodeId": "megaplay:20:178",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=178&language=sub"
+    },
+    {
+      "number": 179,
+      "title": "Episode 179",
+      "providerEpisodeId": "megaplay:20:179",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=179&language=sub"
+    },
+    {
+      "number": 180,
+      "title": "Episode 180",
+      "providerEpisodeId": "megaplay:20:180",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=180&language=sub"
+    },
+    {
+      "number": 181,
+      "title": "Episode 181",
+      "providerEpisodeId": "megaplay:20:181",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=181&language=sub"
+    },
+    {
+      "number": 182,
+      "title": "Episode 182",
+      "providerEpisodeId": "megaplay:20:182",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=182&language=sub"
+    },
+    {
+      "number": 183,
+      "title": "Episode 183",
+      "providerEpisodeId": "megaplay:20:183",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=183&language=sub"
+    },
+    {
+      "number": 184,
+      "title": "Episode 184",
+      "providerEpisodeId": "megaplay:20:184",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=184&language=sub"
+    },
+    {
+      "number": 185,
+      "title": "Episode 185",
+      "providerEpisodeId": "megaplay:20:185",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=185&language=sub"
+    },
+    {
+      "number": 186,
+      "title": "Episode 186",
+      "providerEpisodeId": "megaplay:20:186",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=186&language=sub"
+    },
+    {
+      "number": 187,
+      "title": "Episode 187",
+      "providerEpisodeId": "megaplay:20:187",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=187&language=sub"
+    },
+    {
+      "number": 188,
+      "title": "Episode 188",
+      "providerEpisodeId": "megaplay:20:188",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=188&language=sub"
+    },
+    {
+      "number": 189,
+      "title": "Episode 189",
+      "providerEpisodeId": "megaplay:20:189",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=189&language=sub"
+    },
+    {
+      "number": 190,
+      "title": "Episode 190",
+      "providerEpisodeId": "megaplay:20:190",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=190&language=sub"
+    },
+    {
+      "number": 191,
+      "title": "Episode 191",
+      "providerEpisodeId": "megaplay:20:191",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=191&language=sub"
+    },
+    {
+      "number": 192,
+      "title": "Episode 192",
+      "providerEpisodeId": "megaplay:20:192",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=192&language=sub"
+    },
+    {
+      "number": 193,
+      "title": "Episode 193",
+      "providerEpisodeId": "megaplay:20:193",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=193&language=sub"
+    },
+    {
+      "number": 194,
+      "title": "Episode 194",
+      "providerEpisodeId": "megaplay:20:194",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=194&language=sub"
+    },
+    {
+      "number": 195,
+      "title": "Episode 195",
+      "providerEpisodeId": "megaplay:20:195",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=195&language=sub"
+    },
+    {
+      "number": 196,
+      "title": "Episode 196",
+      "providerEpisodeId": "megaplay:20:196",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=196&language=sub"
+    },
+    {
+      "number": 197,
+      "title": "Episode 197",
+      "providerEpisodeId": "megaplay:20:197",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=197&language=sub"
+    },
+    {
+      "number": 198,
+      "title": "Episode 198",
+      "providerEpisodeId": "megaplay:20:198",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=198&language=sub"
+    },
+    {
+      "number": 199,
+      "title": "Episode 199",
+      "providerEpisodeId": "megaplay:20:199",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=199&language=sub"
+    },
+    {
+      "number": 200,
+      "title": "Episode 200",
+      "providerEpisodeId": "megaplay:20:200",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=200&language=sub"
+    },
+    {
+      "number": 201,
+      "title": "Episode 201",
+      "providerEpisodeId": "megaplay:20:201",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=201&language=sub"
+    },
+    {
+      "number": 202,
+      "title": "Episode 202",
+      "providerEpisodeId": "megaplay:20:202",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=202&language=sub"
+    },
+    {
+      "number": 203,
+      "title": "Episode 203",
+      "providerEpisodeId": "megaplay:20:203",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=203&language=sub"
+    },
+    {
+      "number": 204,
+      "title": "Episode 204",
+      "providerEpisodeId": "megaplay:20:204",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=204&language=sub"
+    },
+    {
+      "number": 205,
+      "title": "Episode 205",
+      "providerEpisodeId": "megaplay:20:205",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=205&language=sub"
+    },
+    {
+      "number": 206,
+      "title": "Episode 206",
+      "providerEpisodeId": "megaplay:20:206",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=206&language=sub"
+    },
+    {
+      "number": 207,
+      "title": "Episode 207",
+      "providerEpisodeId": "megaplay:20:207",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=207&language=sub"
+    },
+    {
+      "number": 208,
+      "title": "Episode 208",
+      "providerEpisodeId": "megaplay:20:208",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=208&language=sub"
+    },
+    {
+      "number": 209,
+      "title": "Episode 209",
+      "providerEpisodeId": "megaplay:20:209",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=209&language=sub"
+    },
+    {
+      "number": 210,
+      "title": "Episode 210",
+      "providerEpisodeId": "megaplay:20:210",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=210&language=sub"
+    },
+    {
+      "number": 211,
+      "title": "Episode 211",
+      "providerEpisodeId": "megaplay:20:211",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=211&language=sub"
+    },
+    {
+      "number": 212,
+      "title": "Episode 212",
+      "providerEpisodeId": "megaplay:20:212",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=212&language=sub"
+    },
+    {
+      "number": 213,
+      "title": "Episode 213",
+      "providerEpisodeId": "megaplay:20:213",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=213&language=sub"
+    },
+    {
+      "number": 214,
+      "title": "Episode 214",
+      "providerEpisodeId": "megaplay:20:214",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=214&language=sub"
+    },
+    {
+      "number": 215,
+      "title": "Episode 215",
+      "providerEpisodeId": "megaplay:20:215",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=215&language=sub"
+    },
+    {
+      "number": 216,
+      "title": "Episode 216",
+      "providerEpisodeId": "megaplay:20:216",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=216&language=sub"
+    },
+    {
+      "number": 217,
+      "title": "Episode 217",
+      "providerEpisodeId": "megaplay:20:217",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=217&language=sub"
+    },
+    {
+      "number": 218,
+      "title": "Episode 218",
+      "providerEpisodeId": "megaplay:20:218",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=218&language=sub"
+    },
+    {
+      "number": 219,
+      "title": "Episode 219",
+      "providerEpisodeId": "megaplay:20:219",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=219&language=sub"
+    },
+    {
+      "number": 220,
+      "title": "Episode 220",
+      "providerEpisodeId": "megaplay:20:220",
+      "thumbnail": "",
+      "url": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=220&language=sub"
+    }
+  ],
+  "episodeSources": {},
+  "seasonEpisodeSources": {
+    "1": {
+      "1": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=1&language=sub",
+      "2": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=2&language=sub",
+      "3": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=3&language=sub",
+      "4": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=4&language=sub",
+      "5": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=5&language=sub",
+      "6": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=6&language=sub",
+      "7": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=7&language=sub",
+      "8": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=8&language=sub",
+      "9": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=9&language=sub",
+      "10": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=10&language=sub",
+      "11": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=11&language=sub",
+      "12": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=12&language=sub",
+      "13": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=13&language=sub",
+      "14": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=14&language=sub",
+      "15": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=15&language=sub",
+      "16": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=16&language=sub",
+      "17": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=17&language=sub",
+      "18": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=18&language=sub",
+      "19": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=19&language=sub",
+      "20": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=20&language=sub",
+      "21": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=21&language=sub",
+      "22": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=22&language=sub",
+      "23": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=23&language=sub",
+      "24": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=24&language=sub",
+      "25": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=25&language=sub",
+      "26": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=26&language=sub",
+      "27": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=27&language=sub",
+      "28": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=28&language=sub",
+      "29": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=29&language=sub",
+      "30": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=30&language=sub",
+      "31": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=31&language=sub",
+      "32": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=32&language=sub",
+      "33": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=33&language=sub",
+      "34": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=34&language=sub",
+      "35": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=35&language=sub",
+      "36": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=36&language=sub",
+      "37": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=37&language=sub",
+      "38": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=38&language=sub",
+      "39": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=39&language=sub",
+      "40": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=40&language=sub",
+      "41": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=41&language=sub",
+      "42": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=42&language=sub",
+      "43": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=43&language=sub",
+      "44": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=44&language=sub",
+      "45": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=45&language=sub",
+      "46": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=46&language=sub",
+      "47": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=47&language=sub",
+      "48": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=48&language=sub",
+      "49": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=49&language=sub",
+      "50": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=50&language=sub",
+      "51": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=51&language=sub",
+      "52": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=52&language=sub",
+      "53": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=53&language=sub",
+      "54": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=54&language=sub",
+      "55": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=55&language=sub",
+      "56": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=56&language=sub",
+      "57": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=57&language=sub",
+      "58": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=58&language=sub",
+      "59": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=59&language=sub",
+      "60": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=60&language=sub",
+      "61": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=61&language=sub",
+      "62": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=62&language=sub",
+      "63": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=63&language=sub",
+      "64": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=64&language=sub",
+      "65": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=65&language=sub",
+      "66": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=66&language=sub",
+      "67": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=67&language=sub",
+      "68": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=68&language=sub",
+      "69": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=69&language=sub",
+      "70": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=70&language=sub",
+      "71": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=71&language=sub",
+      "72": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=72&language=sub",
+      "73": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=73&language=sub",
+      "74": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=74&language=sub",
+      "75": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=75&language=sub",
+      "76": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=76&language=sub",
+      "77": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=77&language=sub",
+      "78": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=78&language=sub",
+      "79": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=79&language=sub",
+      "80": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=80&language=sub",
+      "81": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=81&language=sub",
+      "82": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=82&language=sub",
+      "83": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=83&language=sub",
+      "84": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=84&language=sub",
+      "85": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=85&language=sub",
+      "86": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=86&language=sub",
+      "87": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=87&language=sub",
+      "88": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=88&language=sub",
+      "89": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=89&language=sub",
+      "90": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=90&language=sub",
+      "91": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=91&language=sub",
+      "92": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=92&language=sub",
+      "93": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=93&language=sub",
+      "94": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=94&language=sub",
+      "95": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=95&language=sub",
+      "96": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=96&language=sub",
+      "97": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=97&language=sub",
+      "98": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=98&language=sub",
+      "99": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=99&language=sub",
+      "100": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=100&language=sub",
+      "101": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=101&language=sub",
+      "102": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=102&language=sub",
+      "103": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=103&language=sub",
+      "104": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=104&language=sub",
+      "105": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=105&language=sub",
+      "106": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=106&language=sub",
+      "107": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=107&language=sub",
+      "108": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=108&language=sub",
+      "109": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=109&language=sub",
+      "110": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=110&language=sub",
+      "111": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=111&language=sub",
+      "112": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=112&language=sub",
+      "113": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=113&language=sub",
+      "114": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=114&language=sub",
+      "115": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=115&language=sub",
+      "116": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=116&language=sub",
+      "117": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=117&language=sub",
+      "118": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=118&language=sub",
+      "119": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=119&language=sub",
+      "120": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=120&language=sub",
+      "121": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=121&language=sub",
+      "122": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=122&language=sub",
+      "123": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=123&language=sub",
+      "124": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=124&language=sub",
+      "125": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=125&language=sub",
+      "126": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=126&language=sub",
+      "127": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=127&language=sub",
+      "128": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=128&language=sub",
+      "129": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=129&language=sub",
+      "130": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=130&language=sub",
+      "131": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=131&language=sub",
+      "132": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=132&language=sub",
+      "133": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=133&language=sub",
+      "134": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=134&language=sub",
+      "135": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=135&language=sub",
+      "136": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=136&language=sub",
+      "137": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=137&language=sub",
+      "138": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=138&language=sub",
+      "139": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=139&language=sub",
+      "140": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=140&language=sub",
+      "141": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=141&language=sub",
+      "142": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=142&language=sub",
+      "143": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=143&language=sub",
+      "144": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=144&language=sub",
+      "145": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=145&language=sub",
+      "146": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=146&language=sub",
+      "147": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=147&language=sub",
+      "148": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=148&language=sub",
+      "149": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=149&language=sub",
+      "150": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=150&language=sub",
+      "151": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=151&language=sub",
+      "152": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=152&language=sub",
+      "153": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=153&language=sub",
+      "154": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=154&language=sub",
+      "155": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=155&language=sub",
+      "156": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=156&language=sub",
+      "157": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=157&language=sub",
+      "158": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=158&language=sub",
+      "159": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=159&language=sub",
+      "160": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=160&language=sub",
+      "161": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=161&language=sub",
+      "162": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=162&language=sub",
+      "163": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=163&language=sub",
+      "164": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=164&language=sub",
+      "165": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=165&language=sub",
+      "166": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=166&language=sub",
+      "167": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=167&language=sub",
+      "168": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=168&language=sub",
+      "169": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=169&language=sub",
+      "170": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=170&language=sub",
+      "171": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=171&language=sub",
+      "172": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=172&language=sub",
+      "173": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=173&language=sub",
+      "174": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=174&language=sub",
+      "175": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=175&language=sub",
+      "176": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=176&language=sub",
+      "177": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=177&language=sub",
+      "178": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=178&language=sub",
+      "179": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=179&language=sub",
+      "180": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=180&language=sub",
+      "181": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=181&language=sub",
+      "182": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=182&language=sub",
+      "183": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=183&language=sub",
+      "184": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=184&language=sub",
+      "185": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=185&language=sub",
+      "186": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=186&language=sub",
+      "187": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=187&language=sub",
+      "188": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=188&language=sub",
+      "189": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=189&language=sub",
+      "190": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=190&language=sub",
+      "191": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=191&language=sub",
+      "192": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=192&language=sub",
+      "193": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=193&language=sub",
+      "194": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=194&language=sub",
+      "195": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=195&language=sub",
+      "196": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=196&language=sub",
+      "197": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=197&language=sub",
+      "198": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=198&language=sub",
+      "199": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=199&language=sub",
+      "200": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=200&language=sub",
+      "201": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=201&language=sub",
+      "202": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=202&language=sub",
+      "203": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=203&language=sub",
+      "204": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=204&language=sub",
+      "205": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=205&language=sub",
+      "206": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=206&language=sub",
+      "207": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=207&language=sub",
+      "208": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=208&language=sub",
+      "209": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=209&language=sub",
+      "210": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=210&language=sub",
+      "211": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=211&language=sub",
+      "212": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=212&language=sub",
+      "213": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=213&language=sub",
+      "214": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=214&language=sub",
+      "215": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=215&language=sub",
+      "216": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=216&language=sub",
+      "217": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=217&language=sub",
+      "218": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=218&language=sub",
+      "219": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=219&language=sub",
+      "220": "https://kitsunest-anime-backend.onrender.com/api/catalogue/player?id=anilist%3A20&episode=220&language=sub"
+    }
+  },
+  "seasonEpisodeCounts": {
+    "1": 220
+  },
+  "upcomingReleases": []
+}
