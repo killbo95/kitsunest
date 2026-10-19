@@ -202,7 +202,8 @@ const server = createServer(async (req, res) => {
       const fallbackEpisodes = linkedEpisodes.length ? linkedEpisodes : metadataEpisodes;
 
       return send(res, 200, {
-        provider: linkedEpisodes.length ? "anilist-streaming-metadata" : contentProvider.id,
+        provider: linkedEpisodes.length ? "anilist-streaming-metadata" : "metadata-fallback",
+        triedProviders: contentProviders.map(provider => provider.id),
         fallback: true,
         metadataOnly: linkedEpisodes.length === 0,
         notice: linkedEpisodes.length
