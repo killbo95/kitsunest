@@ -140,7 +140,7 @@ const server = createServer(async (req, res) => {
         .map((ep, index) => {
           const externalUrl = typeof ep?.externalUrl === "string" ? ep.externalUrl
             : typeof ep?.url === "string" ? ep.url : "";
-          if (!/^https:\/\//i.test(externalUrl)) return null;
+          if (!isAuthorizedViewingUrl(externalUrl)) return null;
           const title = String(ep.title || "");
           const match = title.match(/(?:episode|ep\.?|#)\s*(\d+)/i);
           const number = Number(ep.number) || Number(match?.[1]) || index + 1;
