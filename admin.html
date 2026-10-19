@@ -104,9 +104,12 @@ async function importSdkMetadata(item,base=""){
  for(const ep of episodeItems){
   const number=Number(ep.number);
   if(!Number.isInteger(number)||number<1||number>500)continue;
-  episodesByNumber.set(number,{number,title:ep.title||("Episode "+number),providerEpisodeId:ep.id||"",thumbnail:ep.thumbnail||""});
+  const playerUrl=base+"/api/catalogue/player?id="+encodeURIComponent(item.id)+"&episode="+encodeURIComponent(number)+"&language=sub";
+  episodesByNumber.set(number,{number,title:ep.title||("Episode "+number),providerEpisodeId:ep.id||"",url:playerUrl,thumbnail:ep.thumbnail||""});
+  importedSources[String(number)]=playerUrl;
  }
  if(episodeItems.length){
+  seasonEpisodeSources={...(seasonEpisodeSources||{}),"1":importedSources};
   const count=Math.max(...episodeItems.map(ep=>Number(ep.number)||0));
   $("episodes").value=count;seasonEpisodeCounts={...(seasonEpisodeCounts||{}),"1":count};$("seasonEpisodeCount").value=count;
  }else{
