@@ -28,12 +28,16 @@ function normalizeSearch(item) {
 function normalizeInfo(item) {
   const streamingEpisodes = Array.isArray(item.streamingEpisodes) ? item.streamingEpisodes
     .filter(ep => ep && typeof ep.url === "string" && /^https:\/\//i.test(ep.url))
-    .map((ep, i) => ({
-      number: i + 1,
-      title: ep.title || `Episode ${i + 1}`,
-      url: ep.url,
-      thumbnail: ep.thumbnail || ""
-    })) : [];
+    .map((ep, i) => {
+      const title = ep.title || "";
+      const match = title.match(/(?:episode|ep\\.?|#)\\s*(\\d+)/i);
+      return {
+        number: Number(match?.[1]) || i + 1,
+        title: title || `Episode ${i + 1}`,
+        url: ep.url,
+        thumbnail: ep.thumbnail || ""
+      };
+    }) : [];
   return {
     id: item.id,
     title: titleText(item.title),
