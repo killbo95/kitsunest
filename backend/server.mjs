@@ -1,11 +1,20 @@
 import { createServer } from "node:http";
-import { AnilistMeta, AllmangaProvider, HttpClient } from "anime-sdk";
+import { AnilistMeta, AllmangaProvider, AnimeParadiseProvider, AnikotoProvider, GogoanimeProvider, GoyabuProvider, MegaPlayProvider, HttpClient } from "anime-sdk";
 
 const port = Number(process.env.PORT || 8788);
 const allowedOrigin = process.env.ALLOWED_ORIGIN || "https://killbo95.github.io";
 const http = new HttpClient({ timeoutMs: 25000 });
 const meta = new AnilistMeta(http);
-const contentProvider = new AllmangaProvider(http);
+// Try every anime content provider exposed by anime-sdk. Provider order is deliberate:
+// broad coverage first, then independent fallbacks. Goyabu is only used for raw audio.
+const contentProviders = [
+  new AllmangaProvider(http),
+  new MegaPlayProvider(http),
+  new AnimeParadiseProvider(http),
+  new AnikotoProvider(http),
+  new GogoanimeProvider(http),
+  new GoyabuProvider(http)
+];
 
 function titleText(title) {
   if (typeof title === "string") return title;
@@ -98,7 +107,8 @@ const server = createServer(async (req, res) => {
   const url = new URL(req.url || "/", `http://${req.headers.host || "localhost"}`);
   try {
     if (req.method !== "GET") return send(res, 405, { error: "Only GET is supported." }, origin);
-    if (url.pathname === "/health") return send(res, 200, { ok: true, service: "KitsuNest anime-sdk catalogue", provider: "AniList", version: 1 }, origin);
+    if (url.pathname === "/health") return send(res, 200, { ok: true, service: "KitsuNest anime-sdk catalogue", metadataProvider: "AniList", contentProviders: contentProviders.map(provider => provider.id), version: 2 }, origin);
+    if (url.pathname === "/api/catalogue/providers") return send(res, 200, { metadataProvider: "anilist", providers: contentProviders.map(provider => ({ id: provider.id, languages: provider.id === "goyabu" ? ["raw"] : provider.id === "allmanga" ? ["sub", "dub", "raw"] : provider.id === "anikoto" || provider.id === "megaplay" ? ["sub", "dub"] : ["sub"] })) }, origin);
     if (url.pathname === "/api/catalogue/search") {
       const q = (url.searchParams.get("q") || "").trim();
       if (q.length < 2 || q.length > 100) return send(res, 400, { error: "Search must be 2–100 characters." }, origin);
@@ -110,17 +120,29 @@ const server = createServer(async (req, res) => {
       if (!/^anilist:\d+$/.test(id)) return send(res, 400, { error: "A valid AniList ID is required." }, origin);
       let episodes = [];
       let providerError = "";
-      try {
-        episodes = await meta.fetchContentUnits(id, contentProvider);
-      } catch (error) {
-        providerError = error instanceof Error ? error.message : String(error);
-        console.warn("Episode provider lookup failed; trying AniList streaming metadata:", providerError);
+      let episodeProvider = "";
+      const providerErrors = [];
+      for (const provider of contentProviders) {
+        try {
+          const found = await meta.fetchContentUnits(id, provider);
+          if (Array.isArray(found) && found.length) {
+            episodes = found;
+            episodeProvider = provider.id;
+            break;
+          }
+        } catch (error) {
+          const message = error instanceof Error ? error.message : String(error);
+          providerErrors.push({ provider: provider.id, error: message });
+          console.warn(`Episode lookup failed for ${provider.id}; trying next provider:`, message);
+        }
       }
+      providerError = providerErrors.map(item => `${item.provider}: ${item.error}`).join(" | ");
 
       if (Array.isArray(episodes) && episodes.length) {
         return send(res, 200, {
-          provider: contentProvider.id,
-          fallback: false,
+          provider: episodeProvider,
+          triedProviders: contentProviders.map(provider => provider.id),
+          fallback: episodeProvider !== contentProviders[0].id,
           episodes: episodes.map(ep => ({
             id: ep.id,
             number: Number(ep.number),
@@ -129,7 +151,8 @@ const server = createServer(async (req, res) => {
             thumbnail: ep.thumbnailUrl || "",
             isFiller: Boolean(ep.isFiller),
             isRecap: Boolean(ep.isRecap),
-            sourceAvailable: false
+            // Playback now tries the full provider list; individual episodes can still fail.
+            sourceAvailable: true
           })).filter(ep => Number.isFinite(ep.number) && ep.number > 0).sort((a, b) => a.number - b.number)
         }, origin);
       }
@@ -199,17 +222,27 @@ const server = createServer(async (req, res) => {
         return send(res, 400, { error: "A valid anime ID and episode number are required." }, origin);
       }
       let resolved;
-      try {
-        resolved = await meta.resolveStream(id, episode, contentProvider, language);
-      } catch (error) {
-        const message = error instanceof Error ? error.message : String(error);
-        console.warn("Stream provider could not resolve episode:", message);
-        res.writeHead(404, { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store", "Access-Control-Allow-Origin": origin });
-        return res.end("<!doctype html><meta charset=utf-8><title>Episode unavailable</title><body style='background:#090a12;color:white;font:16px system-ui;padding:24px'><h2>Episode unavailable</h2><p>The configured provider did not return a playable source. Try an official viewing link listed for this anime.</p></body>");
+      const streamErrors = [];
+      for (const provider of contentProviders) {
+        // Goyabu is documented as Brazilian-Portuguese raw audio only.
+        if (provider.id === "goyabu" && language !== "raw") continue;
+        try {
+          const candidate = await meta.resolveStream(id, episode, provider, language);
+          if (candidate?.type === "video" && Array.isArray(candidate.streams) && candidate.streams.length) {
+            resolved = candidate;
+            console.log(`Resolved episode ${episode} through ${provider.id}`);
+            break;
+          }
+        } catch (error) {
+          const message = error instanceof Error ? error.message : String(error);
+          streamErrors.push(`${provider.id}: ${message}`);
+          console.warn(`Stream resolution failed for ${provider.id}; trying next provider:`, message);
+        }
       }
       if (!resolved || resolved.type !== "video" || !resolved.streams?.length) {
+        console.warn("No provider resolved the requested episode.", streamErrors.join(" | "));
         res.writeHead(404, { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store", "Access-Control-Allow-Origin": origin });
-        return res.end("<!doctype html><meta charset=utf-8><title>Episode unavailable</title><body style='background:#090a12;color:white;font:16px system-ui;padding:24px'><h2>Episode unavailable</h2><p>The provider did not return a playable stream for this episode. Try another language or check back later.</p></body>");
+        return res.end("<!doctype html><meta charset=utf-8><title>Episode unavailable</title><body style='background:#090a12;color:white;font:16px system-ui;padding:24px'><h2>Episode unavailable</h2><p>None of the configured anime-sdk providers returned a playable source for this episode. Try an official viewing link listed for this anime.</p></body>");
       }
       const stream = resolved.streams[0];
       if (!/^https:\/\//i.test(stream.sourceUrl || "")) return send(res, 502, { error: "The provider returned an invalid stream URL." }, origin);
