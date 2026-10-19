@@ -77,7 +77,7 @@ function renderWatch(data){
   }
   if(sourceUrl){
     var parsedSource=null;try{parsedSource=new URL(sourceUrl)}catch{}
-    var isExplicitEmbed=!!parsedSource&&(parsedSource.pathname.toLowerCase().includes("/embed/")||/[?&](?:embed|player)=/i.test(parsedSource.search));
+    var isExplicitEmbed=!!parsedSource&&(parsedSource.pathname.toLowerCase().includes("/embed/")||/[?&](?:embed|player)=/i.test(parsedSource.search)||parsedSource.pathname.toLowerCase().endsWith("/api/catalogue/player"));
     if(isExplicitEmbed){
       var frame=document.createElement("iframe");frame.src=sourceUrl;frame.title=show.title+" episode "+episode;frame.allow="autoplay; fullscreen; picture-in-picture";frame.allowFullscreen=true;frame.referrerPolicy="strict-origin-when-cross-origin";player.replaceChildren(frame);
     }else{
