@@ -102,14 +102,14 @@ async function importSdkMetadata(item,base=""){
  }
  catalogueViewingLinks=Array.isArray(item.viewingLinks)?item.viewingLinks.filter(link=>link&&typeof link.url==="string"&&/^https:\/\//i.test(link.url)).map(link=>({site:String(link.site||"Streaming service"),url:link.url})):[];
  const importedSources={...(seasonEpisodeSources["1"]||{})};
- if(episodeMetadataOnly){for(const [number,url] of Object.entries(importedSources)){try{const parsed=new URL(url);if(parsed.pathname.endsWith("/api/catalogue/player")&&parsed.searchParams.get("id")===item.id)delete importedSources[number]}catch{}}}
+ for(const [number,url] of Object.entries(importedSources)){try{const parsed=new URL(url);if(parsed.pathname.endsWith("/api/catalogue/player")&&parsed.searchParams.get("id")===item.id)delete importedSources[number]}catch{}}
  const episodesByNumber=new Map();
  for(const ep of episodeItems){
   const number=Number(ep.number);
   if(!Number.isInteger(number)||number<1||number>500)continue;
   const entry={number,title:ep.title||("Episode "+number),providerEpisodeId:ep.id||"",thumbnail:ep.thumbnail||""};
   if(typeof ep.externalUrl==="string"&&/^https:\/\//i.test(ep.externalUrl)){entry.url=ep.externalUrl;importedSources[String(number)]=ep.externalUrl;}
-  else if(ep.sourceAvailable!==false&&!episodeMetadataOnly){const playerUrl=base+"/api/catalogue/player?id="+encodeURIComponent(item.id)+"&episode="+encodeURIComponent(number)+"&language=sub";entry.url=playerUrl;importedSources[String(number)]=playerUrl;}
+  else if(ep.sourceAvailable===true&&!episodeMetadataOnly){const playerUrl=base+"/api/catalogue/player?id="+encodeURIComponent(item.id)+"&episode="+encodeURIComponent(number)+"&language=sub";entry.url=playerUrl;importedSources[String(number)]=playerUrl;}
   episodesByNumber.set(number,entry);
  }
  if(episodeItems.length){
