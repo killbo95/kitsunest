@@ -66,22 +66,30 @@ function renderWatch(data){
   optionsPanel.style.display=validViewingLinks.length?"block":"none";
   var url=seasonSources[episode];
   var episodeDetail=show.seasonData.find(function(ep){return Number(ep.number)===episode&&typeof ep.url==="string"&&/^https:\/\//i.test(ep.url)});
+  var sourceUrl=(typeof url==="string"&&/^https:\/\//i.test(url)&&url.indexOf("example.")===-1)?url:(episodeDetail?episodeDetail.url:"");
   var player=document.getElementById("player");
-  if(typeof url==="string" && /^https:\/\//i.test(url) && url.indexOf("example.")===-1){
-    if (/\.mp4(?:$|[?#])/i.test(url)) {
-      var video=document.createElement("video");video.src=url;video.controls=true;video.playsInline=true;video.preload="metadata";video.style.width="100%";video.style.height="100%";video.style.objectFit="contain";video.title=show.title+" episode "+episode;
-      video.addEventListener("error",function(){player.innerHTML='<div class="empty"><h2>Video could not load</h2><p>The source may block direct playback or require a different authorized embed URL.</p><a class="pill" href="'+url.replace(/&/g,"&amp;")+'" target="_blank" rel="noopener">Open video source</a></div>';});
-      player.replaceChildren(video);
-    } else {
-      var frame=document.createElement("iframe");frame.src=url;frame.title=show.title+" episode "+episode;frame.allow="autoplay; fullscreen; picture-in-picture";frame.allowFullscreen=true;frame.referrerPolicy="strict-origin-when-cross-origin";player.replaceChildren(frame);
-    }
+  function showExternalEpisode(href,titleText){
+    var card=document.createElement("div");card.className="empty";
+    var title=document.createElement("h2");title.textContent=titleText||("Episode "+episode);
+    var text=document.createElement("p");text.textContent="This episode is listed on an external service. Open it there to watch; ordinary watch-page links are not embedded inside KitsuNest.";
+    var link=document.createElement("a");link.className="pill";link.href=href;link.target="_blank";link.rel="noopener noreferrer";link.textContent="Open episode on provider ↗";
+    card.append(title,text,link);player.replaceChildren(card);
   }
-  if(!(typeof url==="string"&&/^https:\/\//i.test(url)&&url.indexOf("example.")===-1)&&episodeDetail){
-    var external=document.createElement("div");external.className="empty";
-    var externalTitle=document.createElement("h2");externalTitle.textContent=episodeDetail.title||("Episode "+episode);
-    var externalText=document.createElement("p");externalText.textContent="This episode has an external viewing link supplied by the anime catalogue. Availability and playback are controlled by that service.";
-    var externalLink=document.createElement("a");externalLink.className="pill";externalLink.href=episodeDetail.url;externalLink.target="_blank";externalLink.rel="noopener noreferrer";externalLink.textContent="Open episode on provider ↗";
-    external.append(externalTitle,externalText,externalLink);player.replaceChildren(external);
+  if(sourceUrl){
+    var parsedSource=null;try{parsedSource=new URL(sourceUrl)}catch{}
+    var isExplicitEmbed=!!parsedSource&&(/(?:^|\\/)embed(?:\\/|$)/i.test(parsedSource.pathname)||/[?&](?:embed|player)=/i.test(parsedSource.search));
+    if(isExplicitEmbed){
+      var frame=document.createElement("iframe");frame.src=sourceUrl;frame.title=show.title+" episode "+episode;frame.allow="autoplay; fullscreen; picture-in-picture";frame.allowFullscreen=true;frame.referrerPolicy="strict-origin-when-cross-origin";player.replaceChildren(frame);
+    }else{
+      showExternalEpisode(sourceUrl,episodeDetail&&episodeDetail.title);
+    }
+  }else{
+    var empty=document.createElement("div");empty.className="empty";
+    var symbol=document.createElement("div");symbol.className="symbol";symbol.textContent="▶";
+    var title=document.createElement("h2");title.textContent="Episode link not added yet";
+    var text=document.createElement("p");text.textContent="Add an official viewing page or an authorized embed URL for this episode in the admin panel.";
+    var browse=document.createElement("a");browse.className="pill";browse.href="./admin.html";browse.textContent="Open admin panel";
+    empty.append(symbol,title,text,browse);player.replaceChildren(empty);
   }
   var list=document.getElementById("episodes");
   list.replaceChildren();
@@ -92,7 +100,7 @@ function renderWatch(data){
     a.setAttribute("aria-current",i===episode?"page":"false");
     var epDetail=show.seasonData.find(function(ep){return Number(ep.number)===i});
     var label=document.createElement("span");label.textContent=epDetail?.title||("Episode "+i);
-    var sub=document.createElement("small");sub.textContent=seasonSources[i]?"Player available":(epDetail?.url?"External viewing link":"Source not added");
+    var sub=document.createElement("small");sub.textContent=seasonSources[i]?(function(){var u=seasonSources[i];try{var p=new URL(u);return /(?:^|\\/)embed(?:\\/|$)/i.test(p.pathname)||/[?&](?:embed|player)=/i.test(p.search)?"Authorized embed link":"Viewing link added"}catch{return "Viewing link added"}})():(epDetail?.url?"External viewing link":"Source not added");
     a.append(label,sub);
     list.appendChild(a);
   }
