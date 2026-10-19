@@ -111,7 +111,8 @@ function importSdkMetadata(item){
  $("seasonData").value=JSON.stringify([...episodesByNumber.values()].sort((a,b)=>a.number-b.number),null,2);
  populateEpisodeSeasons();renderEpisodeList();updateEpisodeCount();
  metadataStatus("Imported anime details and prepared "+(episodeCount||episodesByNumber.size)+" episode entries. Added "+links.length+" real external episode URL(s) to Season 1. "+(links.length?"Save anime to publish these links. ":"This catalogue returned no episode URLs for this anime; no fake links were created. ")+ "Only links supplied by the catalogue are imported.");
- showCatalogueViewingLinks(title,item.viewingLinks);\n if(!links.length)showOfficialViewingSearches(title);
+ showCatalogueViewingLinks(title,item.viewingLinks);
+ if(!links.length)showOfficialViewingSearches(title);
 }
 async function searchAnimeSdkMetadata(){
  const query=$("metadataQuery").value.trim();
